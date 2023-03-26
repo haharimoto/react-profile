@@ -1,14 +1,16 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
 
 function Header() {
   return (
     <div>
-      Header
-      {/* <header>
+      <header>
         <a href="https://github.com/">
-          <i className="fa-brands fa-github" style="font-size: 1.8em;"></i>
+          <FontAwesomeIcon icon={faGithub} style={{fontSize: "1.8em"}} />
         </a>
-      </header> */}
+      </header>
     </div>
   )
 }
