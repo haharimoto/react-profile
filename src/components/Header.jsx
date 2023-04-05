@@ -8,7 +8,7 @@ function Header() {
     <div>
       <header>
         <a href="https://github.com/">
-          <FontAwesomeIcon icon={faGithub} style={{fontSize: "1.8em"}} />
+          <FontAwesomeIcon icon={faGithub} style={{height: "32px", width: "32px", color: "white"}} />
         </a>
       </header>
     </div>
