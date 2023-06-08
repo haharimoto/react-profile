@@ -1,9 +1,31 @@
 body {
   margin: 0;
-  background-color: rgb(99, 99, 99);
+  background-color: #0D1117;
+  color: white;
 }
 
 header {
-  background-color: #161b22;
-  padding: 13px 32px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: rgba(222, 255, 255, 0.494);
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: #0D1117 1px solid;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  /*TODO add margin left of negative value of whatever the width of icon */
+}
+
+.links > a {
+  /* padding: 0px 10px; */
 }
