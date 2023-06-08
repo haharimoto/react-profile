@@ -10,6 +10,7 @@ function Header() {
         <a href='/'>Portfolio</a>
         <a href='/'>Contents</a>
         <a href='/'>Contact</a>
+        <div className="toggle">toggle</div>
       </div>
     </header>
   )
