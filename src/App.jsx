@@ -1,5 +1,9 @@
 import './App.css'
 import Header from './components/Header'
+import About from './components/About'
+import Portfolio from './components/Portfolio'
+import Contents from './components/Contents'
+import Contact from './components/Contact'
 import { useDarkMode } from './components/Header'
 
 
@@ -15,6 +19,10 @@ function App() {
   return (
     <div className={style}>
       <Header />
+      <About />
+      <Portfolio />
+      <Contents />
+      <Contact />
     </div>
   )
 }

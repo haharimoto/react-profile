@@ -5,7 +5,7 @@ import { persist } from 'zustand/middleware'
 
 // Zustand
 let store = (set) => ({
-  darkMode: false,
+  darkMode: true,
   toggle: () => set((state) => ({ darkMode: !state.darkMode })),
 })
 store = persist(store, { name: 'darkMode' })

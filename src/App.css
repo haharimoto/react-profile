@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  /* background-color: #0D1117; */
+  padding: 0;
+  background-color: rgba(255, 0, 0, 0.099);
 }
 
 header {
@@ -17,13 +22,13 @@ header {
 .App {
   background-color: rgb(121, 121, 121);
   color: black;
-  height: 100vh;
+  transition: 0.5s;
 }
 
 .App-dark {
   background-color: #0D1117;
   color: white;
-  height: 100vh;
+  transition: 0.5s;
 }
 
 .icon {
@@ -38,6 +43,36 @@ header {
 }
 
 .links > a {
+  color: white;
   margin-right: 25px;
   text-decoration: none;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: rgba(137, 43, 226, 0.263);
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
 }
