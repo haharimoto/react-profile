@@ -4,6 +4,7 @@ import About from './components/About'
 import Portfolio from './components/Portfolio'
 import Contents from './components/Contents'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import { useDarkMode } from './components/Header'
 
 
@@ -23,6 +24,7 @@ function App() {
       <Portfolio />
       <Contents />
       <Contact />
+      <Footer />
     </div>
   )
 }
