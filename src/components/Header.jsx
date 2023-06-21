@@ -20,6 +20,7 @@ function Header() {
 
   // console.log(darkMode);
 
+  //* understand this useEffect
   useEffect(() => {
     function handleScroll() {
       const about = document.getElementById('about')
@@ -51,13 +52,13 @@ function Header() {
   return (
     <header>
       <nav>
-        <img className="icon" src="https://images.unsplash.com/photo-1569982175971-d92b01cf8694?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="" />
-        <div className="links">
+        <img className="nav--icon" src="https://images.unsplash.com/photo-1569982175971-d92b01cf8694?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="" />
+        <div className="nav--links">
           <a href='#about' className={activeLink === 'about' ? 'active' : ''}>About</a>
           <a href='#portfolio' className={activeLink === 'portfolio' ? 'active' : ''}>Portfolio</a>
           <a href='#contents' className={activeLink === 'contents' ? 'active' : ''}>Contents</a>
           <a href='#contact' className={activeLink === 'contact' ? 'active' : ''}>Contact</a>
-          <div className="toggle">
+          <div className="nav--toggle">
             <button onClick={toggle}>{darkMode ? 'Dark' : 'Light'}</button>
           </div>
         </div>

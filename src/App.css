@@ -45,21 +45,33 @@ nav {
   align-items: center;
 }
 
-.icon {
+.nav--icon {
   width: 32px;
   height: 32px;
   border-radius: 50%;
   border: #0D1117 1px solid;
 }
 
-.links {
+.nav--links {
   display: flex;
 }
 
-.links > a {
+.nav--links > a {
   color: white;
   margin-right: 25px;
   text-decoration: none;
+}
+
+.nav--links > a:hover {
+  color: rgb(200, 255, 255);
+}
+
+.nav--links > a.active {
+  text-decoration: underline;
+}
+
+.nav--toggle {
+
 }
 
 #about {
@@ -83,8 +95,4 @@ nav {
   justify-content: center;
   align-items: center;
   height: 50vh;
-}
-
-a.active {
-  text-decoration: underline;
 }
