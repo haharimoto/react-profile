@@ -25,7 +25,6 @@ function Header() {
       const about = document.getElementById('about')
       const portfolio = document.getElementById('portfolio')
       const contents = document.getElementById('contents')
-      // const contact = document.getElementById('contact')
 
       const scrollPosition = window.pageYOffset || document.documentElement.scrollTop
       const threshold = window.innerHeight / 2
