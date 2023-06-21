@@ -27,7 +27,7 @@ function Header() {
       const contents = document.getElementById('contents')
       // const contact = document.getElementById('contact')
 
-      const scrollPosition = (window.pageYOffset || document.documentElement.scrollTop) + 50
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop
       const threshold = window.innerHeight / 2
 
       if (scrollPosition < about.offsetTop + about.offsetHeight) {
@@ -54,10 +54,10 @@ function Header() {
       <nav>
         <img className="icon" src="https://images.unsplash.com/photo-1569982175971-d92b01cf8694?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="" />
         <div className="links">
-          <a href='/' className={activeLink === 'about' ? 'active' : ''}>About</a>
-          <a href='/' className={activeLink === 'portfolio' ? 'active' : ''}>Portfolio</a>
-          <a href='/' className={activeLink === 'contents' ? 'active' : ''}>Contents</a>
-          <a href='/' className={activeLink === 'contact' ? 'active' : ''}>Contact</a>
+          <a href='#about' className={activeLink === 'about' ? 'active' : ''}>About</a>
+          <a href='#portfolio' className={activeLink === 'portfolio' ? 'active' : ''}>Portfolio</a>
+          <a href='#contents' className={activeLink === 'contents' ? 'active' : ''}>Contents</a>
+          <a href='#contact' className={activeLink === 'contact' ? 'active' : ''}>Contact</a>
           <div className="toggle">
             <button onClick={toggle}>{darkMode ? 'Dark' : 'Light'}</button>
           </div>
