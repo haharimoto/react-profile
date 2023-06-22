@@ -70,9 +70,74 @@ nav {
   text-decoration: underline;
 }
 
+/* dark mode toggle----------------------------------------- */
 .nav--toggle {
 
 }
+
+.nav--toggle--switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.nav--toggle--switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.nav--toggle--slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.nav--toggle--slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .nav--toggle--slider {
+  background-color: #282D35;
+}
+
+input:focus + .nav--toggle--slider {
+  box-shadow: 0 0 1px #282D35;
+}
+
+input:checked + .nav--toggle--slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.nav--toggle--slider.round {
+  border-radius: 34px;
+}
+
+.nav--toggle--slider.round:before {
+  border-radius: 50%;
+}
+/* ----------------------------------------------------------- */
+
 
 #about {
   display: flex;
@@ -86,7 +151,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 60vh;
   border: 1px gray dashed;
 }
 

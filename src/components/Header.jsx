@@ -48,6 +48,20 @@ function Header() {
     }
   }, [])
 
+  // dark mode
+  let lightStyle
+  if (!darkMode) {
+    lightStyle = { 'fontWeight': 'bold', 'transition': '0.4s' }
+  } else {
+    lightStyle = { 'fontWeight': 'normal', 'opacity': '20%', 'transition': '0.4s' }
+  }
+
+  let darkStyle
+  if (darkMode) {
+    darkStyle = { 'fontWeight': 'bold', 'transition': '0.4s' }
+  } else {
+    darkStyle = { 'fontWeight': 'normal', 'opacity': '20%', 'transition': '0.4s' }
+  }
 
   return (
     <header>
@@ -58,9 +72,17 @@ function Header() {
           <a href='#project' className={activeLink === 'project' ? 'active' : ''}>Project</a>
           <a href='#content' className={activeLink === 'content' ? 'active' : ''}>Content</a>
           <a href='#contact' className={activeLink === 'contact' ? 'active' : ''}>Contact</a>
+
           <div className="nav--toggle">
-            <button onClick={toggle}>{darkMode ? 'Dark' : 'Light'}</button>
+            {/* <button onClick={toggle}>{darkMode ? 'Dark' : 'Light'}</button> */}
+            {/* <p style={lightStyle}>Light</p> */}
+            <label className='nav--toggle--switch'>
+              <input type="checkbox" checked={darkMode} onChange={toggle} />
+              <span className="nav--toggle--slider round"></span>
+            </label>
+            {/* <p style={darkStyle}>Dark</p> */}
           </div>
+
         </div>
       </nav>
     </header>
