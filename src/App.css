@@ -82,7 +82,7 @@ nav {
   background-color: rgba(226, 43, 147, 0.094);
 }
 
-#portfolio, #contents, #contact {
+#project, #content, #contact {
   display: flex;
   justify-content: center;
   align-items: center;

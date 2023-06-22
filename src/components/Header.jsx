@@ -24,19 +24,19 @@ function Header() {
   useEffect(() => {
     function handleScroll() {
       const about = document.getElementById('about')
-      const portfolio = document.getElementById('portfolio')
-      const contents = document.getElementById('contents')
+      const project = document.getElementById('project')
+      const content = document.getElementById('content')
 
       const scrollPosition = window.pageYOffset || document.documentElement.scrollTop
       const threshold = window.innerHeight / 2
 
       if (scrollPosition < about.offsetTop + about.offsetHeight) {
         setActiveLink('about')
-      } else if (scrollPosition < portfolio.offsetTop + threshold) {
-        setActiveLink('portfolio')
-      } else if (scrollPosition < contents.offsetTop + threshold) {
-        setActiveLink('contents')
-      } else if (scrollPosition >= contents.offsetTop + threshold) {
+      } else if (scrollPosition < project.offsetTop + threshold) {
+        setActiveLink('project')
+      } else if (scrollPosition < content.offsetTop + threshold) {
+        setActiveLink('content')
+      } else if (scrollPosition >= content.offsetTop + threshold) {
         setActiveLink('contact')
       }
     }
@@ -55,8 +55,8 @@ function Header() {
         <img className="nav--icon" src="https://images.unsplash.com/photo-1569982175971-d92b01cf8694?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="" />
         <div className="nav--links">
           <a href='#about' className={activeLink === 'about' ? 'active' : ''}>About</a>
-          <a href='#portfolio' className={activeLink === 'portfolio' ? 'active' : ''}>Portfolio</a>
-          <a href='#contents' className={activeLink === 'contents' ? 'active' : ''}>Contents</a>
+          <a href='#project' className={activeLink === 'project' ? 'active' : ''}>Project</a>
+          <a href='#content' className={activeLink === 'content' ? 'active' : ''}>Content</a>
           <a href='#contact' className={activeLink === 'contact' ? 'active' : ''}>Contact</a>
           <div className="nav--toggle">
             <button onClick={toggle}>{darkMode ? 'Dark' : 'Light'}</button>
