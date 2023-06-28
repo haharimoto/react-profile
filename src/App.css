@@ -51,7 +51,6 @@ header {
   background: transparent;
   background-color: rgba(245, 245, 245, 0.098);
   backdrop-filter: blur(5px);
-  font-weight: bold;
 }
 
 nav {
@@ -154,9 +153,13 @@ input:checked + .nav--toggle--slider:before {
 /* ----------------------------------------------------------- */
 
 .hero {
+  display: grid;
+  padding: 200px;
+}
+
+.project-container > ul {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  list-style-type: none;
 }
 
 .footer {

@@ -2,6 +2,7 @@ import React from 'react'
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { useState, useEffect } from 'react'
+import avatar from '../../public/avatar.jpg'
 
 
 // Zustand
@@ -66,7 +67,7 @@ function Header() {
   return (
     <header>
       <nav>
-        <img className="nav--icon" src="https://images.unsplash.com/photo-1569982175971-d92b01cf8694?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="" />
+        <img className="nav--icon" src={avatar} alt="" />
         <div className="nav--links">
           <a href='#about' className={activeLink === 'about' ? 'active' : ''}>About</a>
           <a href='#project' className={activeLink === 'project' ? 'active' : ''}>Project</a>
