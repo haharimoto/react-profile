@@ -154,6 +154,7 @@ input:checked + .nav--toggle--slider:before {
 
 .hero {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 200px;
 }
 

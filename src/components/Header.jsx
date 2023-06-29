@@ -1,8 +1,8 @@
 import React from 'react'
+import avatar from '../../public/avatar.jpg'
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { useState, useEffect } from 'react'
-import avatar from '../../public/avatar.jpg'
 
 
 // Zustand
@@ -23,6 +23,7 @@ function Header() {
 
   //* understand this useEffect
   useEffect(() => {
+    // responsive navbar effect
     function handleScroll() {
       const about = document.getElementById('about')
       const project = document.getElementById('project')
