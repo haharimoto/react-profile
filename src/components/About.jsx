@@ -6,10 +6,13 @@ import { useEffect, useRef } from 'react'
 function About() {
   const globeEl = useRef()
 
+  // The useRef hook is used to reference a value that’s not needed for rendering. In this case, it’s used to reference the Globe component so that it can be manipulated using the controls() method of the globeEl.current object. The controls() method is used to access the controls of the globe and set the autoRotate and autoRotateSpeed properties to true and 1 respectively. This makes the globe rotate automatically1. (BING AI)
   useEffect(() => {
     // Auto-rotate
+    // console.log(globeEl.current);
     globeEl.current.controls().autoRotate = true;
     globeEl.current.controls().autoRotateSpeed = 1;
+    globeEl.current.controls().enableZoom = false;
   }, [])
 
   return (
@@ -27,8 +30,10 @@ function About() {
           ref={globeEl}
           globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
           // backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
-          width={500}
-          height={500}
+          backgroundColor="rgba(0,0,0,0)"
+          width={600}
+          height={600}
+
         />
       </div>
     </div>
