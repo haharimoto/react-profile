@@ -1,5 +1,7 @@
 import React from 'react'
 import Globe from 'react-globe.gl'
+import continents from '../../public/custom.geo.json'
+// import earthImg from '../../public/earth.jpg'
 import { useEffect, useRef } from 'react'
 
 
@@ -28,11 +30,14 @@ function About() {
 
         <Globe
           ref={globeEl}
-          globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+          // globeImageUrl={earthImg}
           // backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
-          backgroundColor="rgba(0,0,0,0)"
-          width={600}
-          height={600}
+          backgroundColor='rgba(0,0,0,0)'
+          width={800}
+          height={800}
+          hexPolygonsData={continents.features}
+          hexPolygonMargin={0.7}
+          hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
 
         />
       </div>
@@ -41,3 +46,6 @@ function About() {
 }
 
 export default About
+
+// GeoJSON
+// https://geojson-maps.ash.ms/
