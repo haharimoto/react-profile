@@ -11,10 +11,15 @@ function About() {
   // The useRef hook is used to reference a value that’s not needed for rendering. In this case, it’s used to reference the Globe component so that it can be manipulated using the controls() method of the globeEl.current object. The controls() method is used to access the controls of the globe and set the autoRotate and autoRotateSpeed properties to true and 1 respectively. This makes the globe rotate automatically1. (BING AI)
   useEffect(() => {
     // Auto-rotate
-    // console.log(globeEl.current);
+    console.log(globeEl.current);
     globeEl.current.controls().autoRotate = true;
     globeEl.current.controls().autoRotateSpeed = 1;
     globeEl.current.controls().enableZoom = false;
+    globeEl.current.pointOfView({
+      lat: 23.5,
+      lng: 0,
+      altitude: 2.5,
+    })
   }, [])
 
   return (
@@ -38,6 +43,7 @@ function About() {
           hexPolygonsData={continents.features}
           hexPolygonMargin={0.7}
           hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
+
 
         />
       </div>
