@@ -1,7 +1,7 @@
 import React from 'react'
 import Globe from 'react-globe.gl'
 import continents from '../../public/custom.geo.json'
-// import earthImg from '../../public/earth.jpg'
+import earthImg from '../../public/earth.jpeg'
 import { useEffect, useRef } from 'react'
 
 
@@ -30,7 +30,7 @@ function About() {
 
         <Globe
           ref={globeEl}
-          // globeImageUrl={earthImg}
+          globeImageUrl={earthImg}
           // backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
           backgroundColor='rgba(0,0,0,0)'
           width={800}
