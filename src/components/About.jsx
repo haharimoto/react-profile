@@ -33,19 +33,21 @@ function About() {
           </div>
         </div>
 
-        <Globe
-          ref={globeEl}
-          globeImageUrl={earthImg}
-          // backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
-          backgroundColor='rgba(0,0,0,0)'
-          width={800}
-          height={800}
-          hexPolygonsData={continents.features}
-          hexPolygonMargin={0.7}
-          hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
+        <div className="hero--globe">
+          <Globe
+            ref={globeEl}
+            globeImageUrl={earthImg}
+            // backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
+            backgroundColor='rgba(0,0,0,0)'
+            width={1150}
+            height={1150}
+            hexPolygonsData={continents.features}
+            hexPolygonMargin={0.7}
+            hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
 
+          />
 
-        />
+        </div>
       </div>
     </div>
   )
