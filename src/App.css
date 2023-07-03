@@ -172,8 +172,8 @@ input:checked + .nav--toggle--slider:before {
 .hero--globe {
   position: absolute;
   right: -100px;
-  top: 50px;
-  opacity: 50%;
+  top: 200px;
+  opacity: 25%;
   border: gray 1px dashed;
 }
 

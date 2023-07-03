@@ -14,12 +14,12 @@ function About() {
     // console.log(globeEl.current);
     // console.log(globeEl.current.controls());
     globeEl.current.controls().autoRotate = true;
-    globeEl.current.controls().autoRotateSpeed = 1;
+    globeEl.current.controls().autoRotateSpeed = 0.7;
     globeEl.current.controls().enableZoom = false;
     globeEl.current.pointOfView({
       lat: 23.5,
       lng: 0,
-      altitude: 2.5,
+      altitude: 1.5,
     })
   }, [])
 
@@ -31,17 +31,17 @@ function About() {
           <h1>From Concept to Creation</h1>
           <h4>Bridging the Gap Between Imagination and Reality</h4>
           <div className="hero--description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br></br>Voluptates reprehenderit totam delectus neque error ex numquam, sint dolorum! Aperiam, ipsum?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br></br>Voluptates reprehenderit totam delectus neque error ex numquam
           </div>
         </div>
 
-        <div className="hero--globe" onMouseDown={() => {setAltitude(0.1)}} onMouseUp={() => {setAltitude(0.02)}}>
+        <div className="hero--globe">
           <Globe
             ref={globeEl}
             globeImageUrl={earthImg}
             backgroundColor='rgba(0,0,0,0)'
-            width={1150}
-            height={1150}
+            width={800}
+            height={800}
             hexPolygonsData={countries.features}
             hexPolygonMargin={0.7}
             hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
@@ -56,6 +56,8 @@ function About() {
 }
 
 export default About
+
+// onMouseDown={() => {setAltitude(0.04)}} onMouseUp={() => {setAltitude(0.02)}}
 
 // GeoJSON
 // https://geojson-maps.ash.ms/
