@@ -23,6 +23,7 @@ function About() {
 
   }, [])
 
+  // console.log(countries.features);
 
   return (
   <div id='about'>
