@@ -173,7 +173,7 @@ input:checked + .nav--toggle--slider:before {
   position: absolute;
   right: -100px;
   top: 200px;
-  opacity: 25%;
+  opacity: 50%;
   border: gray 1px dashed;
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Globe from 'react-globe.gl'
-import countries from '../../public/custom.geo.json'
+import countries from '../../public/geo.json'
 import earthImg from '../../public/earth.jpeg'
 import { useState, useEffect, useRef } from 'react'
 
@@ -12,26 +12,26 @@ function About() {
   useEffect(() => {
     // Auto-rotate
     // console.log(globeEl.current);
-    // console.log(globeEl.current.controls());
     globeEl.current.controls().autoRotate = true;
-    globeEl.current.controls().autoRotateSpeed = 0.7;
+    globeEl.current.controls().autoRotateSpeed = 1;
     globeEl.current.controls().enableZoom = false;
     globeEl.current.pointOfView({
       lat: 23.5,
       lng: 0,
       altitude: 1.5,
     })
+
   }, [])
 
 
   return (
-    <div id='about'>
+  <div id='about'>
       <div className="hero">
         <div className="hero--text">
           <h1>From Concept to Creation</h1>
           <h4>Bridging the Gap Between Imagination and Reality</h4>
           <div className="hero--description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br></br>Voluptates reprehenderit totam delectus neque error ex numquam
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br></br>Voluptates reprehenderit totam delectus neque error ex numquam, sint dolorum! Aperiam, ipsum?
           </div>
         </div>
 
@@ -46,8 +46,7 @@ function About() {
             hexPolygonMargin={0.7}
             hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
             hexPolygonAltitude={altitude}
-
-          />
+            />
 
         </div>
       </div>
@@ -57,7 +56,7 @@ function About() {
 
 export default About
 
-// onMouseDown={() => {setAltitude(0.04)}} onMouseUp={() => {setAltitude(0.02)}}
+// onMouseDown={() => {setAltitude(0.1)}} onMouseUp={() => {setAltitude(0.02)}}
 
 // GeoJSON
 // https://geojson-maps.ash.ms/
