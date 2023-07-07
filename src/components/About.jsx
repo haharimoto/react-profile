@@ -7,6 +7,7 @@ import { useState, useEffect, useRef } from 'react'
 
 
 function About() {
+  const [arcsData, setArcsData] = useState([])
   const globeEl = useRef()
 
   useEffect(() => {
@@ -20,31 +21,33 @@ function About() {
       lng: 0,
       altitude: 2
     })
-  }, [])
+  }, [globeEl.current])
 
-  // arcsData
-  const N = 8
-  const arcsData = [...Array(N).keys()].map(() => {
-    // Randomly select two cities
-    let randomEl = Math.floor(Math.random() * cities.length)
-    let randomEl2
-    do {
-      randomEl2 = Math.floor(Math.random() * cities.length)
-    } while (randomEl === randomEl2)  // ensure endCoords is different from startCoords
-    const startCoords = cities[randomEl]
-    const endCoords = cities[randomEl2]
-
-    return {
-      startLat: startCoords.latitude,
-      startLng: startCoords.longitude,
-      endLat: endCoords.latitude,
-      endLng: endCoords.longitude,
-      color: [
-        ["pink", "white", "skyblue", "purple"][Math.round(Math.random() * 3)],
-        ["pink", "white", "skyblue", "purple"][Math.round(Math.random() * 3)]
-      ]
-    }
-  })
+  function onGlobeReady() {
+    // arcsData
+    const N = 8
+    const newArcsData = [...Array(N).keys()].map(() => {
+      // Randomly select two cities
+      let randomEl = Math.floor(Math.random() * cities.length)
+      let randomEl2
+      do {
+        randomEl2 = Math.floor(Math.random() * cities.length)
+      } while (randomEl === randomEl2)  // ensure endCoords is different from startCoords
+      const startCoords = cities[randomEl]
+      const endCoords = cities[randomEl2]
+      return {
+        startLat: startCoords.latitude,
+        startLng: startCoords.longitude,
+        endLat: endCoords.latitude,
+        endLng: endCoords.longitude,
+        color: [
+          ["pink", "white", "skyblue", "purple"][Math.round(Math.random() * 3)],
+          ["pink", "white", "skyblue", "purple"][Math.round(Math.random() * 3)]
+        ]
+      }
+    })
+    setArcsData(newArcsData)
+  }
 
 
   return (
@@ -74,6 +77,7 @@ function About() {
             arcDashLength={() => Math.random() + 3}
             arcDashGap={() => Math.random() + 1}
             arcDashAnimateTime={() => 1500}
+            onGlobeReady={onGlobeReady}
             />
 
         </div>
