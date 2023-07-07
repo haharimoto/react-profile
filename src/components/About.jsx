@@ -51,7 +51,7 @@ function About() {
 
 
   return (
-  <div id='about'>
+    <div id='about'>
       <div className="hero">
         <div className="hero--text">
           <h1>From Concept to Creation</h1>
@@ -78,7 +78,7 @@ function About() {
             arcDashGap={() => Math.random() + 1}
             arcDashAnimateTime={() => 1500}
             onGlobeReady={onGlobeReady}
-            />
+          />
 
         </div>
       </div>
