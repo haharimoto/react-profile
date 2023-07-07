@@ -22,12 +22,14 @@ function About() {
     })
   }, [])
 
+  // arcsData
   const N = 8
   const arcsData = [...Array(N).keys()].map(() => ({
     startLat: (Math.random() - 0.5) * 180,
     startLng: (Math.random() - 0.5) * 360,
     endLat: (Math.random() - 0.5) * 180,
-    endLng: (Math.random() - 0.5) * 360
+    endLng: (Math.random() - 0.5) * 360,
+    color: [["orange", "white", "skyblue", "purple"][Math.round(Math.random() * 3)], ["orange", "white", "skyblue", "purple"][Math.round(Math.random() * 3)]]
   }))
 
 
@@ -54,10 +56,10 @@ function About() {
             hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
             hexPolygonAltitude={altitude}
             arcsData={arcsData}
-            arcColor={() => 'rgba(255, 255, 255, 1)'}
-            arcDashLength={2}
+            arcColor={"color"}
+            arcDashLength={() => Math.random() + 3}
             arcDashGap={() => Math.random() + 1}
-            arcDashAnimateTime={() => 2000}
+            arcDashAnimateTime={() => 1500}
             />
 
         </div>
