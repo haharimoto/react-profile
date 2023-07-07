@@ -18,12 +18,18 @@ function About() {
     globeEl.current.pointOfView({
       lat: 23.5,
       lng: 0,
-      altitude: 1.5,
+      altitude: 2,
     })
-
   }, [])
 
-  // console.log(countries.features);
+  const N = 8
+  const arcsData = [...Array(N).keys()].map(() => ({
+    startLat: (Math.random() - 0.5) * 180,
+    startLng: (Math.random() - 0.5) * 360,
+    endLat: (Math.random() - 0.5) * 180,
+    endLng: (Math.random() - 0.5) * 360
+  }))
+
 
   return (
   <div id='about'>
@@ -47,6 +53,11 @@ function About() {
             hexPolygonMargin={0.7}
             hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
             hexPolygonAltitude={altitude}
+            arcsData={arcsData}
+            arcColor={() => 'rgba(255, 255, 255, 1)'}
+            arcDashLength={2}
+            arcDashGap={() => Math.random() + 1}
+            arcDashAnimateTime={() => 2000}
             />
 
         </div>
