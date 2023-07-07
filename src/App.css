@@ -171,10 +171,10 @@ input:checked + .nav--toggle--slider:before {
 
 .hero--globe {
   position: absolute;
-  right: -100px;
-  top: 200px;
+  right: -30px;
+  top: 130px;
   opacity: 50%;
-  border: gray 1px dashed;
+  /* border: gray 1px dashed; */
 }
 
 .project-container > ul {

@@ -1,12 +1,12 @@
 import React from 'react'
 import Globe from 'react-globe.gl'
 import countries from '../../public/geo.json'
+import cities from '../../public/techHubs.json'
 import earthImg from '../../public/earth.jpeg'
 import { useState, useEffect, useRef } from 'react'
 
 
 function About() {
-  const [altitude, setAltitude] = useState(0.02)
   const globeEl = useRef()
 
   useEffect(() => {
@@ -18,19 +18,33 @@ function About() {
     globeEl.current.pointOfView({
       lat: 23.5,
       lng: 0,
-      altitude: 2,
+      altitude: 2
     })
   }, [])
 
   // arcsData
   const N = 8
-  const arcsData = [...Array(N).keys()].map(() => ({
-    startLat: (Math.random() - 0.5) * 180,
-    startLng: (Math.random() - 0.5) * 360,
-    endLat: (Math.random() - 0.5) * 180,
-    endLng: (Math.random() - 0.5) * 360,
-    color: [["orange", "white", "skyblue", "purple"][Math.round(Math.random() * 3)], ["orange", "white", "skyblue", "purple"][Math.round(Math.random() * 3)]]
-  }))
+  const arcsData = [...Array(N).keys()].map(() => {
+    // Randomly select two cities
+    let randomEl = Math.floor(Math.random() * cities.length)
+    let randomEl2
+    do {
+      randomEl2 = Math.floor(Math.random() * cities.length)
+    } while (randomEl === randomEl2)  // ensure endCoords is different from startCoords
+    const startCoords = cities[randomEl]
+    const endCoords = cities[randomEl2]
+
+    return {
+      startLat: startCoords.latitude,
+      startLng: startCoords.longitude,
+      endLat: endCoords.latitude,
+      endLng: endCoords.longitude,
+      color: [
+        ["pink", "white", "skyblue", "purple"][Math.round(Math.random() * 3)],
+        ["pink", "white", "skyblue", "purple"][Math.round(Math.random() * 3)]
+      ]
+    }
+  })
 
 
   return (
@@ -54,7 +68,7 @@ function About() {
             hexPolygonsData={countries.features}
             hexPolygonMargin={0.7}
             hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
-            hexPolygonAltitude={altitude}
+            // hexPolygonAltitude={altitude}
             arcsData={arcsData}
             arcColor={"color"}
             arcDashLength={() => Math.random() + 3}
@@ -69,8 +83,6 @@ function About() {
 }
 
 export default About
-
-// onMouseDown={() => {setAltitude(0.1)}} onMouseUp={() => {setAltitude(0.02)}}
 
 // GeoJSON
 // https://geojson-maps.ash.ms/
