@@ -77,6 +77,7 @@ function About() {
             arcDashLength={() => Math.random() + 3}
             arcDashGap={() => Math.random() + 1}
             arcDashAnimateTime={() => 1500}
+            arcAltitudeAutoScale={0.4}
             onGlobeReady={onGlobeReady}
           />
 
