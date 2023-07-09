@@ -49,7 +49,7 @@ function About() {
     setArcsData(newArcsData)
   }
 
-
+  // globe loading time: 5-6 seconds
   return (
     <div id='about'>
       <div className="hero">
@@ -78,6 +78,13 @@ function About() {
             arcDashGap={() => Math.random() + 1}
             arcDashAnimateTime={() => 1500}
             arcAltitudeAutoScale={0.4}
+            pointsData={cities}
+            pointLat="latitude"
+            pointLng="longitude"
+            pointColor={() => 'rgba(255, 255, 255, 1)'}
+            pointRadius={0.5}
+            pointAltitude={0.01}
+            pointLabel={d => `${d.city}`}
             onGlobeReady={onGlobeReady}
           />
 
