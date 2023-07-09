@@ -49,6 +49,10 @@ function About() {
     setArcsData(newArcsData)
   }
 
+  function toggleRotation() {
+    globeEl.current.controls().autoRotate = !globeEl.current.controls().autoRotate
+  }
+
   // globe loading time: 5-6 seconds
   return (
     <div id='about'>
@@ -86,6 +90,7 @@ function About() {
             pointAltitude={0.01}
             pointLabel={d => `${d.city}`}
             onGlobeReady={onGlobeReady}
+            onGlobeRightClick={toggleRotation}
           />
 
         </div>
