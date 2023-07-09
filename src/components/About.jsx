@@ -1,6 +1,6 @@
 import React from 'react'
 import Globe from 'react-globe.gl'
-import countries from '../../public/geo.json'
+import countries from '../../public/custom.geo.json'
 import cities from '../../public/techHubs.json'
 import earthImg from '../../public/earth.jpeg'
 import { useState, useEffect, useRef } from 'react'
@@ -12,9 +12,8 @@ function About() {
 
   useEffect(() => {
     // Auto-rotate
-    // console.log(globeEl.current);
     globeEl.current.controls().autoRotate = true;
-    globeEl.current.controls().autoRotateSpeed = 1;
+    globeEl.current.controls().autoRotateSpeed = 0.8;
     globeEl.current.controls().enableZoom = false;
     globeEl.current.pointOfView({
       lat: 23.5,
@@ -53,7 +52,7 @@ function About() {
     globeEl.current.controls().autoRotate = !globeEl.current.controls().autoRotate
   }
 
-  // globe loading time: 5-6 seconds
+
   return (
     <div id='about'>
       <div className="hero">
@@ -75,12 +74,11 @@ function About() {
             hexPolygonsData={countries.features}
             hexPolygonMargin={0.7}
             hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
-            // hexPolygonAltitude={altitude}
             arcsData={arcsData}
             arcColor={"color"}
-            arcDashLength={() => Math.random() + 3}
+            arcDashLength={() => Math.random() + 2}
             arcDashGap={() => Math.random() + 1}
-            arcDashAnimateTime={() => 1500}
+            arcDashAnimateTime={() => 1750}
             arcAltitudeAutoScale={0.4}
             pointsData={cities}
             pointLat="latitude"
@@ -92,7 +90,6 @@ function About() {
             onGlobeReady={onGlobeReady}
             onGlobeRightClick={toggleRotation}
           />
-
         </div>
       </div>
     </div>
@@ -103,7 +100,8 @@ export default About
 
 // GeoJSON
 // https://geojson-maps.ash.ms/
-// does not provide Antarctica, use website down below for all the continents
+// does not provide Antarctica but is light-weight and fast loading
+// use website down below for all the continents, but beware bc the file size is too big and cause lengthy loading of the globe
 // http://geojson.xyz/
 
 // The useRef hook is used to reference a value that’s not needed for rendering. In this case, it’s used to reference the Globe component so that it can be manipulated using the controls() method of the globeEl.current object. The controls() method is used to access the controls of the globe and set the autoRotate and autoRotateSpeed properties to true and 1 respectively. This makes the globe rotate automatically1. (BING AI)
