@@ -40,8 +40,8 @@ function About() {
         endLat: endCoords.latitude,
         endLng: endCoords.longitude,
         color: [
-          ["pink", "white", "skyblue", "purple"][Math.round(Math.random() * 3)],
-          ["pink", "white", "skyblue", "purple"][Math.round(Math.random() * 3)]
+          ["pink", "navy", "skyblue", "purple"][Math.round(Math.random() * 3)],
+          ["pink", "navy", "skyblue", "purple"][Math.round(Math.random() * 3)]
         ]
       }
     })
@@ -57,10 +57,10 @@ function About() {
       <div className="hero">
         <div className="hero--text">
           <h1>From Concept to Creation</h1>
-          <h4>Bridging the Gap Between Imagination and Reality</h4>
-          <div className="hero--description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br></br>Voluptates reprehenderit totam delectus neque error ex numquam, sint dolorum! Aperiam, ipsum?
-          </div>
+          <p>
+            Frontend Developer & Content Creator <br />
+            Bridging the Gap Between Imagination and Reality
+          </p>
         </div>
 
         <div className="hero--globe">
@@ -90,6 +90,7 @@ function About() {
             onGlobeRightClick={toggleRotation}
           />
         </div>
+        <a className="hero--arrow" href='#project'></a>
       </div>
     </div>
   )
