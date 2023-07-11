@@ -2,7 +2,7 @@ import React from 'react'
 import Globe from 'react-globe.gl'
 import countries from '../../public/custom.geo.json'
 import cities from '../../public/techHubs.json'
-import earthImg from '../../public/earth.jpeg'
+import earthImg from '../../public/earth.png'
 import { useState, useEffect, useRef } from 'react'
 
 
