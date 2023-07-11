@@ -8,7 +8,7 @@ function Header() {
 
   //* understand this useEffect
   useEffect(() => {
-    // responsive navbar effect
+    // Responsive Navbar effect
     function handleScroll() {
       const about = document.getElementById('about')
       const project = document.getElementById('project')
@@ -26,13 +26,16 @@ function Header() {
         setActiveLink('contact')
       }
     }
-
     window.addEventListener('scroll', handleScroll)
-
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
+  const handleClick = (e, id) => {
+    e.preventDefault()
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+  }
 
 
   return (
@@ -40,10 +43,10 @@ function Header() {
       <nav>
         <img className="nav--icon" src={avatar} alt="" />
         <div className="nav--links">
-          <a href='#about' className={activeLink === 'about' ? 'active' : ''}>About</a>
-          <a href='#project' className={activeLink === 'project' ? 'active' : ''}>Project</a>
-          <a href='#content' className={activeLink === 'content' ? 'active' : ''}>Content</a>
-          <a href='#contact' className={activeLink === 'contact' ? 'active' : ''}>Contact</a>
+          <a href='' className={activeLink === 'about' ? 'active' : ''} onClick={(e) => handleClick(e, 'about')}>About</a>
+          <a href='' className={activeLink === 'project' ? 'active' : ''} onClick={(e) => handleClick(e, 'project')}>Project</a>
+          <a href='' className={activeLink === 'content' ? 'active' : ''} onClick={(e) => handleClick(e, 'content')}>Content</a>
+          <a href='' className={activeLink === 'contact' ? 'active' : ''} onClick={(e) => handleClick(e, 'contact')}>Contact</a>
         </div>
       </nav>
     </header>

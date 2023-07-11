@@ -23,7 +23,7 @@ function About() {
   }, [globeEl.current])
 
   function onGlobeReady() {
-    // arcsData
+    //* arcsData
     const N = 8
     const newArcsData = [...Array(N).keys()].map(() => {
       // Randomly select two cities
