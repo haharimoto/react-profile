@@ -52,6 +52,12 @@ function About() {
     globeEl.current.controls().autoRotate = !globeEl.current.controls().autoRotate
   }
 
+  function scrollToProject(e) {
+    e.preventDefault()
+    const projectSection = document.getElementById('project')
+    projectSection.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <div id='about'>
       <div className="hero">
@@ -90,7 +96,7 @@ function About() {
             onGlobeRightClick={toggleRotation}
           />
         </div>
-        <a className="hero--arrow" href='#project'></a>
+        <a href='' className="hero--arrow" onClick={(e) => scrollToProject(e)}></a>
       </div>
     </div>
   )
