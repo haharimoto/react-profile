@@ -64,8 +64,8 @@ function About() {
         <div className="hero--text">
           <h1>from Concept <br /> to <span>Creation</span></h1>
           <p>
-            Frontend Developer & Content Creator <br />
-            Bridging the Gap Between Imagination and Reality
+            frontend developer & content creator <br />
+            bridging the gap between imagination and reality
           </p>
         </div>
 

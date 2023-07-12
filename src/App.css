@@ -24,7 +24,8 @@ body {
   display: grid;
   height: 100vh;
   overflow: hidden;
-  background-color: rgba(144, 44, 222, 0.044);
+  background-color: #13121F;
+  /* background-color: rgba(144, 44, 222, 0.044); */
 }
 
 #project, #content, #contact {
@@ -69,6 +70,7 @@ nav {
   color: white;
   margin-right: 25px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .nav--links > a:hover {
@@ -179,7 +181,7 @@ input:checked + .nav--toggle--slider:before {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradient 6s ease infinite;
+  animation: gradient 6s ease-in-out infinite;
 }
 
 @keyframes gradient {
@@ -198,6 +200,7 @@ input:checked + .nav--toggle--slider:before {
   margin-top: 10px;
   font-size: 19px;
   letter-spacing: 0.02em;
+  opacity: 50%;
 }
 
 .hero--globe {
