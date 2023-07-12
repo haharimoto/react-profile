@@ -62,7 +62,7 @@ function About() {
     <div id='about'>
       <div className="hero">
         <div className="hero--text">
-          <h1>From Concept to Creation</h1>
+          <h1>From Concept <br /> to Creation</h1>
           <p>
             Frontend Developer & Content Creator <br />
             Bridging the Gap Between Imagination and Reality
@@ -74,8 +74,8 @@ function About() {
             ref={globeEl}
             globeImageUrl={earthImg}
             backgroundColor='rgba(0,0,0,0)'
-            width={711}
-            height={711}
+            width={750}
+            height={750}
             hexPolygonsData={countries.features}
             hexPolygonMargin={0.7}
             hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}

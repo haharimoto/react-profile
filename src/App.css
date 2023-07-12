@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Mark Pro';
+  src: url('./fonts/MarkPro.ttf') format('truetype');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,7 +13,6 @@ body {
   max-width: 100%;
   background-color: rgba(255, 0, 0, 0.099);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  /* font-family: Circular Std Book, sans-serif; */
 }
 
 .App {
@@ -146,7 +150,7 @@ input:checked + .nav--toggle--slider:before {
 
 .hero {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   position: relative;
 }
 
@@ -154,7 +158,7 @@ input:checked + .nav--toggle--slider:before {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 110px;
+  margin-left: 125px;
 }
 
 .hero--text * {
@@ -162,16 +166,20 @@ input:checked + .nav--toggle--slider:before {
 }
 
 .hero--text h1 {
-  font-size: 50px;
+  font-family: 'Mark Pro', sans-serif;
+  font-size: 72px;
+  line-height: 110%;
+  letter-spacing: -.02em;
 }
 
 .hero--text p {
   margin-top: 10px;
-  font-size: 17px;
+  font-size: 19px;
 }
 
 .hero--globe {
-  padding-top: 50px;
+  margin-top: 50px;
+  margin-right: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
