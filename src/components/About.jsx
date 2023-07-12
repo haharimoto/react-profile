@@ -18,7 +18,7 @@ function About() {
     globeEl.current.pointOfView({
       lat: 23.5,
       lng: 0,
-      altitude: 2
+      altitude: 1.9
     })
   }, [globeEl.current])
 
@@ -74,8 +74,8 @@ function About() {
             ref={globeEl}
             globeImageUrl={earthImg}
             backgroundColor='rgba(0,0,0,0)'
-            width={800}
-            height={800}
+            width={711}
+            height={711}
             hexPolygonsData={countries.features}
             hexPolygonMargin={0.7}
             hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
