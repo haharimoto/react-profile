@@ -40,8 +40,8 @@ function About() {
         endLat: endCoords.latitude,
         endLng: endCoords.longitude,
         color: [
-          ["pink", "darkslateblue", "skyblue", "rebeccapurple"][Math.round(Math.random() * 3)],
-          ["pink", "darkslateblue", "skyblue", "rebeccapurple"][Math.round(Math.random() * 3)]
+          ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)],
+          ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)]
         ]
       }
     })
