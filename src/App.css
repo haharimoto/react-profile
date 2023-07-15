@@ -302,17 +302,26 @@ input:checked + .nav--toggle--slider:before {
   }
  }
 
-.project-container {
+.slideshow {
   width: 60%;
   height: 80%;
   border: blue 1px dashed;
   overflow: hidden;
 }
 
-.project-container img {
+.slideshow--slide.active {
+  display: block;
+}
+
+.slideshow--slide {
+  display: none;
+}
+
+/* object-fit: cover for perfect aspect ratio */
+.slideshow img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /*for perfect aspect ratio*/
+  object-fit: cover;
 }
 
 .footer {

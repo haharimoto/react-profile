@@ -1,28 +1,42 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 // import macbook from '../../public/macbookFrame.png'
 // import iphone from '../../public/iphone14Max.png'
-import imageApp from '../../public/carousel/images/imageApp.png'
+// import imageApp from '../../public/carousel/images/imageApp.png'
 
 
 
 function Project() {
+  const [activeIndex, setActiveIndex] = useState(0)
   const slides = [
     {image: '../../public/carousel/images/imageApp.png', name: 'imageApp'},
     {image: '../../public/carousel/images/memeGenerator.png', name: 'memeGenerator'},
     {image: '../../public/carousel/images/photoRonin.png', name: 'photoRonin'}
   ]
 
+  useEffect(() => {
+    setActiveIndex(Math.floor(Math.random() * 3))
+  }, [])
+
+  function selectSlide(index) {
+    setActiveSlide(index)
+  }
+
+
   return (
     <div id='project'>
-      <div className="project-container">
-        <img src={imageApp} alt="" />
-
-        {/* {slides.map((slide, index) => (
-          <li key={index}>
-            <img src={slide} alt="" />
-          </li>
-        ))} */}
+      <div className="slideshow">
+        {slides.map((slide, index) => (
+          <div className={`slideshow--slide ${index === activeIndex ? 'active' : ''}`} key={index}>
+            <img src={slide.image} alt="" />
+          </div>
+        ))}
+      </div>
+      <div className="buttons">
+        <button onClick={selectSlide}>Image App</button>
+        <button onClick={selectSlide}>Photo Ronin</button>
+        <button onClick={selectSlide}>Meme Generator</button>
+        <button onClick={selectSlide}>See More</button>
       </div>
     </div>
   )
@@ -30,5 +44,4 @@ function Project() {
 
 export default Project
 
-
-{/* <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8" alt="" /> */}
+{/* <img src={imageApp} alt="" /> */}
