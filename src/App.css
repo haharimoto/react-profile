@@ -43,10 +43,13 @@ body {
   background-color: #13121F;
 }
 
-#project, #content, #contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#project {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+#content, #contact {
   height: 80vh;
   border: 1px rgba(128, 128, 128, 0.495) dashed;
 }
@@ -311,6 +314,8 @@ input:checked + .nav--toggle--slider:before {
 
 .slideshow--slide.active {
   display: block;
+  /* transition: fade 1s; */
+  border: purple 1px dashed;
 }
 
 .slideshow--slide {

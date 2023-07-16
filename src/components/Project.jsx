@@ -2,25 +2,30 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 // import macbook from '../../public/macbookFrame.png'
 // import iphone from '../../public/iphone14Max.png'
-// import imageApp from '../../public/carousel/images/imageApp.png'
+import imageApp from '../../public/carousel/images/imageApp.png'
+import memeGenerator from '../../public/carousel/images/memeGenerator.png'
+import photoRonin from '../../public/carousel/images/photoRonin.png'
 
 
 
 function Project() {
   const [activeIndex, setActiveIndex] = useState(0)
   const slides = [
-    {image: '../../public/carousel/images/imageApp.png', name: 'imageApp'},
-    {image: '../../public/carousel/images/memeGenerator.png', name: 'memeGenerator'},
-    {image: '../../public/carousel/images/photoRonin.png', name: 'photoRonin'}
+    {image: imageApp, name: 'UnSplash Image App'},
+    {image: memeGenerator, name: 'Meme Generator'},
+    {image: photoRonin, name: 'Photo Ronin'}
   ]
 
   useEffect(() => {
-    setActiveIndex(Math.floor(Math.random() * 3))
-  }, [])
+    // setActiveIndex(Math.floor(Math.random() * 3))
+    const interval = setInterval(() => {
+      setActiveIndex(prevState => {
+        return (prevState + 1) % slides.length
+      })
+    }, 5000);
 
-  function selectSlide(index) {
-    setActiveSlide(index)
-  }
+    return () => clearInterval(interval)
+  }, [])
 
 
   return (
@@ -32,11 +37,11 @@ function Project() {
           </div>
         ))}
       </div>
+
       <div className="buttons">
-        <button onClick={selectSlide}>Image App</button>
-        <button onClick={selectSlide}>Photo Ronin</button>
-        <button onClick={selectSlide}>Meme Generator</button>
-        <button onClick={selectSlide}>See More</button>
+        {slides.map((slide, index) => (
+          <button key={index} onClick={() => setActiveIndex(index)}>{slide.name}</button>
+        ))}
       </div>
     </div>
   )
@@ -44,4 +49,4 @@ function Project() {
 
 export default Project
 
-{/* <img src={imageApp} alt="" /> */}
+// not recommended to use index for the key property bc the order of the index change if the structure inside of the slides array changes
