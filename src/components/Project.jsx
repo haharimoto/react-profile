@@ -46,6 +46,7 @@ function Project() {
         {slides.map((slide, index) => (
           <button key={index} onClick={() => setActiveIndex(index)}>{slide.name}</button>
         ))}
+        <button>See More</button>
       </div>
     </div>
   )
