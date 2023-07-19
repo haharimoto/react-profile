@@ -7,60 +7,60 @@ import { useState, useEffect, useRef } from 'react'
 
 
 function About() {
-  // const [arcsData, setArcsData] = useState([])
-  // const globeEl = useRef()
+  const [arcsData, setArcsData] = useState([])
+  const globeEl = useRef()
 
-  // useEffect(() => {
-  //   // Auto-rotate
-  //   globeEl.current.controls().autoRotate = true;
-  //   globeEl.current.controls().autoRotateSpeed = 0.8;
-  //   globeEl.current.controls().enableZoom = false;
-  //   globeEl.current.pointOfView({
-  //     lat: 23.5,
-  //     lng: 0,
-  //     altitude: 1.9
-  //   })
-  // }, [globeEl.current])
+  useEffect(() => {
+    // Auto-rotate
+    globeEl.current.controls().autoRotate = true;
+    globeEl.current.controls().autoRotateSpeed = 0.8;
+    globeEl.current.controls().enableZoom = false;
+    globeEl.current.pointOfView({
+      lat: 23.5,
+      lng: 0,
+      altitude: 1.9
+    })
+  }, [globeEl.current])
 
-  // function onGlobeReady() {
-  //   //* arcsData
-  //   const N = 8
-  //   const newArcsData = [...Array(N).keys()].map(() => {
-  //     // Randomly select two cities
-  //     let randomEl = Math.floor(Math.random() * cities.length)
-  //     let randomEl2
-  //     do {
-  //       randomEl2 = Math.floor(Math.random() * cities.length)
-  //     } while (randomEl === randomEl2)  // ensure endCoords is different from startCoords
-  //     const startCoords = cities[randomEl]
-  //     const endCoords = cities[randomEl2]
-  //     return {
-  //       startLat: startCoords.latitude,
-  //       startLng: startCoords.longitude,
-  //       endLat: endCoords.latitude,
-  //       endLng: endCoords.longitude,
-  //       color: [
-  //         ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)],
-  //         ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)]
-  //       ]
-  //     }
-  //   })
-  //   setArcsData(newArcsData)
-  // }
+  function onGlobeReady() {
+    //* arcsData
+    const N = 8
+    const newArcsData = [...Array(N).keys()].map(() => {
+      // Randomly select two cities
+      let randomEl = Math.floor(Math.random() * cities.length)
+      let randomEl2
+      do {
+        randomEl2 = Math.floor(Math.random() * cities.length)
+      } while (randomEl === randomEl2)  // ensure endCoords is different from startCoords
+      const startCoords = cities[randomEl]
+      const endCoords = cities[randomEl2]
+      return {
+        startLat: startCoords.latitude,
+        startLng: startCoords.longitude,
+        endLat: endCoords.latitude,
+        endLng: endCoords.longitude,
+        color: [
+          ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)],
+          ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)]
+        ]
+      }
+    })
+    setArcsData(newArcsData)
+  }
 
-  // function toggleRotation() {
-  //   globeEl.current.controls().autoRotate = !globeEl.current.controls().autoRotate
-  // }
+  function toggleRotation() {
+    globeEl.current.controls().autoRotate = !globeEl.current.controls().autoRotate
+  }
 
-  // function scrollToProject(e) {
-  //   e.preventDefault()
-  //   const projectSection = document.getElementById('project')
-  //   projectSection.scrollIntoView({ behavior: 'smooth' })
-  // }
+  function scrollToProject(e) {
+    e.preventDefault()
+    const projectSection = document.getElementById('project')
+    projectSection.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <div id='about'>
-      {/* <div className="hero">
+      <div className="hero">
         <div className="hero--text">
           <h1>from Concept <br /> to <span>Creation</span></h1>
           <p>
@@ -97,7 +97,7 @@ function About() {
           />
         </div>
         <a href='' className="hero--arrow" onClick={(e) => scrollToProject(e)}></a>
-      </div> */}
+      </div>
     </div>
   )
 }

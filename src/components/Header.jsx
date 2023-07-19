@@ -8,21 +8,20 @@ function Header() {
 
   //* understand this useEffect
   useEffect(() => {
-    // Responsive Navbar effect
     function handleScroll() {
       const about = document.getElementById('about')
       const project = document.getElementById('project')
       const content = document.getElementById('content')
+      const contact = document.getElementById('contact')
       const scrollPosition = window.pageYOffset || document.documentElement.scrollTop
-      const threshold = window.innerHeight / 2
 
-      if (scrollPosition < about.offsetTop + about.offsetHeight) {
+      if (scrollPosition < project.offsetTop) {
         setActiveLink('about')
-      } else if (scrollPosition < project.offsetTop + threshold) {
+      } else if (scrollPosition < content.offsetTop) {
         setActiveLink('project')
-      } else if (scrollPosition < content.offsetTop + threshold) {
+      } else if (scrollPosition < contact.offsetTop) {
         setActiveLink('content')
-      } else if (scrollPosition >= content.offsetTop + threshold) {
+      } else {
         setActiveLink('contact')
       }
     }

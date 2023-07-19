@@ -9,7 +9,6 @@ import smartphoneMemeGenerator from '../../public/slideshow/images/smartphoneMem
 import smartphonePhotoRonin from '../../public/slideshow/images/smartphonePhotoRonin.png'
 
 
-
 function Project() {
   const [activeIndex, setActiveIndex] = useState(0)
   const slides = [
@@ -18,16 +17,16 @@ function Project() {
     {image: photoRonin, smallImage: smartphonePhotoRonin, name: 'Photo Ronin'}
   ]
 
-  // useEffect(() => {
-  //   // setActiveIndex(Math.floor(Math.random() * 3))
-  //   const interval = setInterval(() => {
-  //     setActiveIndex(prevState => {
-  //       return (prevState + 1) % slides.length
-  //     })
-  //   }, 5000);
+  useEffect(() => {
+    // setActiveIndex(Math.floor(Math.random() * 3))
+    const interval = setInterval(() => {
+      setActiveIndex(prevState => {
+        return (prevState + 1) % slides.length
+      })
+    }, 5000);
 
-  //   return () => clearInterval(interval)
-  // }, [slides])
+    return () => clearInterval(interval)
+  }, [slides])
 
 
   return (
