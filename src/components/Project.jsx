@@ -2,30 +2,33 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 // import macbook from '../../public/macbookFrame.png'
 // import iphone from '../../public/iphone14Max.png'
-import imageApp from '../../public/carousel/images/imageApp.png'
-import memeGenerator from '../../public/carousel/images/memeGenerator.png'
-import photoRonin from '../../public/carousel/images/photoRonin.png'
+import imageApp from '../../public/slideshow/images/imageApp.png'
+import memeGenerator from '../../public/slideshow/images/memeGenerator.png'
+import photoRonin from '../../public/slideshow/images/photoRonin.png'
+import smartphoneImageApp from '../../public/slideshow/images/smartphoneImageApp.png'
+import smartphoneMemeGenerator from '../../public/slideshow/images/smartphoneMemeGenerator.png'
+import smartphonePhotoRonin from '../../public/slideshow/images/smartphonePhotoRonin.png'
 
 
 
 function Project() {
   const [activeIndex, setActiveIndex] = useState(0)
   const slides = [
-    {image: imageApp, name: 'UnSplash Image App'},
-    {image: memeGenerator, name: 'Meme Generator'},
-    {image: photoRonin, name: 'Photo Ronin'}
+    {image: imageApp, smallImage: smartphoneImageApp, name: 'UnSplash Image App'},
+    {image: memeGenerator, smallImage: smartphoneMemeGenerator, name: 'Meme Generator'},
+    {image: photoRonin, smallImage: smartphonePhotoRonin, name: 'Photo Ronin'}
   ]
 
-  useEffect(() => {
-    // setActiveIndex(Math.floor(Math.random() * 3))
-    const interval = setInterval(() => {
-      setActiveIndex(prevState => {
-        return (prevState + 1) % slides.length
-      })
-    }, 5000);
+  // useEffect(() => {
+  //   // setActiveIndex(Math.floor(Math.random() * 3))
+  //   const interval = setInterval(() => {
+  //     setActiveIndex(prevState => {
+  //       return (prevState + 1) % slides.length
+  //     })
+  //   }, 5000);
 
-    return () => clearInterval(interval)
-  }, [])
+  //   return () => clearInterval(interval)
+  // }, [slides])
 
 
   return (
@@ -33,7 +36,8 @@ function Project() {
       <div className="slideshow">
         {slides.map((slide, index) => (
           <div className={`slideshow--slide ${index === activeIndex ? 'active' : ''}`} key={index}>
-            <img src={slide.image} alt="" />
+            <img src={slide.image} alt="" className='slideshow--slide--regular'/>
+            <img src={slide.smallImage} alt="" className='slideshow--slide--smartphone'/>
           </div>
         ))}
       </div>

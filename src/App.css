@@ -306,27 +306,50 @@ input:checked + .nav--toggle--slider:before {
  }
 
 .slideshow {
-  width: 60%;
-  height: 80%;
-  border: blue 1px dashed;
-  overflow: hidden;
+  position: relative;
+  width: 942px;
+  height: 589px;
+  border: rgba(255, 255, 255, 0.51) 1px dashed;
 }
+
+/* .slideshow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../public/slideshow/frames/macbookFrame.png') center / cover no-repeat;
+  z-index: 1;
+} */
 
 .slideshow--slide.active {
   display: block;
-  /* transition: fade 1s; */
-  border: purple 1px dashed;
+  width: 100%;
+  height: 100%;
 }
 
 .slideshow--slide {
   display: none;
+  width: 100%;
+  height: 100%;
+  border: purple 1px dashed;
 }
 
 /* object-fit: cover for perfect aspect ratio */
-.slideshow img {
+/* make sure img aspect ratio matches slideshow aspect ratio */
+.slideshow--slide--regular {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.slideshow--slide--smartphone {
+  position: absolute;
+  top: 89px;
+  right: -130px;
+  width: 298px;
+  height: 607px;
 }
 
 .footer {
