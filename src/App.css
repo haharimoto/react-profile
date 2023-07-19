@@ -46,7 +46,7 @@ body {
 #project {
   display: grid;
   place-items: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 #content, #contact {
@@ -305,35 +305,32 @@ input:checked + .nav--toggle--slider:before {
   }
  }
 
-.slideshow {
-  position: relative;
-  width: 942px;
-  height: 589px;
-  border: rgba(255, 255, 255, 0.51) 1px dashed;
-}
+ .slideshow {
+  position: relative; /**relative*/
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+ }
 
-/* .slideshow::before {
-  content: "";
+ .slideshow--frame {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('../public/slideshow/frames/macbookFrame.png') center / cover no-repeat;
+  width: 1000px;
+  height: auto;
   z-index: 1;
-} */
-
-.slideshow--slide.active {
-  display: block;
-  width: 100%;
-  height: 100%;
+  /* height: 688px; */
 }
 
 .slideshow--slide {
   display: none;
-  width: 100%;
-  height: 100%;
-  border: purple 1px dashed;
+  position: absolute;
+  top: 180px;
+  width: 733px;
+  height: 456.4px;
+  /* border: purple 1px dashed; */
+}
+
+.slideshow--slide.active {
+  display: block;
 }
 
 /* object-fit: cover for perfect aspect ratio */
@@ -346,10 +343,11 @@ input:checked + .nav--toggle--slider:before {
 
 .slideshow--slide--smartphone {
   position: absolute;
-  top: 89px;
-  right: -130px;
-  width: 298px;
-  height: 607px;
+  border-radius: 10px;
+  top: 65px;
+  right: -89px;
+  width: 220px;
+  height: 474px;
 }
 
 .footer {

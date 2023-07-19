@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-// import macbook from '../../public/macbookFrame.png'
-// import iphone from '../../public/iphone14Max.png'
+import combinedFrame from '../../public/slideshow/frames/combinedFrame.png'
 import imageApp from '../../public/slideshow/images/imageApp.png'
 import memeGenerator from '../../public/slideshow/images/memeGenerator.png'
 import photoRonin from '../../public/slideshow/images/photoRonin.png'
@@ -34,6 +33,8 @@ function Project() {
   return (
     <div id='project'>
       <div className="slideshow">
+        <img src={combinedFrame} alt="" className='slideshow--frame'/>
+
         {slides.map((slide, index) => (
           <div className={`slideshow--slide ${index === activeIndex ? 'active' : ''}`} key={index}>
             <img src={slide.image} alt="" className='slideshow--slide--regular'/>
