@@ -44,7 +44,9 @@ function Project() {
 
       <div className="buttons">
         {slides.map((slide, index) => (
-          <button key={index} onClick={() => setActiveIndex(index)}>{slide.name}</button>
+          <button key={index} onClick={() => setActiveIndex(index)} className={`${index === activeIndex ? 'active' : ''}`}>
+            {slide.name}
+          </button>
         ))}
         <button>See More</button>
       </div>

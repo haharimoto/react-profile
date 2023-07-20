@@ -287,6 +287,17 @@ nav {
   text-align: center;
 }
 
+button {
+  border: none;
+  background: none;
+  color: white;
+  margin: 50px;
+}
+
+button.active {
+  text-decoration: underline;
+}
+
 .footer {
   display: flex;
   justify-content: center;

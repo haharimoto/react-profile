@@ -52,15 +52,15 @@ function About() {
   //   globeEl.current.controls().autoRotate = !globeEl.current.controls().autoRotate
   // }
 
-  // function scrollToProject(e) {
-  //   e.preventDefault()
-  //   const projectSection = document.getElementById('project')
-  //   projectSection.scrollIntoView({ behavior: 'smooth' })
-  // }
+  function scrollToProject(e) {
+    e.preventDefault()
+    const projectSection = document.getElementById('project')
+    projectSection.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <div id='about'>
-      {/* <div className="hero">
+      <div className="hero">
         <div className="hero--text">
           <h1>from Concept <br /> to <span>Creation</span></h1>
           <p>
@@ -69,7 +69,7 @@ function About() {
           </p>
         </div>
 
-        <div className="hero--globe">
+        {/* <div className="hero--globe">
           <Globe
             ref={globeEl}
             globeImageUrl={earthImg}
@@ -95,9 +95,9 @@ function About() {
             onGlobeReady={onGlobeReady}
             onGlobeRightClick={toggleRotation}
           />
-        </div>
+        </div> */}
         <a href='' className="hero--arrow" onClick={(e) => scrollToProject(e)}></a>
-      </div> */}
+      </div>
     </div>
   )
 }
