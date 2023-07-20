@@ -40,7 +40,7 @@ body {
   display: grid;
   height: 100vh;
   overflow: hidden;
-  background-color: #13121F;
+  background-color: #10101A;
 }
 
 #project {
@@ -292,10 +292,16 @@ button {
   background: none;
   color: white;
   margin: 50px;
+  font-size: 15px;
+  /* add transition */
 }
 
 button.active {
   text-decoration: underline;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .footer {
