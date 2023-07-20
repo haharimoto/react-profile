@@ -82,18 +82,18 @@ nav {
   display: flex;
 }
 
-.nav--links > a {
+.nav--links a {
   color: white;
   margin-right: 25px;
   text-decoration: none;
   font-weight: bold;
 }
 
-.nav--links > a:hover {
+.nav--links a:hover {
   color: rgb(200, 255, 255);
 }
 
-.nav--links > a.active {
+.nav--links a.active {
   text-decoration: underline;
 }
 
@@ -287,20 +287,41 @@ nav {
   text-align: center;
 }
 
-button {
+#project button {
+  position: relative;
   border: none;
   background: none;
   color: white;
   margin: 50px;
   font-size: 15px;
-  /* add transition */
 }
 
-button.active {
-  text-decoration: underline;
+#project button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0%; /* Change to 0% so the underline starts as hidden */
+  background: linear-gradient(-45deg, pink, skyblue);
 }
 
-button:hover {
+#project button.active {
+  position: relative;
+}
+
+#project button.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(-45deg, pink,skyblue);
+  transition: width 0.5s ease-in-out; /* Add transition to width */
+}
+
+#project button:hover {
   cursor: pointer;
 }
 
