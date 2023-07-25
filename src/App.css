@@ -88,17 +88,14 @@ nav {
 }
 
 .nav--links a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.25);
   margin-right: 20px;
   text-decoration: none;
 }
 
 .nav--links a:hover {
   color: rgba(200, 255, 255, 0.9);
-}
-
-.nav--links a.active {
-  color: white;
+  transition: 0.25s;
 }
 
 .hero {
@@ -328,6 +325,8 @@ nav {
 
 #project button:hover {
   cursor: pointer;
+  color: rgba(200, 255, 255, 0.9);
+  transition: 0.25s;
 }
 
 .grid-container {
@@ -341,6 +340,7 @@ nav {
 
 .grid-container > div {
   transition: transform .2s;
+  border-radius: 5px;
 }
 
 .grid-container > div:hover {

@@ -6,30 +6,7 @@ import { useState, useEffect } from 'react'
 function Header() {
   const [activeLink, setActiveLink] = useState('about')
 
-  //* understand this useEffect
-  useEffect(() => {
-    function handleScroll() {
-      const about = document.getElementById('about')
-      const project = document.getElementById('project')
-      const content = document.getElementById('content')
-      const contact = document.getElementById('contact')
-      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop
 
-      if (scrollPosition < project.offsetTop) {
-        setActiveLink('about')
-      } else if (scrollPosition < content.offsetTop) {
-        setActiveLink('project')
-      } else if (scrollPosition < contact.offsetTop) {
-        setActiveLink('content')
-      } else {
-        setActiveLink('contact')
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
 
   function scrollToSections(e, id) {
     e.preventDefault()
@@ -42,10 +19,10 @@ function Header() {
       <nav>
         <img className="nav--icon" src={avatar} alt="" />
         <div className="nav--links">
-          <a href='' className={activeLink === 'about' ? 'active' : ''} onClick={(e) => scrollToSections(e, 'about')}>About</a>
-          <a href='' className={activeLink === 'project' ? 'active' : ''} onClick={(e) => scrollToSections(e, 'project')}>Project</a>
-          <a href='' className={activeLink === 'content' ? 'active' : ''} onClick={(e) => scrollToSections(e, 'content')}>Content</a>
-          <a href='' className={activeLink === 'contact' ? 'active' : ''} onClick={(e) => scrollToSections(e, 'contact')}>Contact</a>
+          <a href='' onClick={(e) => scrollToSections(e, 'about')}>About</a>
+          <a href='' onClick={(e) => scrollToSections(e, 'project')}>Project</a>
+          <a href='' onClick={(e) => scrollToSections(e, 'content')}>Content</a>
+          <a href='' onClick={(e) => scrollToSections(e, 'contact')}>Contact</a>
         </div>
       </nav>
     </header>
