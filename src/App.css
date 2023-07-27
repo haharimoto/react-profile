@@ -369,9 +369,10 @@ nav {
   bottom: 0;
   left: 0;
   right: 0;
+  border-radius: 5px;
   background-color: black;
   opacity: 0;
-  transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .grid-container--portrait:hover::before {
@@ -383,7 +384,7 @@ nav {
   color: rgba(255, 255, 255, 0.55);
   cursor: default;
   opacity: 0;
-  transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .grid-container--portrait:hover .grid-container--portrait--text {
@@ -400,8 +401,16 @@ nav {
   grid-row: 1;
   grid-column: 3 / 4;
   background-image: url('../public/grid/sakura.jpg');
-  background-position: right 0px bottom -50px;
+  background-position: center;
   background-size: cover;
+  transition: 0.5s ease-in-out;
+}
+
+.grid-container--landscape.first:hover {
+  background-image: url('../public/grid/nightSakura.jpg');
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s ease-in-out;
 }
 
 .grid-container--landscape.second {
@@ -410,6 +419,14 @@ nav {
   background-image: url('../public/grid/doggos.jpg');
   background-position: center;
   background-size: cover;
+  transition: 0.5s ease-in-out;
+}
+
+.grid-container--landscape.second:hover {
+  background-image: url('../public/grid/taxi.jpg');
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s ease-in-out;
 }
 
 .grid-container--square {
