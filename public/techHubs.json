@@ -1,5 +1,10 @@
 [
   {
+    "city": "Raleigh",
+    "latitude": 35.7796,
+    "longitude": -78.6382
+  },
+  {
     "city": "San Francisco",
     "latitude": 37.7749,
     "longitude": -122.4194

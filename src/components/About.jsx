@@ -90,7 +90,14 @@ function About() {
             pointsData={cities}
             pointLat="latitude"
             pointLng="longitude"
-            pointColor={() => 'rgba(255, 255, 255, 1)'}
+            // pointColor={() => 'rgba(255, 255, 255, 1)'}
+            pointColor={(city) => {
+              if (city.city === 'Tokyo' || city.city === 'Beijing' || city.city === 'Raleigh') {
+                return 'lightcoral'
+              } else {
+                return 'white'
+              }
+            }}
             pointRadius={0.5}
             pointAltitude={0.01}
             pointLabel={d => `${d.city}`}
