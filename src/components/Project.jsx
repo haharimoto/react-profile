@@ -17,16 +17,16 @@ function Project() {
     {image: photoRonin, smallImage: smartphonePhotoRonin, name: 'Photo Ronin'}
   ]
 
-  // useEffect(() => {
-  //   // setActiveIndex(Math.floor(Math.random() * 3))
-  //   const interval = setInterval(() => {
-  //     setActiveIndex(prevState => {
-  //       return (prevState + 1) % slides.length
-  //     })
-  //   }, 5000);
+  useEffect(() => {
+    // setActiveIndex(Math.floor(Math.random() * 3))
+    const interval = setInterval(() => {
+      setActiveIndex(prevState => {
+        return (prevState + 1) % slides.length
+      })
+    }, 5000);
 
-  //   return () => clearInterval(interval)
-  // }, [slides])
+    return () => clearInterval(interval)
+  }, [slides])
 
 
   return (

@@ -1,13 +1,8 @@
 import React from 'react'
 import avatar from '../../public/avatar.jpg'
-import { useState, useEffect } from 'react'
 
 
 function Header() {
-  const [activeLink, setActiveLink] = useState('about')
-
-
-
   function scrollToSections(e, id) {
     e.preventDefault()
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' })

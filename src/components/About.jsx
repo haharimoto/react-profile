@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from './Header'
 import Globe from 'react-globe.gl'
 import countries from '../../public/custom.geo.json'
 import cities from '../../public/techHubs.json'
@@ -60,6 +61,7 @@ function About() {
 
   return (
     <div id='about'>
+      <Header />
       <div className="hero">
         <div className="hero--text">
           <h1>from Concept <br /> to <span>Creation</span></h1>
