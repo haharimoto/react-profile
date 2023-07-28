@@ -93,7 +93,7 @@ function About() {
             // pointColor={() => 'rgba(255, 255, 255, 1)'}
             pointColor={(city) => {
               if (city.city === 'Tokyo' || city.city === 'Beijing' || city.city === 'Raleigh') {
-                return 'lightcoral'
+                return '#5a5096'
               } else {
                 return 'white'
               }
