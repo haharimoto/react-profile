@@ -36,11 +36,16 @@ body {
   color: white;
 } */
 
-#about {
+#hero {
   display: grid;
   height: 100vh;
   overflow: hidden;
-  background-color: #10101A;
+  background-color: #10101a;
+}
+
+#about {
+  height: 100vh;
+  background-color: rgb(20, 17, 39);
 }
 
 #project {
@@ -323,8 +328,8 @@ nav {
 
 #project button:hover {
   cursor: pointer;
-  color: rgba(200, 255, 255, 0.9);
-  transition: 0.25s;
+  color: rgba(200, 255, 255);
+  transition: 0.1s;
 }
 
 .grid-container {
