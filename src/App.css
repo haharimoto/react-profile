@@ -44,8 +44,9 @@ body {
 }
 
 #about {
-  height: 100vh;
-  background-color: rgb(20, 17, 39);
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: rgb(25, 25, 25);
 }
 
 #project {
@@ -101,31 +102,31 @@ nav {
   transition: 0.1s;
 }
 
-.hero {
+.hero--container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
 }
 
-.hero--text {
+.hero--container--text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 125px;
 }
 
-.hero--text * {
+.hero--container--text * {
   margin: 0;
 }
 
-.hero--text h1 {
+.hero--container--text h1 {
   font-family: 'Mark Pro', sans-serif;
   font-size: 81px;
   line-height: 100%;
   letter-spacing: -.02em;
 }
 
-.hero--text h1 span {
+.hero--container--text h1 span {
   background: linear-gradient(-45deg, pink, rgb(128, 62, 128), rgb(0, 62, 128), skyblue);
   background-size: 400% 400%;
   color: transparent;
@@ -147,24 +148,14 @@ nav {
   }
 }
 
-.hero--text p {
+.hero--container--text p {
   margin-top: 10px;
   font-size: 19px;
   letter-spacing: 0.02em;
   opacity: 50%;
 }
 
-.hero--globe {
-  margin-top: 50px;
-  margin-right: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  opacity: 50%;
-  /* border: gray 1px dashed; */
-}
-
-.hero--arrow {
+.hero--container--arrow {
   position: absolute;
 	left: 50%;
 	bottom: 5vh;
@@ -185,7 +176,7 @@ nav {
 }
 
 /* for more clickable area */
-.hero--arrow::before {
+.hero--container--arrow::before {
   content: "";
   position: absolute;
   top: -15px;
@@ -195,7 +186,7 @@ nav {
   background-color: transparent;
 }
 
-/* for hero--arrow animation */
+/* for hero--container--arrow animation */
 @-webkit-keyframes fade_move_down {
     0% {
   -webkit-transform:translate(0, -10px) rotate(45deg);
@@ -238,15 +229,41 @@ nav {
   }
  }
 
- .slideshow {
-  position: relative; /**relative*/
-  max-width: 1000px;
-  height: 573.33px;
-  margin-left: auto;
-  margin-right: auto;
- }
+.about--container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+}
 
- .slideshow--frame {
+.about--container--globe {
+  position: absolute;
+  top: 30px;
+  left: -300px;
+  opacity: 50%;
+  /* border: gray 1px dashed; */
+}
+
+.about--container--intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 800px;
+  /* border: darkblue 1px dashed; */
+}
+
+.about--container--intro--container {
+  margin: 0px 50px;
+}
+
+.slideshow {
+position: relative; /**relative*/
+max-width: 1000px;
+height: 573.33px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.slideshow--frame {
   position: absolute;
   width: 100%;
   height: 100%;
