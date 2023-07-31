@@ -55,13 +55,14 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(180deg, rgba(7, 0, 31, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(180deg, rgba(40, 0, 31, 0.5) 0%, rgba(0, 0, 0, 0.4) 70%, rgba(10, 0, 31, 0.5) 100%);
 }
 
 #about {
   min-height: 100vh;
   overflow: hidden;
-  background-color: rgb(20, 20, 25);
+  /* background-color: rgb(12, 12, 22); */
+  background-color: #10101a;
 }
 
 #project {
@@ -142,7 +143,7 @@ nav {
 }
 
 .hero--container--text h1 span {
-  background: linear-gradient(-45deg, pink, rgb(128, 100, 128), rgb(100, 75, 120), skyblue);
+  background: linear-gradient(-45deg,skyblue, rgb(85, 72, 121), rgb(124, 84, 124), pink);
   background-size: 400% 400%;
   color: transparent;
   -webkit-background-clip: text;
