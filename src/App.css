@@ -55,29 +55,26 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  /* background: rgba(0, 0, 0, 0.6); */
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 #about {
   min-height: 100vh;
   overflow: hidden;
-  background-color: rgb(25, 25, 25);
+  background-color: rgb(20, 20, 25);
 }
 
 #project {
   padding-top: 125px;
   padding-bottom: 75px;
+  background-color: #0D1117;
+  /* border: skyblue 1px dashed; */
 }
 
 #content {
   padding: 200px 0px;
-  border: gray 1px dashed;
-}
-
-#contact {
-  min-height: 80vh;
-  border: 1px rgba(128, 128, 128, 0.495) dashed;
+  background-color: #0b0f14;
+  /* border: gray 1px dashed; */
 }
 
 header {
@@ -144,7 +141,7 @@ nav {
 }
 
 .hero--container--text h1 span {
-  background: linear-gradient(-45deg, pink, rgb(128, 100, 128), rgb(100, 66, 120), skyblue);
+  background: linear-gradient(-45deg, pink, rgb(128, 100, 128), rgb(100, 75, 120), skyblue);
   background-size: 400% 400%;
   color: transparent;
   -webkit-background-clip: text;
