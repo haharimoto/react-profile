@@ -55,7 +55,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(180deg, rgba(7, 0, 31, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 #about {
@@ -98,6 +98,7 @@ nav {
   height: 32px;
   border-radius: 50%;
   border: #0D1117 1px solid;
+  filter: saturate(80%);
 }
 
 .nav--links {
