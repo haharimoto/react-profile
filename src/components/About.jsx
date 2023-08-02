@@ -7,56 +7,56 @@ import earthImg from '../../public/earth.png'
 
 
 function About() {
-  // const [arcsData, setArcsData] = useState([])
-  // const globeEl = useRef()
+  const [arcsData, setArcsData] = useState([])
+  const globeEl = useRef()
 
-  // useEffect(() => {
-  //   // Auto-rotate
-  //   globeEl.current.controls().autoRotate = true;
-  //   globeEl.current.controls().autoRotateSpeed = 0.8;
-  //   globeEl.current.controls().enableZoom = false;
-  //   globeEl.current.pointOfView({
-  //     // lat: 23.5,
-  //     lat: 30,
-  //     lng: 155,
-  //     altitude: 1.9
-  //   })
-  // }, [globeEl.current])
+  useEffect(() => {
+    // Auto-rotate
+    globeEl.current.controls().autoRotate = true;
+    globeEl.current.controls().autoRotateSpeed = 0.8;
+    globeEl.current.controls().enableZoom = false;
+    globeEl.current.pointOfView({
+      // lat: 23.5,
+      lat: 30,
+      lng: 155,
+      altitude: 1.9
+    })
+  }, [globeEl.current])
 
-  // function onGlobeReady() {
-  //   //* arcsData
-  //   const N = 8
-  //   const newArcsData = [...Array(N).keys()].map(() => {
-  //     // Randomly select two cities
-  //     let randomEl = Math.floor(Math.random() * cities.length)
-  //     let randomEl2
-  //     do {
-  //       randomEl2 = Math.floor(Math.random() * cities.length)
-  //     } while (randomEl === randomEl2)  // ensure endCoords is different from startCoords
-  //     const startCoords = cities[randomEl]
-  //     const endCoords = cities[randomEl2]
-  //     return {
-  //       startLat: startCoords.latitude,
-  //       startLng: startCoords.longitude,
-  //       endLat: endCoords.latitude,
-  //       endLng: endCoords.longitude,
-  //       color: [
-  //         ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)],
-  //         ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)]
-  //       ]
-  //     }
-  //   })
-  //   setArcsData(newArcsData)
-  // }
+  function onGlobeReady() {
+    //* arcsData
+    const N = 7
+    const newArcsData = [...Array(N).keys()].map(() => {
+      // Randomly select two cities
+      let randomEl = Math.floor(Math.random() * cities.length)
+      let randomEl2
+      do {
+        randomEl2 = Math.floor(Math.random() * cities.length)
+      } while (randomEl === randomEl2)  // ensure endCoords is different from startCoords
+      const startCoords = cities[randomEl]
+      const endCoords = cities[randomEl2]
+      return {
+        startLat: startCoords.latitude,
+        startLng: startCoords.longitude,
+        endLat: endCoords.latitude,
+        endLng: endCoords.longitude,
+        color: [
+          ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)],
+          ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)]
+        ]
+      }
+    })
+    setArcsData(newArcsData)
+  }
 
-  // function toggleRotation() {
-  //   globeEl.current.controls().autoRotate = !globeEl.current.controls().autoRotate
-  // }
+  function toggleRotation() {
+    globeEl.current.controls().autoRotate = !globeEl.current.controls().autoRotate
+  }
 
   return (
     <div id='about'>
       <div className="about--container">
-        {/* <div className="about--container--globe">
+        <div className="about--container--globe">
           <Globe
             ref={globeEl}
             globeImageUrl={earthImg}
@@ -88,11 +88,33 @@ function About() {
             onGlobeReady={onGlobeReady}
             onGlobeRightClick={toggleRotation}
           />
-        </div> */}
+        </div>
         <div className="about--container--intro">
           <div className="about--container--intro--container">
             <h1>Hi, I'm Harry Harimoto</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem tempora dolores repellat corrupti quas at minus voluptas, porro reiciendis cum, optio dignissimos. Accusamus, beatae consequatur voluptas unde aliquam quod esse cum, incidunt neque assumenda blanditiis et dolorum nihil autem corrupti totam minima amet! Enim incidunt non minus. Quo, commodi quidem!</p>
+            <p>
+              As a Frontend Developer, I specialize in developing web applications with a focus on optimal performance and responsive design. And, when I'm not immersed in code, you'll find me exploring and appreciating the vibrant city of Tokyo, capturing the cityscape and people through my lens.
+            </p>
+            <p>
+              With the unique fortune of having experienced living in Japan, China, and the US, I've garnered a broad perspective and a global mindset from a young age. This multicultural background has empowered me to approach things differently, fostering my ability to think outside the box.
+            </p>
+            <p>
+              And, Indeed, if the Earth is our 'box', my experiences have instilled in me a profound appreciation for the boundless beauty of the universe.
+            </p>
+            <ul>
+              <li>Javascript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Ruby</li>
+              <li>React</li>
+              <li>Ruby on Rails</li>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Figma</li>
+              <li>Photoshop</li>
+              <li>Lightroom</li>
+              <li>DaVinci Resolve</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -101,3 +123,6 @@ function About() {
 }
 
 export default About
+
+{/* <p>A frontend developer specializing in web apps with optimal performance and responsive design. During my free time, I adore the beauty of Tokyo by capturing cityscape and people by portraits.</p>
+<p>Having lived in Japan, China, and the US, I was fortunate enough to experience multiple cultures and to have a global mindset since I was at a young age. This experience has led myself to be very different and to think outside the box. And, if the Earth is our box, it did not take too long for me to realize and appreciate the beauty of the universe.</p> */}

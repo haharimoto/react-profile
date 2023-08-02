@@ -55,13 +55,12 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(180deg, rgba(40, 0, 31, 0.5) 0%, rgba(0, 0, 0, 0.4) 70%, rgba(10, 0, 31, 0.5) 100%);
+  background: linear-gradient(175deg, rgba(40, 0, 31, 0.3) 0%, rgba(0, 0, 0, 0.4) 70%, rgba(10, 0, 31, 0.6) 100%);
 }
 
 #about {
   min-height: 100vh;
   overflow: hidden;
-  /* background-color: rgb(12, 12, 22); */
   background-color: #10101a;
 }
 
@@ -76,6 +75,14 @@ body {
   padding: 200px 0px;
   background-color: #0b0f14;
   /* border: gray 1px dashed; */
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #10101a;
 }
 
 header {
@@ -99,7 +106,7 @@ nav {
   height: 32px;
   border-radius: 50%;
   border: #0D1117 1px solid;
-  filter: saturate(80%);
+  filter: saturate(90%);
 }
 
 .nav--links {
@@ -140,6 +147,7 @@ nav {
   font-size: 81px;
   line-height: 100%;
   letter-spacing: -.02em;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .hero--container--text h1 span {
@@ -268,7 +276,39 @@ nav {
 }
 
 .about--container--intro--container {
-  margin: 0px 50px;
+  margin: 0px 120px;
+  padding-top: 50px;
+}
+
+.about--container--intro--container h1 {
+  margin: 20px 0px 30px 0px;
+  font-family: 'Mark Pro', sans-serif;
+  line-height: 100%;
+  letter-spacing: -.02em;
+}
+
+.about--container--intro--container p {
+  opacity: 75%;
+  margin: 20px 0px;
+  letter-spacing: 0.02em;
+}
+
+.about--container--intro--container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 40px;
+}
+
+.about--container--intro--container li {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
 }
 
 .slideshow {
@@ -487,11 +527,4 @@ margin-right: auto;
   background-image: url('../public/grid/ramen.jpg');
   background-position: center;
   background-size: cover;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
 }
