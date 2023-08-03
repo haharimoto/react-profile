@@ -123,6 +123,3 @@ function About() {
 }
 
 export default About
-
-{/* <p>A frontend developer specializing in web apps with optimal performance and responsive design. During my free time, I adore the beauty of Tokyo by capturing cityscape and people by portraits.</p>
-<p>Having lived in Japan, China, and the US, I was fortunate enough to experience multiple cultures and to have a global mindset since I was at a young age. This experience has led myself to be very different and to think outside the box. And, if the Earth is our box, it did not take too long for me to realize and appreciate the beauty of the universe.</p> */}

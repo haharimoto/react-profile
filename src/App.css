@@ -55,7 +55,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(175deg, rgba(40, 0, 31, 0.3) 0%, rgba(0, 0, 0, 0.4) 70%, rgba(10, 0, 31, 0.6) 100%);
+  background: linear-gradient(175deg, rgba(40, 0, 31, 0.2) 0%, rgba(0, 0, 0, 0.4) 70%, rgba(10, 0, 31, 0.8) 100%);
 }
 
 #about {
@@ -88,9 +88,7 @@ body {
 header {
   position: absolute;
   display: grid;
-  height: 50px;
   width: 100%;
-  padding: 0px 5px 0px 25px;
   background-color: transparent;
   z-index: 10;
 }
@@ -99,29 +97,36 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* margin: 10px 30px 0px 30px; */
+  margin: 10px 0 0 20px;
 }
 
 .nav--icon {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: #0D1117 1px solid;
-  filter: saturate(90%);
+  opacity: 90%;
 }
 
 .nav--links {
   display: flex;
+  padding: 20px 80px 20px 40px;
+  background-color: rgba(255, 255, 255, 0.075);
+  backdrop-filter: blur(1px);
 }
 
 .nav--links a {
   color: rgb(255, 255, 255);
-  margin-right: 20px;
   text-decoration: none;
+}
+
+.nav--links a:not(:last-child) {
+  margin-right: 30px;
 }
 
 .nav--links a:hover {
   color: rgb(200, 255, 255);
-  transition: 0.1s;
 }
 
 .hero--container {
@@ -176,7 +181,7 @@ nav {
   margin-top: 10px;
   font-size: 19px;
   letter-spacing: 0.02em;
-  opacity: 50%;
+  opacity: 75%;
 }
 
 .hero--container--arrow {
@@ -295,7 +300,7 @@ nav {
 
 .about--container--intro--container ul {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*used so that the items will wrap onto multiple lines if there is not enough space in a single line.*/
   padding: 0;
   margin: 0;
   list-style: none;

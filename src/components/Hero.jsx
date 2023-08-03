@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from './Header'
 
 
 function Hero() {
@@ -12,7 +11,6 @@ function Hero() {
 
   return (
     <div id='hero'>
-      <Header />
       <div className="hero--container">
         <div className="hero--container--text">
           <h1>from Concept <br /> to <span>Creation</span></h1>
