@@ -309,6 +309,13 @@ nav {
   background-color: rgba(255, 255, 255, 0.05);
   color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
+  transition: transform 0.1s ease-in-out;
+  cursor: default;
+}
+
+.about--container--intro--container li:hover {
+  transform: scale(1.1);
+  transition: 0.1s ease-in-out;
 }
 
 .slideshow {
@@ -415,7 +422,7 @@ margin-right: auto;
 }
 
 .grid-container > div {
-  transition: transform .2s;
+  transition: transform .25s ease-in-out;
   border-radius: 5px;
 }
 
