@@ -13,7 +13,6 @@ function Header() {
     <header>
       <nav>
         <img className="nav--icon" src={moonIcon} alt="" />
-        {/* <div className="nav--line"></div> */}
         <div className="nav--links">
           <a href='' onClick={(e) => scrollToSections(e, 'about')}>About</a>
           <a href='' onClick={(e) => scrollToSections(e, 'project')}>Project</a>

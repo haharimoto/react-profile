@@ -7,14 +7,15 @@ import photoRonin from '../../public/slideshow/images/photoRonin.png'
 import smartphoneImageApp from '../../public/slideshow/images/smartphoneImageApp.png'
 import smartphoneMemeGenerator from '../../public/slideshow/images/smartphoneMemeGenerator.png'
 import smartphonePhotoRonin from '../../public/slideshow/images/smartphonePhotoRonin.png'
+// import linkIcon from '../../public/slideshow/external-link.png'
 
 
 function Project() {
   const [activeIndex, setActiveIndex] = useState(0)
   const slides = [
-    {image: imageApp, smallImage: smartphoneImageApp, name: 'UnSplash Image App'},
-    {image: memeGenerator, smallImage: smartphoneMemeGenerator, name: 'Meme Generator'},
-    {image: photoRonin, smallImage: smartphonePhotoRonin, name: 'Photo Ronin'}
+    {image: imageApp, smallImage: smartphoneImageApp, name: 'UnSplash Image App', url: 'http://example1.com', description: 'Unsplash description'},
+    {image: photoRonin, smallImage: smartphonePhotoRonin, name: 'Photo Ronin', url: 'http://example2.com', description: 'Photo Ronin description'},
+    {image: memeGenerator, smallImage: smartphoneMemeGenerator, name: 'Meme Generator', url: 'http://example3.com', description: 'Meme Generator description'}
   ]
 
   useEffect(() => {
@@ -32,7 +33,7 @@ function Project() {
   return (
     <div id='project'>
       <div className="slideshow">
-        <img src={combinedFrame} alt="" className='slideshow--frame'/>
+        <img className='slideshow--frame' src={combinedFrame} alt="" />
 
         {slides.map((slide, index) => (
           <div className={`slideshow--slide ${index === activeIndex ? 'active' : ''}`} key={index}>
