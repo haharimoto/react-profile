@@ -4,7 +4,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Project from './components/Project'
 import Content from './components/Content'
-import Footer from './components/Footer'
+import Contact from './components/Contact'
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <About />
       <Project />
       <Content />
-      <Footer />
+      <Contact />
     </div>
   )
 }
