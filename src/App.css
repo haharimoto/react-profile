@@ -556,11 +556,7 @@ footer h2 {
 .footer--container {
   display: flex;
   justify-content: space-between;
-  margin: 50px 200px;
-}
-
-.footer--container div {
-  /* border: white 1px dashed; */
+  margin: 40px 200px;
 }
 
 .footer--container div:first-child * {
@@ -569,9 +565,10 @@ footer h2 {
 
 .footer--container div h2 {
   margin-bottom: 5px;
+  cursor: default;
 }
 
-.footer--container img {
+.footer--container--first img {
   width: 66px;
   height: 66px;
   border-radius: 50%;
@@ -584,6 +581,18 @@ footer h2 {
 
 .footer--container--second--links a {
   text-decoration: none;
+  filter: saturate(0%);
+  transition: filter 0.2s ease-in-out;
+}
+
+.footer--container--second--links a:hover {
+  filter: saturate(90%);
+  transition: filter 0.1s ease-in-out;
+}
+
+.footer--container--second--links img {
+  width: 32px;
+  height: 32px;
 }
 
 .footer--end {
@@ -598,6 +607,15 @@ footer h2 {
   color: rgba(255, 255, 255, 0.5);
   font-size: 12px;
   text-decoration: none;
+}
+
+.footer--end p {
+  margin: 0;
+  cursor: default;
+}
+
+.footer--end a:hover {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .footer--end--links a:not(:last-child) {
