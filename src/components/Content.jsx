@@ -36,12 +36,12 @@ function Content() {
             </div>
             <div className="grid-container--landscape third"></div>
             <div className="grid-container--landscape fourth"></div>
-            {/* <div className="grid-container--landscape fifth"></div>
-            <div className="grid-container--landscape sixth"></div> */}
+            <div className="grid-container--landscape fifth"></div>
+            <div className="grid-container--landscape sixth"></div>
             <div className="grid-container--square third"></div>
             <div className="grid-container--square fourth"></div>
-            {/* <div className="grid-container--square fifth"></div>
-            <div className="grid-container--square sixth"></div> */}
+            <div className="grid-container--square fifth"></div>
+            <div className="grid-container--square sixth"></div>
 
 
           </>

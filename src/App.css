@@ -416,6 +416,7 @@ margin-right: auto;
   transition: 0.1s;
 }
 
+/** --------------------GRID-------------------- */
 .grid-container {
   display: grid;
   justify-content: center;
@@ -466,7 +467,7 @@ margin-right: auto;
 .grid-container--portrait.third {
   position: relative;
   grid-row: 9 / 13;
-  grid-column: 1 / 5;
+  grid-column: 1 / 4;
   /* background-image: url('../public/grid/harimoto.jpg'); */
   background-position: right 0px;
   background-size: cover;
@@ -516,12 +517,6 @@ margin-right: auto;
   transition: 0.5s ease-in-out;
 }
 
-.grid-container--landscape.first:hover {
-  background-image: url('../public/grid/nightSakura.jpg');
-  background-position: center;
-  background-size: cover;
-  transition: 0.5s ease-in-out;
-}
 
 .grid-container--landscape.second {
   grid-row: 3 / 5;
@@ -545,6 +540,31 @@ margin-right: auto;
   grid-row: 7 / 9;
   grid-column: 3 / 7;
   /* background-image: url('../public/grid/doggos.jpg'); */
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+}
+
+.grid-container--landscape.fifth {
+  grid-row: 9 / 11;
+  grid-column: 4 / 8;
+  /* background-image: url('../public/grid/doggos.jpg'); */
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+}
+
+.grid-container--landscape.sixth {
+  grid-row: 11 / 13;
+  grid-column: 6 / 11;
+  /* background-image: url('../public/grid/doggos.jpg'); */
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s ease-in-out;
+}
+
+.grid-container--landscape.first:hover {
+  background-image: url('../public/grid/nightSakura.jpg');
   background-position: center;
   background-size: cover;
   transition: 0.5s ease-in-out;
@@ -594,6 +614,24 @@ margin-right: auto;
   background-position: center;
   background-size: cover;
 }
+
+.grid-container--square.fifth {
+  grid-row: 9 / 11;
+  grid-column: 8 / 11;
+  /* background-image: url('../public/grid/ramen.jpg'); */
+  background-position: center;
+  background-size: cover;
+}
+
+.grid-container--square.sixth {
+  grid-row: 11 / 13;
+  grid-column: 4 / 6;
+  /* background-image: url('../public/grid/ramen.jpg'); */
+  background-position: center;
+  background-size: cover;
+}
+
+/** --------------------GRID-------------------- */
 
 footer {
   display: flex;
