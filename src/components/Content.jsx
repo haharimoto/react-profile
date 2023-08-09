@@ -53,7 +53,9 @@ function Content() {
          )
         }
       </animated.div>
-      <button onClick={() => {setIsShowMore(!isShowMore)}}>button</button>
+      <button onClick={() => {setIsShowMore(!isShowMore)}}>
+        {isShowMore ? 'COLLAPSE' : 'EXPAND' }
+      </button>
     </div>
   )
 }

@@ -74,6 +74,8 @@ body {
 #content {
   padding: 150px 0px;
   background-color: #0b0f14;
+  display: grid;
+  place-items: center;
   /* border: gray 1px dashed; */
 }
 
@@ -424,11 +426,12 @@ margin-right: auto;
   gap: 10px;
   padding: 10px 0px;
   overflow: hidden;
-  border: gray 2px solid;
+  width: 100%;
+  /* border: gray 2px solid; */
 }
 
 .grid-container > div {
-  transition: transform .25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
   border-radius: 5px;
 }
 
@@ -632,6 +635,23 @@ margin-right: auto;
   background-size: cover;
 }
 
+#content button {
+  width: 100px;
+  height: 50px;
+  margin-top: 40px;
+  padding: 0;
+  color: white;
+  background-color: transparent;
+  border: white 2px solid;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+}
+
+#content button:hover {
+  transform: scale(1.05);
+  transition: 0.1s ease-in-out;
+}
+
 /** --------------------GRID-------------------- */
 
 footer {
@@ -669,14 +689,19 @@ footer h2 {
   opacity: 90%;
 }
 
-.footer--container--second--links {
-  display: grid;
+.footer--container--second {
+  display: flex;
+  align-items: end;
 }
 
 .footer--container--second--links a {
   text-decoration: none;
   filter: saturate(0%);
   transition: filter 0.2s ease-in-out;
+}
+
+.footer--container--second--links a:not(:last-child) {
+  margin-right: 20px;
 }
 
 .footer--container--second--links a:hover {
