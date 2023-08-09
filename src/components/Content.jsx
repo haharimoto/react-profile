@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import { animated, useSpring } from 'react-spring';
+import upIcon from '../../public/grid/up.png'
+import downIcon from '../../public/grid/down.png'
 
 function Content() {
   const [isShowMore, setIsShowMore] = useState(false)
@@ -9,7 +11,7 @@ function Content() {
   const animation = useSpring({
     // maxHeight: isShowMore ? '1440px' : '480px',
     // after adding gap =>
-    maxHeight: isShowMore ? '1580px' : '540px',
+    maxHeight: isShowMore ? '1570px' : '530px',
     config: { tension: 120, friction: 14 }
   });
 
@@ -29,16 +31,8 @@ function Content() {
 
         {isShowMore && (
           <>
-            <div className="grid-container--portrait second">
-              <div className="grid-container--portrait second--text">
-                Second Portrait
-              </div>
-            </div>
-            <div className="grid-container--portrait third">
-              <div className="grid-container--portrait third--text">
-                Third Portrait
-              </div>
-            </div>
+            <div className="grid-container--portrait second"></div>
+            <div className="grid-container--portrait third"></div>
             <div className="grid-container--landscape third"></div>
             <div className="grid-container--landscape fourth"></div>
             <div className="grid-container--landscape fifth"></div>
@@ -47,14 +41,16 @@ function Content() {
             <div className="grid-container--square fourth"></div>
             <div className="grid-container--square fifth"></div>
             <div className="grid-container--square sixth"></div>
-
-
           </>
          )
         }
       </animated.div>
       <button onClick={() => {setIsShowMore(!isShowMore)}}>
-        {isShowMore ? 'COLLAPSE' : 'EXPAND' }
+        {isShowMore ?
+          <img className='button--up' src={upIcon} alt="" />
+          :
+          <img className='button--down' src={downIcon} alt="" />
+        }
       </button>
     </div>
   )

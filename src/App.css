@@ -55,7 +55,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(175deg, rgba(40, 0, 31, 0.2) 0%, rgba(0, 0, 0, 0.4) 70%, rgba(10, 0, 31, 0.8) 100%);
+  background: linear-gradient(175deg, rgba(40, 0, 40, 0.3) 0%, rgba(0, 0, 0, 0.4) 70%, rgba(10, 0, 31, 0.8) 100%);
 }
 
 #about {
@@ -441,12 +441,13 @@ margin-right: auto;
 }
 
 .grid-container--portrait {
-  border: pink 1px dashed;
   width: 380px;
   height: 510px;
+  /* border: pink 1px dashed; */
 }
 
 /* object-fit property does not work on background-image */
+/*! issue------------------------------------------------- */
 .grid-container--portrait.first {
   position: relative;
   grid-row: 1 / 5;
@@ -495,6 +496,8 @@ margin-right: auto;
 }
 
 .grid-container--portrait.first--text {
+  width: auto;
+  height: 50px;
   position: relative;
   color: rgba(255, 255, 255, 0.5);
   cursor: default;
@@ -636,22 +639,38 @@ margin-right: auto;
 }
 
 #content button {
-  width: 100px;
-  height: 50px;
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 0;
   color: white;
   background-color: transparent;
-  border: white 2px solid;
-  border-radius: 5px;
+  border: transparent;
+  filter: invert(100%);
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+
+.button--down {
+  transition: 0.4s ease-in-out;
+  opacity: 80%;
+}
+
+.button--up {
+  transition: 0.4s ease-in-out;
+  opacity: 100%;
+}
+
+.button--down:hover {
+  transform: scale(1.1) translateY(5px);
+  opacity: 100%;
   transition: 0.2s ease-in-out;
 }
 
-#content button:hover {
-  transform: scale(1.05);
-  transition: 0.1s ease-in-out;
+.button--up:hover {
+  transform: scale(0.9) translateY(-5px);
+  opacity: 80%;
+  transition: 0.2s ease-in-out;
 }
-
 /** --------------------GRID-------------------- */
 
 footer {
