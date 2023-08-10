@@ -46,11 +46,7 @@ function Content() {
         }
       </animated.div>
       <button onClick={() => {setIsShowMore(!isShowMore)}}>
-        {isShowMore ?
-          <img className='button--up' src={upIcon} alt="" />
-          :
-          <img className='button--down' src={downIcon} alt="" />
-        }
+        {isShowMore ? <img className='button--up' src={upIcon} alt="" /> : <img className='button--down' src={downIcon} alt="" />}
       </button>
     </div>
   )
