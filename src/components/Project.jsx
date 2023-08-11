@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import combinedFrame from '../../public/slideshow/frames/combinedFrame.png'
 import imageApp from '../../public/slideshow/images/imageApp.png'
 import memeGenerator from '../../public/slideshow/images/memeGenerator.png'
@@ -17,6 +18,8 @@ function Project() {
     {image: photoRonin, smallImage: smartphonePhotoRonin, name: 'Photo Ronin', url: 'http://example2.com', description: 'Photo Ronin description'},
     {image: memeGenerator, smallImage: smartphoneMemeGenerator, name: 'Meme Generator', url: 'http://example3.com', description: 'Meme Generator description'}
   ]
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     // setActiveIndex(Math.floor(Math.random() * 3))
@@ -49,7 +52,7 @@ function Project() {
             {slide.name}
           </button>
         ))}
-        <button>See More</button>
+        <button onClick={() => navigate('/project')}>See More</button>
       </div>
     </div>
   )

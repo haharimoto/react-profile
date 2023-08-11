@@ -5,19 +5,30 @@ import About from './components/About'
 import Project from './components/Project'
 import Content from './components/Content'
 import Contact from './components/Contact'
+import ProjectPage from './components/ProjectPage'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
 function App() {
 
   return (
-    <div className="App">
+    <BrowserRouter>
       <Header />
-      <Hero />
-      <About />
-      <Project />
-      <Content />
-      <Contact />
-    </div>
+      <div className="App">
+        <Routes>
+          <Route path='/' element={
+            <>
+              <Hero />
+              <About />
+              <Project />
+              <Content />
+              <Contact />
+            </>
+          } />
+          <Route path="/project" element={<ProjectPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 
