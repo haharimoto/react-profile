@@ -78,6 +78,10 @@ body {
   background-color: #10101a;
 }
 
+#project-page {
+  min-height: 100vh;
+}
+
 header {
   position: absolute;
   display: grid;
@@ -414,8 +418,47 @@ margin-right: auto;
   color: rgba(200, 255, 255);
   transition: 0.1s;
 }
- /**--------------------Project section-------------------- */
+/**--------------------Project section-------------------- */
 
+
+/*! -------------------ProjectPage section------------------- */
+.project-page--projects {
+  display: grid;
+  place-items: center;
+  padding: 200px 0px;
+  /* border: white 1px dashed; */
+}
+
+.project-page--projects .project {
+  display: flex;
+  width: 1000px;
+  height: 400px;
+  margin-bottom: 100px;
+  border: pink 1px solid;
+}
+
+.project-page--projects img {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+  /* border: white 1px solid; */
+}
+
+.project-page--projects .project--text {
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+}
+
+.project-page--projects .project--text * {
+  margin: 0;
+}
+
+.project-page--projects .project--text h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+/** -------------------ProjectPage section------------------- */
 
 /** --------------------Contents section-------------------- */
 .grid-container {

@@ -13,11 +13,11 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header />
       <div className="App">
         <Routes>
           <Route path='/' element={
             <>
+              <Header />
               <Hero />
               <About />
               <Project />
