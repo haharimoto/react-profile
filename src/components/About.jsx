@@ -7,56 +7,56 @@ import earthImg from '../../public/earth.png'
 
 
 function About() {
-  // const [arcsData, setArcsData] = useState([])
-  // const globeEl = useRef()
+  const [arcsData, setArcsData] = useState([])
+  const globeEl = useRef()
 
-  // useEffect(() => {
-  //   // Auto-rotate
-  //   globeEl.current.controls().autoRotate = true;
-  //   globeEl.current.controls().autoRotateSpeed = 0.8;
-  //   globeEl.current.controls().enableZoom = false;
-  //   globeEl.current.pointOfView({
-  //     // lat: 23.5,
-  //     lat: 30,
-  //     lng: 155,
-  //     altitude: 1.9
-  //   })
-  // }, [globeEl.current])
+  useEffect(() => {
+    // Auto-rotate
+    globeEl.current.controls().autoRotate = true;
+    globeEl.current.controls().autoRotateSpeed = 0.8;
+    globeEl.current.controls().enableZoom = false;
+    globeEl.current.pointOfView({
+      // lat: 23.5,
+      lat: 30,
+      lng: 155,
+      altitude: 1.9
+    })
+  }, [globeEl.current])
 
-  // function onGlobeReady() {
-  //   //* arcsData
-  //   const N = 7
-  //   const newArcsData = [...Array(N).keys()].map(() => {
-  //     // Randomly select two cities
-  //     let randomEl = Math.floor(Math.random() * cities.length)
-  //     let randomEl2
-  //     do {
-  //       randomEl2 = Math.floor(Math.random() * cities.length)
-  //     } while (randomEl === randomEl2)  // ensure endCoords is different from startCoords
-  //     const startCoords = cities[randomEl]
-  //     const endCoords = cities[randomEl2]
-  //     return {
-  //       startLat: startCoords.latitude,
-  //       startLng: startCoords.longitude,
-  //       endLat: endCoords.latitude,
-  //       endLng: endCoords.longitude,
-  //       color: [
-  //         ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)],
-  //         ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)]
-  //       ]
-  //     }
-  //   })
-  //   setArcsData(newArcsData)
-  // }
+  function onGlobeReady() {
+    //* arcsData
+    const N = 7
+    const newArcsData = [...Array(N).keys()].map(() => {
+      // Randomly select two cities
+      let randomEl = Math.floor(Math.random() * cities.length)
+      let randomEl2
+      do {
+        randomEl2 = Math.floor(Math.random() * cities.length)
+      } while (randomEl === randomEl2)  // ensure endCoords is different from startCoords
+      const startCoords = cities[randomEl]
+      const endCoords = cities[randomEl2]
+      return {
+        startLat: startCoords.latitude,
+        startLng: startCoords.longitude,
+        endLat: endCoords.latitude,
+        endLng: endCoords.longitude,
+        color: [
+          ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)],
+          ["pink", "darkslateblue", "skyblue", "azure"][Math.round(Math.random() * 3)]
+        ]
+      }
+    })
+    setArcsData(newArcsData)
+  }
 
-  // function toggleRotation() {
-  //   globeEl.current.controls().autoRotate = !globeEl.current.controls().autoRotate
-  // }
+  function toggleRotation() {
+    globeEl.current.controls().autoRotate = !globeEl.current.controls().autoRotate
+  }
 
   return (
     <div id='about'>
       <div className="about--container">
-        {/* <div className="about--container--globe">
+        <div className="about--container--globe">
           <Globe
             ref={globeEl}
             globeImageUrl={earthImg}
@@ -88,7 +88,7 @@ function About() {
             onGlobeReady={onGlobeReady}
             onGlobeRightClick={toggleRotation}
           />
-        </div> */}
+        </div>
         <div className="about--container--intro">
           <div className="about--container--intro--text">
             <h1>Hi, I'm Harry Harimoto</h1>

@@ -14,9 +14,9 @@ import smartphonePhotoRonin from '../../public/slideshow/images/smartphonePhotoR
 function Project() {
   const [activeIndex, setActiveIndex] = useState(0)
   const slides = [
-    {image: imageApp, smallImage: smartphoneImageApp, name: 'UnSplash Image App', url: 'http://example1.com', description: 'Unsplash description'},
-    {image: photoRonin, smallImage: smartphonePhotoRonin, name: 'Photo Ronin', url: 'http://example2.com', description: 'Photo Ronin description'},
-    {image: memeGenerator, smallImage: smartphoneMemeGenerator, name: 'Meme Generator', url: 'http://example3.com', description: 'Meme Generator description'}
+    {image: imageApp, smallImage: smartphoneImageApp, name: 'UnSplash App'},
+    {image: photoRonin, smallImage: smartphonePhotoRonin, name: 'Photo Ronin'},
+    {image: memeGenerator, smallImage: smartphoneMemeGenerator, name: 'Meme Generator'}
   ]
 
   const navigate = useNavigate()
