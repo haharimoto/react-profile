@@ -436,20 +436,56 @@ margin-right: auto;
   margin-bottom: 100px;
   border: rgba(255, 255, 255, 0.5) 1px solid;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .project--image {
   position: relative;
 }
 
-.project .image-overlay {
+.project:nth-child(1) .image-overlay {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: #101b2bba;
+  pointer-events: none;
+}
+
+.project:nth-child(2) .image-overlay,
+.project:nth-child(3) .image-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.project:nth-child(5) .image-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(45, 30, 45, 0.45);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.project:nth-child(4) .image-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
   pointer-events: none;
   z-index: 1;
 }
@@ -457,7 +493,18 @@ margin-right: auto;
 .project img {
   width: 400px;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.project:nth-child(4) .globe {
+  width: 400px;
+  height: 100%;
+  opacity: 90%;
+  pointer-events: none;
+}
+
+.project:nth-child(5) img {
+  transform: scale(0.5);
 }
 
 .hover-text {
@@ -466,16 +513,17 @@ margin-right: auto;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  background-color: rgba(128, 128, 128, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   padding: 12px 24px;
+  border: rgb(40, 40, 40) 2px solid;
   border-radius: 25px;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 .project a:hover .hover-text {
   opacity: 1;
-  transition: 0.1s;
+  transition: 0.2s;
 }
 
 .project .project--text {
