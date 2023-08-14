@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 import moonIcon from '../../public/moonIcon.png'
 import instagramIcon from '../../public/footer/instagram.png'
 import githubIcon from '../../public/footer/github.png'
@@ -6,6 +7,8 @@ import linkedinIcon from '../../public/footer/linkedin.png'
 import upworkIcon from '../../public/footer/upwork.png'
 
 function Contact() {
+  const location = useLocation()
+
   function scrollToSections(e, id) {
     e.preventDefault()
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
@@ -18,7 +21,9 @@ function Contact() {
         <div className="footer--container">
 
           <div className="footer--container--first">
-            <img className='footer--icon' src={moonIcon} alt="" />
+            <a href="/">
+              <img className='footer--icon' src={moonIcon} alt="" />
+            </a>
             <h2>
               from Concept <br />
               to <span>Creation</span>
@@ -47,13 +52,13 @@ function Contact() {
           <div>
             <p>© 2023 haharimoto</p>
           </div>
-          <div className="footer--end--links">
+          {location.pathname === '/' && <div className="footer--end--links">
             <a href='' onClick={(e) => scrollToSections(e, 'hero')}>Home</a>
             <a href='' onClick={(e) => scrollToSections(e, 'about')}>About</a>
             <a href='' onClick={(e) => scrollToSections(e, 'project')}>Project</a>
             <a href='' onClick={(e) => scrollToSections(e, 'content')}>Content</a>
             <a href='' onClick={(e) => scrollToSections(e, 'contact')}>Contact</a>
-          </div>
+          </div>}
         </div>
       </footer>
     </div>

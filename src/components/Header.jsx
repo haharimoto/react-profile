@@ -1,8 +1,11 @@
 import React from 'react'
 import moonIcon from '../../public/moonIcon.png'
+import { useLocation } from 'react-router-dom'
 
 
 function Header() {
+  const location = useLocation()
+
   function scrollToSections(e, id) {
     e.preventDefault()
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
@@ -12,13 +15,15 @@ function Header() {
   return (
     <header>
       <nav>
-        <img className="nav--icon" src={moonIcon} alt="" />
-        <div className="nav--links">
+        <a href="/">
+          <img className="nav--icon" src={moonIcon} alt="" />
+        </a>
+        {location.pathname === '/' && <div className="nav--links">
           <a href='' onClick={(e) => scrollToSections(e, 'about')}>About</a>
           <a href='' onClick={(e) => scrollToSections(e, 'project')}>Project</a>
           <a href='' onClick={(e) => scrollToSections(e, 'content')}>Content</a>
           <a href='' onClick={(e) => scrollToSections(e, 'contact')}>Contact</a>
-        </div>
+        </div>}
       </nav>
     </header>
   )

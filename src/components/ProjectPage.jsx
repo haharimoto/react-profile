@@ -180,7 +180,6 @@ function ProjectPage() {
           </div>
         </div>
 
-
       </div>
       <Contact />
     </div>
