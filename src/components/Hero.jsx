@@ -26,13 +26,3 @@ function Hero() {
 }
 
 export default Hero
-
-
-// GeoJSON
-// https://geojson-maps.ash.ms/
-// does not provide Antarctica but is light-weight and fast loading
-// use website down below for all the continents, but beware bc the file size is too big and cause lengthy loading of the globe
-// http://geojson.xyz/
-
-
-// The useRef hook is used to reference a value that’s not needed for rendering. In this case, it’s used to reference the Globe component so that it can be manipulated using the controls() method of the globeEl.current object. The controls() method is used to access the controls of the globe and set the autoRotate and autoRotateSpeed properties to true and 1 respectively. This makes the globe rotate automatically1. (BING AI)
