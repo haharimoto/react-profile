@@ -8,7 +8,6 @@ import photoRonin from '../../public/slideshow/images/photoRonin.png'
 import smartphoneImageApp from '../../public/slideshow/images/smartphoneImageApp.png'
 import smartphoneMemeGenerator from '../../public/slideshow/images/smartphoneMemeGenerator.png'
 import smartphonePhotoRonin from '../../public/slideshow/images/smartphonePhotoRonin.png'
-// import linkIcon from '../../public/slideshow/external-link.png'
 
 
 function Project() {
@@ -22,7 +21,6 @@ function Project() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    // setActiveIndex(Math.floor(Math.random() * 3))
     const interval = setInterval(() => {
       setActiveIndex(prevState => {
         return (prevState + 1) % slides.length

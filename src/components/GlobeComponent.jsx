@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 import Globe from 'react-globe.gl'
 import countries from '../../public/custom.geo.json'
 import cities from '../../public/techHubs.json'
@@ -9,23 +10,29 @@ import earthImg from '../../public/earth.png'
 function GlobeComponent() {
   const [arcsData, setArcsData] = useState([])
   const globeEl = useRef()
+  const location = useLocation()
 
   useEffect(() => {
-    // Auto-rotate
     globeEl.current.controls().autoRotate = true;
-    globeEl.current.controls().autoRotateSpeed = 0.8;
+    globeEl.current.controls().autoRotateSpeed = location.pathname === '/' ? 0.8 : 1;
     globeEl.current.controls().enableZoom = false;
     globeEl.current.pointOfView({
-      // lat: 23.5,
-      lat: 30,
+      lat: location.pathname === '/' ? 30 : 23.5,
       lng: 155,
-      altitude: 1.9
+      altitude: location.pathname === '/' ? 1.9 : 1.95
     })
-  }, [globeEl.current])
+  }, [globeEl.current, location.pathname])
 
   function onGlobeReady() {
     //* arcsData
-    const N = 7
+    let N
+
+    if (location.pathname === '/') {
+      N = 7
+    } else {
+      N = 5
+    }
+
     const newArcsData = [...Array(N).keys()].map(() => {
       // Randomly select two cities
       let randomEl = Math.floor(Math.random() * cities.length)
@@ -60,8 +67,8 @@ function GlobeComponent() {
         ref={globeEl}
         globeImageUrl={earthImg}
         backgroundColor='rgba(0,0,0,0)'
-        width={1100}
-        height={1100}
+        width={location.pathname === '/' ? 1100 : 400}
+        height={location.pathname === '/' ? 1100 : 400}
         hexPolygonsData={countries.features}
         hexPolygonMargin={0.7}
         hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
