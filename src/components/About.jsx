@@ -1,13 +1,14 @@
-import React from 'react'
-import GlobeComponent from './GlobeComponent'
-
+import React, {Suspense} from 'react'
+const LazyGlobe = React.lazy(() => import('./GlobeComponent'))
 
 function About() {
   return (
     <div id='about'>
       <div className="about--container">
         <div className="about--container--globe">
-          <GlobeComponent />
+          <Suspense fallback={<div>Loading globe...</div>}>
+            <LazyGlobe />
+          </Suspense>
         </div>
         <div className="about--container--intro">
           <div className="about--container--intro--text">
