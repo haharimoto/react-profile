@@ -1,4 +1,4 @@
-// import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
@@ -11,19 +11,27 @@ import ProjectPage from './components/ProjectPage'
 
 
 function App() {
-  // const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
+  const lottiePath = '/lottie.json'
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false)
-  //   }, 2000)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 3300)
 
-  //   return () => clearTimeout(timer)
-  // }, [])
+    return () => clearTimeout(timer)
+  }, [])
 
-  // if (isLoading) {
-  //   return <div>Loading...</div>;
-  // }
+  if (isLoading) {
+    return <lottie-player
+      src={lottiePath}
+      background="transparent"
+      speed="1"
+      style={{ width: '300px', height: '300px' }}
+      loop
+      autoplay
+    ></lottie-player>
+  }
 
   return (
     <BrowserRouter>
