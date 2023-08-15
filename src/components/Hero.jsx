@@ -2,7 +2,7 @@ import React from 'react'
 
 
 function Hero() {
-  function scrollToProject(e) {
+  function handleClick(e) {
     e.preventDefault()
     const aboutSection = document.getElementById('about')
     aboutSection.scrollIntoView({ behavior: 'smooth' })
@@ -19,7 +19,7 @@ function Hero() {
             bridging the gap between imagination and reality
           </p>
         </div>
-        <a href='' className="hero--container--arrow" onClick={(e) => scrollToProject(e)}></a>
+        <a href='' className="hero--container--arrow" onClick={(e) => handleClick(e)}></a>
       </div>
     </div>
   )

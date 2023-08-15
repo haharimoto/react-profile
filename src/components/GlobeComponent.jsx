@@ -24,7 +24,7 @@ function GlobeComponent() {
   }, [globeEl.current, location.pathname])
 
   function onGlobeReady() {
-    //* arcsData
+    // arcsData
     let N
 
     if (location.pathname === '/') {
@@ -65,11 +65,12 @@ function GlobeComponent() {
     <div>
       <Globe
         ref={globeEl}
-        globeImageUrl={earthImg}
+        globeImageUrl={location.pathname === '/' ? "//unpkg.com/three-globe/example/img/earth-dark.jpg" : earthImg}
+        bumpImageUrl={location.pathname === '/' ? "//unpkg.com/three-globe/example/img/earth-topology.png" : undefined}
         backgroundColor='rgba(0,0,0,0)'
         width={location.pathname === '/' ? 1100 : 400}
         height={location.pathname === '/' ? 1100 : 400}
-        hexPolygonsData={countries.features}
+        hexPolygonsData={location.pathname === '/' ? undefined : countries.features}
         hexPolygonMargin={0.7}
         hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
         arcsData={arcsData}

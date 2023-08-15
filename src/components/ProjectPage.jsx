@@ -1,4 +1,5 @@
-import React, {Suspense} from 'react'
+import React from 'react'
+import { Suspense } from 'react'
 const LazyGlobe = React.lazy(() => import('./GlobeComponent'))
 import { useEffect } from 'react'
 import Header from './Header'

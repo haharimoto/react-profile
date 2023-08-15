@@ -266,7 +266,8 @@ nav {
   position: absolute;
   top: 60px;
   left: -300px;
-  opacity: 50%;
+  opacity: 20%;
+  filter: saturate(150%);
   /* border: gray 1px dashed; */
 }
 
@@ -499,7 +500,7 @@ margin-right: auto;
 .project:nth-child(4) .globe {
   width: 400px;
   height: 100%;
-  opacity: 90%;
+  opacity: 80%;
   pointer-events: none;
 }
 
