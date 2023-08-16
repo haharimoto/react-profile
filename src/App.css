@@ -94,6 +94,7 @@ lottie-player {
   background-color: #0D1117;
 }
 
+/** ---------------------Header section--------------------- */
 header {
   /* absolute to hero */
   position: absolute;
@@ -142,6 +143,24 @@ a:hover .nav--icon {
 .nav--links a:hover {
   color: rgb(200, 255, 255);
 }
+
+.nav--hamburger {
+  display: none;
+  background: transparent;
+  border: transparent;
+  filter: invert(100%);
+  padding: 0;
+}
+
+.nav--hamburger.hide {
+  display: none;
+}
+
+.nav--side-links {
+  display: none;
+}
+
+/** ---------------------Header section--------------------- */
 
 .hero--container {
   display: grid;
@@ -973,11 +992,44 @@ footer h2 {
   }
 
   nav {
-    margin: 20px 0 0 20px;
+    margin: 20px 20px 0 20px;
   }
 
   .nav--links {
     display: none;
+  }
+
+  .nav--hamburger {
+    display: block;
+  }
+
+  .nav--hamburger img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav--side-links {
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(135, 207, 235, 0.1);
+  }
+
+  .nav--side-links.hide {
+    display: none;
+  }
+
+  .nav--side-links button {
+    background-color: transparent;
+    border: transparent;
+  }
+
+  .nav--side-links img {
+    width: 44px;
+    height: 44px;
+    filter: invert(100%);
   }
 
   #hero {

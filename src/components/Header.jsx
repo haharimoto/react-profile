@@ -1,9 +1,13 @@
 import React from 'react'
-import moonIcon from '../../public/moonIcon.png'
+import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
+import moonIcon from '../../public/moonIcon.png'
+import hamburger from '../../public/hamburgerMenu.png'
+import closeButton from '../../public/closeButton.png'
 
 
 function Header() {
+  const [isHamburger, setIsHamburger] = useState(true)
   const location = useLocation()
 
   function scrollToSections(e, id) {
@@ -24,6 +28,16 @@ function Header() {
           <a href='' onClick={(e) => scrollToSections(e, 'content')}>Content</a>
           <a href='' onClick={(e) => scrollToSections(e, 'contact')}>Contact</a>
         </div>}
+
+        <button className="nav--hamburger" onClick={() => setIsHamburger(!isHamburger)}>
+          {isHamburger ? <img src={hamburger} alt="" /> : <img src={closeButton} alt="" />}
+        </button>
+        <div className={`nav--side-links ${isHamburger ? 'hide' : ''}`}>
+          <a href='' onClick={(e) => scrollToSections(e, 'about')}>About</a>
+          <a href='' onClick={(e) => scrollToSections(e, 'project')}>Project</a>
+          <a href='' onClick={(e) => scrollToSections(e, 'content')}>Content</a>
+          <a href='' onClick={(e) => scrollToSections(e, 'contact')}>Contact</a>
+        </div>
       </nav>
     </header>
   )
