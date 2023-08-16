@@ -115,7 +115,12 @@ nav {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  opacity: 90%;
+  transform: rotate(30deg);
+}
+
+a:hover .nav--icon {
+  transform: rotate(390deg);
+  transition: 1s;
 }
 
 .nav--links {
@@ -514,7 +519,7 @@ margin-right: auto;
 .project:nth-child(4) .globe {
   width: 400px;
   height: 100%;
-  opacity: 80%;
+  opacity: 90%;
   pointer-events: none;
 }
 
@@ -895,7 +900,12 @@ footer h2 {
   width: 66px;
   height: 66px;
   border-radius: 50%;
-  opacity: 90%;
+  transform: rotate(30deg);
+}
+
+.footer--container--first a:hover img {
+  transform: rotate(390deg);
+  transition: 1s;
 }
 
 .footer--container--second {
@@ -905,8 +915,6 @@ footer h2 {
 
 .footer--container--second--links a {
   text-decoration: none;
-  /* width: 0.8rem;
-  height: 0.8rem; */
   filter: saturate(0%);
   transition: filter 0.2s ease-in-out;
 }
