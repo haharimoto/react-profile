@@ -2,7 +2,6 @@
 import React from 'react'
 import { Suspense } from 'react'
 const LazyGlobe = React.lazy(() => import('./GlobeComponent'))
-// import GlobeComponent from './GlobeComponent'
 
 
 function About() {
@@ -46,6 +45,3 @@ function About() {
 }
 
 export default About
-
-
-{/* <GlobeComponent /> */}

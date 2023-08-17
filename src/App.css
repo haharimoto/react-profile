@@ -126,7 +126,8 @@ a:hover .nav--icon {
 .nav--links {
   display: flex;
   padding: 20px 80px 20px 40px;
-  background-color: rgba(255, 255, 255, 0.075);
+  /* background-color: rgba(255, 255, 255, 0.075); */
+  background-color: #10101a91;
   border-radius: 2.5px;
   flex-wrap: wrap;
 }
@@ -318,7 +319,7 @@ a:hover .nav--icon {
 }
 
 .about--container--intro--text {
-  margin: 0px 120px;
+  margin: 0 120px;
   padding-top: 50px;
 }
 
@@ -461,7 +462,7 @@ margin-right: auto;
 
 
 /** -------------------ProjectPage section------------------- */
-.project-page--projects {
+.project-page--container {
   display: grid;
   place-items: center;
   padding: 200px 0px;
@@ -583,6 +584,31 @@ margin-right: auto;
 
 .project .project--text p {
   opacity: 75%;
+}
+
+.project ul {
+  display: flex;
+  flex-wrap: wrap; /*used so that the items will wrap onto multiple lines if there is not enough space in a single line.*/
+  padding: 0;
+  margin-top: 15px !important;
+  list-style: none;
+  margin-top: 40px;
+}
+
+.project li {
+  margin-right: 10px !important;
+  margin-bottom: 10px !important;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+  cursor: default;
+}
+
+.project li:hover {
+  transform: scale(1.15);
+  transition: 0.1s ease-in-out;
 }
 /** -------------------ProjectPage section------------------- */
 
@@ -986,6 +1012,7 @@ footer h2 {
 /**--------------------Contact section-------------------- */
 
 
+
 /** --------------------Responsive Design-------------------- */
 @media (max-width: 600px) {
   .App {
@@ -1173,7 +1200,7 @@ footer h2 {
   }
 
   /* ---------------------------------------------------- */
-  .project-page--projects {
+  .project-page--container {
     padding: 200px 0 100px 0;
   }
 
@@ -1183,7 +1210,7 @@ footer h2 {
     height: auto;
   }
 
-  .project .project--text * {
+  .project .project--text *:not(li) {
     margin: 15px 0px;
   }
 
