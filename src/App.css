@@ -580,6 +580,10 @@ margin-right: auto;
   font-size: 2em;
   margin-bottom: 15px;
 }
+
+.project .project--text p {
+  opacity: 75%;
+}
 /** -------------------ProjectPage section------------------- */
 
 
@@ -1158,15 +1162,67 @@ footer h2 {
     border-radius: 0;
   }
 
-
   #project .buttons button {
     display: none;
     margin: 50px 0 100px 0;
   }
 
   #project .buttons button:last-child {
-      display: block;
+    display: block;
+    font-size: 16px;
   }
+
+  /* ---------------------------------------------------- */
+  .project-page--projects {
+    padding: 200px 0 100px 0;
+  }
+
+  .project {
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+  }
+
+  .project .project--text * {
+    margin: 15px 0px;
+  }
+
+  .project .project--text h1 {
+    margin-bottom: 0;
+  }
+
+  .project--image {
+    position: relative;
+    width: 350px;
+    height: 350px;
+  }
+
+  .image-overlay {
+    z-index: 10;
+  }
+
+  .project img,
+  .project .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project:nth-child(5) img {
+    transform: scale(0.6);
+    object-fit: none;
+  }
+
+  .project:nth-child(4) .globe {
+    position: absolute;
+    top: -25px;
+    left: -25px;
+  }
+/* ---------------------------------------------------- */
+
 
   #content {
     margin: 0;
@@ -1221,7 +1277,6 @@ footer h2 {
     grid-row: span 1;
   }
 
-
   .grid-container--portrait.first--text {
     width: 100px;
     height: auto;
@@ -1236,9 +1291,6 @@ footer h2 {
     margin-bottom: 20px;
   }
 
-  .footer--container--second {
-  }
-
   .footer--end {
     flex-direction: column;
     margin: 20px 20px;
@@ -1247,6 +1299,5 @@ footer h2 {
   .footer--end--links {
     margin-top: 10px;
   }
-
 }
 /** --------------------Responsive Design-------------------- */

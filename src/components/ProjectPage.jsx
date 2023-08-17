@@ -1,6 +1,5 @@
 import React from 'react'
 import { Suspense } from 'react'
-const LazyGlobe = React.lazy(() => import('./GlobeComponent'))
 import { useEffect } from 'react'
 import Header from './Header'
 import Contact from './Contact'
@@ -8,6 +7,7 @@ import unsplash from '../../public/projectPage/unsplash.jpg'
 import photoRonin from '../../public/projectPage/photoRonin.jpg'
 import chromeDino from '../../public/projectPage/chromeDino.jpg'
 import memeGenerator from '../../public/projectPage/trollFace.png'
+const LazyGlobe = React.lazy(() => import('./GlobeComponent'))
 
 
 function ProjectPage() {
