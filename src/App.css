@@ -1227,11 +1227,25 @@ footer h2 {
     height: auto;
   }
 
+  .footer--container {
+    flex-direction: column;
+    margin: 20px 20px 0 20px;
+  }
 
+  .footer--container--first {
+    margin-bottom: 20px;
+  }
 
+  .footer--container--second {
+  }
 
-  #contact {
-    display: none;
+  .footer--end {
+    flex-direction: column;
+    margin: 20px 20px;
+  }
+
+  .footer--end--links {
+    margin-top: 10px;
   }
 
 }
