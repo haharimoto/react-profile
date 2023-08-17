@@ -13,7 +13,6 @@ function About() {
           <Suspense fallback={<div>Loading globe...</div>}>
             <LazyGlobe />
           </Suspense>
-          {/* <GlobeComponent /> */}
         </div>
         <div className="about--container--intro">
           <div className="about--container--intro--text">
@@ -47,3 +46,6 @@ function About() {
 }
 
 export default About
+
+
+{/* <GlobeComponent /> */}

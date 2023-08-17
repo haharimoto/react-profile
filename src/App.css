@@ -1092,10 +1092,23 @@ footer h2 {
     left: 47.5%;
   }
 
+  .about--container--intro {
+    margin: 0;
+  }
+
+  .about--container--intro--text {
+    margin-inline: 20px;
+    padding: 0;
+  }
+
+  .about--container--globe {
+    top: 150px;
+    left: -500px;
+  }
 
 
 
-  #about, #project, #content, #contact {
+  #project, #content, #contact {
     display: none;
   }
 }
