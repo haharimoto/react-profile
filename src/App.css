@@ -29,6 +29,7 @@ body {
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: white;
+  background-color: #10101a;
 }
 
 #root {
@@ -1099,6 +1100,11 @@ footer h2 {
     left: 47.5%;
   }
 
+  .about--container {
+    height: auto;
+    margin: 100px 0px;
+  }
+
   .about--container--intro {
     margin: 0;
   }
@@ -1162,13 +1168,71 @@ footer h2 {
       display: block;
   }
 
+  #content {
+    margin: 0;
+    padding: 100px 20px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-rows: auto-fill;
+    gap: 5px;
+  }
+
+  .grid-container--portrait {
+    width: auto;
+    height: auto;
+  }
+
+  .grid-container--landscape {
+    width: auto;
+    height: auto;
+  }
+
+  .grid-container--square {
+    width: auto;
+    height: auto;
+  }
+
+  .grid-container--portrait.first,
+  .grid-container--portrait.second,
+  .grid-container--portrait.third {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .grid-container--landscape.first,
+  .grid-container--landscape.second,
+  .grid-container--landscape.third,
+  .grid-container--landscape.fourth,
+  .grid-container--landscape.fifth,
+  .grid-container--landscape.sixth {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .grid-container--square.first,
+  .grid-container--square.second,
+  .grid-container--square.third,
+  .grid-container--square.fourth,
+  .grid-container--square.fifth,
+  .grid-container--square.sixth {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+
+  .grid-container--portrait.first--text {
+    width: 100px;
+    height: auto;
+  }
 
 
 
 
-
-  #content, #contact {
+  #contact {
     display: none;
   }
+
 }
 /** --------------------Responsive Design-------------------- */
