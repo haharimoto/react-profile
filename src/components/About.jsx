@@ -9,11 +9,11 @@ function About() {
   return (
     <div id='about'>
       <div className="about--container">
-        <div className="about--container--globe">
+        {/* <div className="about--container--globe">
           <Suspense fallback={<div>Loading globe...</div>}>
             <LazyGlobe />
           </Suspense>
-        </div>
+        </div> */}
         <div className="about--container--intro">
           <div className="about--container--intro--text">
             <h1>Hi, I'm Harry Harimoto</h1>

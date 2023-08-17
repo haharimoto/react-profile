@@ -35,7 +35,6 @@ function Project() {
     <div id='project'>
       <div className="slideshow">
         <img className='slideshow--frame' src={combinedFrame} alt="" />
-
         {slides.map((slide, index) => (
           <div className={`slideshow--slide ${index === activeIndex ? 'active' : ''}`} key={index}>
             <img src={slide.image} alt="" className='slideshow--slide--regular'/>
@@ -50,7 +49,7 @@ function Project() {
             {slide.name}
           </button>
         ))}
-        <button onClick={() => navigate('/project')}>See More</button>
+        <button onClick={() => navigate('/project')}>See More ➡</button>
       </div>
     </div>
   )
