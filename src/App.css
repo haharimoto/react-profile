@@ -1009,6 +1009,13 @@ footer h2 {
     height: 44px;
   }
 
+  .nav--hamburger.active {
+    position: fixed;
+    z-index: 11; /* one more than .nav--side-links */
+    top: 20px; /* adjust according to your design */
+    right: 20px; /* adjust according to your design */
+  }
+
   .nav--side-links {
     position: fixed;
     top: 0;

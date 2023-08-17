@@ -29,7 +29,7 @@ function Header() {
           <a href='' onClick={(e) => scrollToSections(e, 'contact')}>Contact</a>
         </div>}
 
-        <button className="nav--hamburger" onClick={() => setIsHamburger(!isHamburger)}>
+        <button className={`nav--hamburger ${!isHamburger ? 'active' : ''}`} onClick={() => setIsHamburger(!isHamburger)}>
           {isHamburger ? <img src={hamburger} alt="" /> : <img src={closeButton} alt="" />}
         </button>
         <div className={`nav--side-links ${isHamburger ? 'hide' : ''}`}>
