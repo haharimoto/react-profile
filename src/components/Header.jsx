@@ -29,15 +29,17 @@ function Header() {
           <a href='' onClick={(e) => scrollToSections(e, 'contact')}>Contact</a>
         </div>}
 
-        <button className={`nav--hamburger ${!isHamburger ? 'active' : ''}`} onClick={() => setIsHamburger(!isHamburger)}>
-          {isHamburger ? <img src={hamburger} alt="" /> : <img src={closeButton} alt="" />}
-        </button>
-        <div className={`nav--side-links ${isHamburger ? 'hide' : ''}`}>
-          <a href='' onClick={(e) => scrollToSections(e, 'about')}>About</a>
-          <a href='' onClick={(e) => scrollToSections(e, 'project')}>Project</a>
-          <a href='' onClick={(e) => scrollToSections(e, 'content')}>Content</a>
-          <a href='' onClick={(e) => scrollToSections(e, 'contact')}>Contact</a>
-        </div>
+        {location.pathname === '/' && <>
+          <button className={`nav--hamburger ${!isHamburger ? 'active' : ''}`} onClick={() => setIsHamburger(!isHamburger)}>
+            {isHamburger ? <img src={hamburger} alt="" /> : <img src={closeButton} alt="" />}
+          </button>
+          <div className={`nav--side-links ${isHamburger ? 'hide' : ''}`}>
+            <a href='' onClick={(e) => scrollToSections(e, 'about')}>About</a>
+            <a href='' onClick={(e) => scrollToSections(e, 'project')}>Project</a>
+            <a href='' onClick={(e) => scrollToSections(e, 'content')}>Content</a>
+            <a href='' onClick={(e) => scrollToSections(e, 'contact')}>Contact</a>
+          </div>
+        </>}
       </nav>
     </header>
   )

@@ -1013,7 +1013,7 @@ footer h2 {
 
 
 
-/** --------------------Responsive Design-------------------- */
+/** --------------------RESPONSIVE DESIGN-------------------- */
 @media (max-width: 600px) {
   .App {
     position: relative;
@@ -1025,6 +1025,11 @@ footer h2 {
 
   nav {
     margin: 20px 20px 0 20px;
+  }
+
+  a:hover .nav--icon {
+    transform: none;
+    transition: none;
   }
 
   .nav--links {
@@ -1148,6 +1153,7 @@ footer h2 {
   .about--container--globe {
     top: 150px;
     left: -500px;
+    pointer-events: none;
   }
 
   #project {
@@ -1197,6 +1203,12 @@ footer h2 {
   #project .buttons button:last-child {
     display: block;
     font-size: 16px;
+  }
+
+  #project button:hover {
+    color: inherit; /* Reset to the color before hover */
+    cursor: default; /* Reset cursor */
+    transition: none;
   }
 
   /* ---------------------------------------------------- */
@@ -1309,6 +1321,12 @@ footer h2 {
     height: auto;
   }
 
+  .button--down:hover, .button--up:hover {
+    transform: none;
+    opacity: inherit; /* It will inherit the opacity from non-hover state */
+    transition: none;
+  }
+
   .footer--container {
     flex-direction: column;
     margin: 20px 20px 0 20px;
@@ -1316,6 +1334,11 @@ footer h2 {
 
   .footer--container--first {
     margin-bottom: 20px;
+  }
+
+  .footer--container--first a:hover img {
+    transform: none;
+    transition: none;
   }
 
   .footer--end {
