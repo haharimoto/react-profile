@@ -365,11 +365,11 @@ a:hover .nav--icon {
 
  /**--------------------Project section-------------------- */
 .slideshow {
-position: relative;
-max-width: 1000px;
-height: 573.33px;
-margin-left: auto;
-margin-right: auto;
+  position: relative;
+  max-width: 1000px;
+  height: 573.33px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slideshow--frame {
@@ -1014,7 +1014,7 @@ footer h2 {
 
 
 /** --------------------RESPONSIVE DESIGN-------------------- */
-@media (max-width: 600px) {
+@media (max-width: 600px) and (hover: none) {
   .App {
     position: relative;
   }
@@ -1027,10 +1027,10 @@ footer h2 {
     margin: 20px 20px 0 20px;
   }
 
-  a:hover .nav--icon {
+  /* a:hover .nav--icon {
     transform: none;
     transition: none;
-  }
+  } */
 
   .nav--links {
     display: none;
@@ -1202,23 +1202,18 @@ footer h2 {
   #project .buttons button {
     display: none;
     margin: 50px 0 100px 0;
-    pointer-events: none;
   }
 
   #project .buttons button:last-child {
     display: block;
     font-size: 16px;
-    pointer-events: auto;
   }
 
-  #project button:hover,
-  #project button:active,
-  #project button:focus {
+  /* #project button:hover {
     color: inherit;
     cursor: default;
-    outline: none;
     transition: none;
-  }
+  } */
 
   /* ---------------------------------------------------- */
   .project-page--container {
@@ -1329,11 +1324,11 @@ footer h2 {
     height: auto;
   }
 
-  .button--down:hover, .button--up:hover {
+  /* .button--down:hover, .button--up:hover {
     transform: none;
     opacity: inherit;
     transition: none;
-  }
+  } */
 
   .footer--container {
     flex-direction: column;
@@ -1344,7 +1339,7 @@ footer h2 {
     margin-bottom: 20px;
   }
 
-  .footer--container--first a:hover img {
+  /* .footer--container--first a:hover img {
     transform: none;
     transition: none;
   }
@@ -1352,7 +1347,7 @@ footer h2 {
   .footer--container--second--links a:hover {
     filter: none;
     transition: none;
-  }
+  } */
 
   .footer--end {
     flex-direction: column;

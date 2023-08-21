@@ -14,24 +14,24 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
   const lottiePath = '/lottie.json'
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 3300)
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false)
+  //   }, 3300)
 
-    return () => clearTimeout(timer)
-  }, [])
+  //   return () => clearTimeout(timer)
+  // }, [])
 
-  if (isLoading) {
-    return <lottie-player
-      src={lottiePath}
-      background="transparent"
-      speed="1"
-      style={{ width: '300px', height: '300px' }}
-      loop
-      autoplay
-    ></lottie-player>
-  }
+  // if (isLoading) {
+  //   return <lottie-player
+  //     src={lottiePath}
+  //     background="transparent"
+  //     speed="1"
+  //     style={{ width: '300px', height: '300px' }}
+  //     loop
+  //     autoplay
+  //   ></lottie-player>
+  // }
 
   return (
     <BrowserRouter>
