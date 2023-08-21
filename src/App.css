@@ -1202,16 +1202,21 @@ footer h2 {
   #project .buttons button {
     display: none;
     margin: 50px 0 100px 0;
+    pointer-events: none;
   }
 
   #project .buttons button:last-child {
     display: block;
     font-size: 16px;
+    pointer-events: auto;
   }
 
-  #project button:hover {
-    color: inherit; /* Reset to the color before hover */
-    cursor: default; /* Reset cursor */
+  #project button:hover,
+  #project button:active,
+  #project button:focus {
+    color: inherit;
+    cursor: default;
+    outline: none;
     transition: none;
   }
 
