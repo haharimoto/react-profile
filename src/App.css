@@ -1209,10 +1209,17 @@ footer h2 {
     font-size: 16px;
   }
 
-  #project button:hover {
+  #project button:hover,
+  #project button:active,
+  #project button:focus {
     color: white;
     cursor: default;
     transition: none;
+  }
+
+  #project button::after,
+  #project button.active::after {
+    content: none; /* This will remove the pseudo-element */
   }
 
   /* ---------------------------------------------------- */
