@@ -1014,7 +1014,7 @@ footer h2 {
 
 
 /** --------------------RESPONSIVE DESIGN-------------------- */
-@media (max-width: 600px) and (hover: none) {
+@media (max-width: 600px) {
   .App {
     position: relative;
   }
@@ -1209,11 +1209,11 @@ footer h2 {
     font-size: 16px;
   }
 
-  /* #project button:hover {
-    color: inherit;
+  #project button:hover {
+    color: white;
     cursor: default;
     transition: none;
-  } */
+  }
 
   /* ---------------------------------------------------- */
   .project-page--container {
@@ -1324,7 +1324,7 @@ footer h2 {
     height: auto;
   }
 
-  /* .button--down:hover, .button--up:hover {
+  /*! .button--down:hover, .button--up:hover {
     transform: none;
     opacity: inherit;
     transition: none;
@@ -1339,7 +1339,7 @@ footer h2 {
     margin-bottom: 20px;
   }
 
-  /* .footer--container--first a:hover img {
+  /*! .footer--container--first a:hover img {
     transform: none;
     transition: none;
   }
