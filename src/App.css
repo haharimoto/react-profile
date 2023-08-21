@@ -1130,10 +1130,14 @@ footer h2 {
     opacity: 50%;
   }
 
-  .hero--container--arrow {
+  /* .hero--container--arrow {
     width: 20px;
     height: 20px;
     left: 47.5%;
+  } */
+
+  .hero--container--arrow {
+    display: none;
   }
 
   .about--container {
@@ -1262,7 +1266,6 @@ footer h2 {
   }
 /* ---------------------------------------------------- */
 
-
   #content {
     margin: 0;
     padding: 100px 20px;
@@ -1323,7 +1326,7 @@ footer h2 {
 
   .button--down:hover, .button--up:hover {
     transform: none;
-    opacity: inherit; /* It will inherit the opacity from non-hover state */
+    opacity: inherit;
     transition: none;
   }
 
@@ -1338,6 +1341,11 @@ footer h2 {
 
   .footer--container--first a:hover img {
     transform: none;
+    transition: none;
+  }
+
+  .footer--container--second--links a:hover {
+    filter: none;
     transition: none;
   }
 
