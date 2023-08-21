@@ -1014,7 +1014,7 @@ footer h2 {
 
 
 /** --------------------RESPONSIVE DESIGN-------------------- */
-@media (max-width: 600px) {
+@media (max-width: 600px) and (hover: none) {
   .App {
     position: relative;
   }
@@ -1216,12 +1216,6 @@ footer h2 {
   }
 
   #project button:hover {
-    cursor: default;
-    color: white;
-    transition: none;
-  }
-
-  #project button:last-child:hover {
     cursor: default;
     color: white;
     transition: none;
