@@ -1014,7 +1014,7 @@ footer h2 {
 
 
 /** --------------------RESPONSIVE DESIGN-------------------- */
-@media (max-width: 600px) {
+@media (max-width: 600px) and (pointer: fine) {
   .App {
     position: relative;
   }
@@ -1209,18 +1209,11 @@ footer h2 {
     font-size: 16px;
   }
 
-  #project button:hover,
-  #project button:active,
-  #project button:focus {
+  /*! #project button:hover {
     color: white;
     cursor: default;
     transition: none;
-  }
-
-  #project button::after,
-  #project button.active::after {
-    content: none; /* This will remove the pseudo-element */
-  }
+  } */
 
   /* ---------------------------------------------------- */
   .project-page--container {
