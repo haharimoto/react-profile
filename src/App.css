@@ -1014,7 +1014,7 @@ footer h2 {
 
 
 /** --------------------RESPONSIVE DESIGN-------------------- */
-@media (max-width: 600px) and (pointer: fine) {
+@media (max-width: 600px) {
   .App {
     position: relative;
   }
