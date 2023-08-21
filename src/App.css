@@ -1199,21 +1199,28 @@ footer h2 {
     border-radius: 0;
   }
 
-  #project .buttons button {
+  #project button,
+  #project button.active {
     display: none;
     margin: 50px 0 100px 0;
   }
 
-  #project .buttons button:last-child {
-    display: block;
-    font-size: 16px;
+  #project button::after,
+  #project button.active::after {
+    content: none;
   }
 
-  /*! #project button:hover {
-    color: white;
+
+  #project button:last-child {
+    display: block;
+    font-size: 20px;
+  }
+
+  #project button:hover {
     cursor: default;
+    color: white;
     transition: none;
-  } */
+  }
 
   /* ---------------------------------------------------- */
   .project-page--container {
