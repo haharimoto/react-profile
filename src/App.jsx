@@ -8,6 +8,7 @@ import Project from './components/Project'
 import Content from './components/Content'
 import Contact from './components/Contact'
 import ProjectPage from './components/ProjectPage'
+import ErrorPage from './components/ErrorPage'
 
 
 function App() {
@@ -47,7 +48,8 @@ function App() {
               <Contact />
             </>
           } />
-          <Route path="/project" element={<ProjectPage />} />
+          <Route path='/project' element={<ProjectPage />} />
+          <Route path='*' element={<ErrorPage />} />
         </Routes>
       </div>
     </BrowserRouter>
