@@ -3,7 +3,7 @@ import Header from './Header'
 import Contact from './Contact'
 
 function ErrorPage() {
-  const lottiePath = '../../public/lottie404.json'
+  const lottiePath = '/lottie404.json'
 
   return (
     <div id='error-page'>
