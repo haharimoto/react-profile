@@ -20,6 +20,7 @@ function Project() {
 
   const navigate = useNavigate()
 
+  // for removing hover effects on mobile devices
   useEffect(() => {
     function handleTouchStart() {
       document.body.classList.add("touch-device")

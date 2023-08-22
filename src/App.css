@@ -1215,15 +1215,15 @@ footer h2 {
     font-size: 20px;
   }
 
-  #project button:hover {
+  /* #project button:hover {
     cursor: default;
     color: white;
     transition: none;
-  }
+  } */
 
   .touch-device #project button:hover {
-    color: white; /* Reset to default color */
-    transition: none; /* Remove the transition */
+    color: white;
+    transition: none;
   }
 
   /* ---------------------------------------------------- */
