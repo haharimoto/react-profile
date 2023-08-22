@@ -133,7 +133,7 @@ a:hover .nav--icon {
 }
 
 .nav--links a {
-  color: rgb(255, 255, 255, 0.8);
+  color: rgb(255, 255, 255, 0.9);
   text-decoration: none;
   font-family: 'Mark Pro', sans-serif;
 }
@@ -188,7 +188,7 @@ a:hover .nav--icon {
   font-size: 81px;
   line-height: 100%;
   letter-spacing: -.02em;
-  color: rgba(255, 255, 255, 0.9);
+  color: white;
 }
 
 .hero--container--text h1 span {
@@ -217,7 +217,7 @@ a:hover .nav--icon {
   margin-top: 10px;
   font-size: 19px;
   letter-spacing: 0.02em;
-  opacity: 65%;
+  opacity: 75%;
 }
 
 .hero--container--arrow {
@@ -1157,6 +1157,7 @@ footer h2 {
   .about--container--globe {
     top: 150px;
     left: -500px;
+    opacity: 40%;
     pointer-events: none;
   }
 
@@ -1335,11 +1336,11 @@ footer h2 {
     height: auto;
   }
 
-  /*! .button--down:hover, .button--up:hover {
+  .button--down:hover, .button--up:hover {
     transform: none;
     opacity: inherit;
     transition: none;
-  } */
+  }
 
   .footer--container {
     flex-direction: column;
@@ -1350,7 +1351,7 @@ footer h2 {
     margin-bottom: 20px;
   }
 
-  /*! .footer--container--first a:hover img {
+  .footer--container--first a:hover img {
     transform: none;
     transition: none;
   }
@@ -1358,7 +1359,7 @@ footer h2 {
   .footer--container--second--links a:hover {
     filter: none;
     transition: none;
-  } */
+  }
 
   .footer--end {
     flex-direction: column;
@@ -1367,6 +1368,10 @@ footer h2 {
 
   .footer--end--links {
     margin-top: 10px;
+  }
+
+  .footer--end a:hover {
+    color: inherit;
   }
 }
 /** --------------------Responsive Design-------------------- */
