@@ -1266,6 +1266,10 @@ footer h2 {
     object-fit: cover;
   }
 
+  .project:nth-child(4) .globe {
+    opacity: 100%;
+  }
+
   .project:nth-child(5) img {
     transform: scale(0.6);
     object-fit: none;
