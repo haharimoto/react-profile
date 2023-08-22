@@ -1221,6 +1221,11 @@ footer h2 {
     transition: none;
   }
 
+  .touch-device #project button:hover {
+    color: white; /* Reset to default color */
+    transition: none; /* Remove the transition */
+  }
+
   /* ---------------------------------------------------- */
   .project-page--container {
     padding: 200px 0 100px 0;

@@ -21,11 +21,21 @@ function Project() {
   const navigate = useNavigate()
 
   useEffect(() => {
+    function handleTouchStart() {
+      document.body.classList.add("touch-device")
+    }
+
+    window.addEventListener("touchstart", handleTouchStart)
+
+    return () => window.removeEventListener("touchstart", handleTouchStart)
+  }, [])
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex(prevState => {
         return (prevState + 1) % slides.length
       })
-    }, 5000);
+    }, 5000)
 
     return () => clearInterval(interval)
   }, [slides])
