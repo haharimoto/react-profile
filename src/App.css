@@ -1214,6 +1214,7 @@ footer h2 {
   #project button:last-child {
     display: block;
     font-size: 20px;
+    font-family: 'Mark Pro', sans-serif;
   }
 
   /* #project button:hover {

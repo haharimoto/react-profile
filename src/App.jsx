@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
@@ -11,8 +11,8 @@ import ProjectPage from './components/ProjectPage'
 
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true)
-  const lottiePath = '/lottie.json'
+  // const [isLoading, setIsLoading] = useState(true)
+  // const lottiePath = '/lottie.json'
 
   // useEffect(() => {
   //   const timer = setTimeout(() => {
