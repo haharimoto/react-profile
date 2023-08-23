@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import combinedFrame from '../../public/slideshow/frames/combinedFrame.png'
 import imageApp from '../../public/slideshow/images/imageApp.png'
@@ -18,9 +18,46 @@ function Project() {
     {image: memeGenerator, smallImage: smartphoneMemeGenerator, name: 'Meme Generator'}
   ]
 
+  const carouselRef = useRef(null)
   const navigate = useNavigate()
 
-  // for removing hover effects on mobile devices
+  // centering the 'middle' image horizontally
+  useEffect(() => {
+    function scrollToCenter() {
+      const carousel = carouselRef.current;
+      if (!carousel) return;
+
+      let imagesLoaded = 0;
+
+      carousel.querySelectorAll('img').forEach((img) => {
+        img.onload = () => {
+          imagesLoaded++;
+          if (imagesLoaded === slides.length) {
+            let centerIndex;
+            if (slides.length % 2 === 0) { // even
+              centerIndex = slides.length / 2 - 1;
+            } else { // odd
+              centerIndex = (slides.length - 1) / 2;
+            }
+
+            const imageMargin = 20;  // 10px on each side, margin-inline of carousel img
+            const imageWidth = img.offsetWidth + imageMargin;  // image width including margin
+            const scrollPosition = centerIndex * imageWidth;
+
+            carousel.scrollLeft = scrollPosition - carousel.offsetWidth / 2 + imageWidth / 2;
+          }
+        };
+      });
+    }
+
+    scrollToCenter();
+
+    window.addEventListener('resize', scrollToCenter);
+    return () => window.removeEventListener('resize', scrollToCenter);
+  }, []);
+
+
+  // for removing hover effects of See More button on mobile devices
   useEffect(() => {
     function handleTouchStart() {
       document.body.classList.add("touch-device")
@@ -52,6 +89,12 @@ function Project() {
             <img src={slide.smallImage} alt="" className='slideshow--slide--smartphone'/>
           </div>
         ))}
+      </div>
+
+      <div ref={carouselRef} className="carousel">
+          {slides.map((slide, index) => (
+            <img key={index} src={slide.smallImage} alt="" />
+          ))}
       </div>
 
       <div className="buttons">
