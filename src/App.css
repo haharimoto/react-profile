@@ -1327,8 +1327,7 @@ footer h2 {
 
   .project {
     flex-direction: column;
-    /* width: 350px; */
-    width: 21.875rem;
+    width: 350px;
     height: auto;
   }
 
@@ -1343,10 +1342,8 @@ footer h2 {
 
   .project--image {
     position: relative;
-    /* width: 350px;
-    height: 350px; */
-    width: 21.875rem;
-    height: 21.875rem;
+    width: 350px;
+    height: 350px;
   }
 
   .image-overlay {
@@ -1374,10 +1371,8 @@ footer h2 {
 
   .project:nth-child(4) .globe {
     position: absolute;
-    /* top: -25px;
-    left: -25px; */
-    top: 1.563rem;
-    left: 1.563rem;
+    top: -25px;
+    left: -25px;
   }
 /* ---------------------------------------------------- */
 
