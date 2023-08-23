@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import moonIcon from '../../public/moonIcon.png'
 import hamburger from '../../public/hamburgerMenu.png'
@@ -9,6 +9,28 @@ import closeButton from '../../public/closeButton.png'
 function Header() {
   const [isHamburger, setIsHamburger] = useState(true)
   const location = useLocation()
+  const hamburgerRef = useRef(null)
+  const sideLinksRef = useRef(null)
+
+  useEffect(() => {
+    // Check if the clicked target is neither the side nav nor the hamburger button
+    function handleClickOutside(e) {
+      if (
+        sideLinksRef.current &&
+        !sideLinksRef.current.contains(e.target) &&
+        hamburgerRef.current &&
+        !hamburgerRef.current.contains(e.target)
+      ) {
+        setIsHamburger(true)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [])
 
   function scrollToSections(e, id) {
     e.preventDefault()
@@ -30,10 +52,10 @@ function Header() {
         </div>}
 
         {location.pathname === '/' && <>
-          <button className={`nav--hamburger ${!isHamburger ? 'active' : ''}`} onClick={() => setIsHamburger(!isHamburger)}>
+          <button ref={hamburgerRef} className={`nav--hamburger ${!isHamburger ? 'active' : ''}`} onClick={() => setIsHamburger(!isHamburger)}>
             {isHamburger ? <img src={hamburger} alt="" /> : <img src={closeButton} alt="" />}
           </button>
-          <div className={`nav--side-links ${isHamburger ? 'hide' : ''}`}>
+          <div ref={sideLinksRef} className={`nav--side-links ${isHamburger ? 'hide' : ''}`}>
             <a href='' onClick={(e) => scrollToSections(e, 'about')}>About</a>
             <a href='' onClick={(e) => scrollToSections(e, 'project')}>Project</a>
             <a href='' onClick={(e) => scrollToSections(e, 'content')}>Content</a>
