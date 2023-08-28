@@ -11,7 +11,7 @@ function Preloader() {
         background="transparent"
         speed="1"
         style={{ width: '20.625rem', height: '20.625rem' }}
-        // loop
+        loop
         autoplay
       ></lottie-player>
     </div>
