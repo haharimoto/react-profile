@@ -10,7 +10,7 @@ function Preloader() {
         src={lottiePath}
         background="transparent"
         speed="1"
-        style={{ width: '300px', height: '300px' }}
+        style={{ width: '20.625rem', height: '20.625rem' }}
         // loop
         autoplay
       ></lottie-player>
