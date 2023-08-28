@@ -8,37 +8,15 @@ import Project from './components/Project'
 import Content from './components/Content'
 import Contact from './components/Contact'
 import ProjectPage from './components/ProjectPage'
-import Preloader from './components/Preloader'
+// import Preloader from './components/Preloader'
 import ErrorPage from './components/ErrorPage'
 
 
 function App() {
-  // const [isLoading, setIsLoading] = useState(true)
-  // const lottiePath = '/lottie.json'
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false)
-  //   }, 3300)
-
-  //   return () => clearTimeout(timer)
-  // }, [])
-
-  // if (isLoading) {
-  //   return <lottie-player
-  //     src={lottiePath}
-  //     background="transparent"
-  //     speed="1"
-  //     style={{ width: '300px', height: '300px' }}
-  //     loop
-  //     autoplay
-  //   ></lottie-player>
-  // }
-
   return (
     <BrowserRouter>
       <div className="App">
-        <Preloader />
+        {/* <Preloader /> */}
         <Routes>
           <Route path='/' element={
             <>
