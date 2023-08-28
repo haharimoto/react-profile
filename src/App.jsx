@@ -8,6 +8,7 @@ import Project from './components/Project'
 import Content from './components/Content'
 import Contact from './components/Contact'
 import ProjectPage from './components/ProjectPage'
+import Preloader from './components/Preloader'
 import ErrorPage from './components/ErrorPage'
 
 
@@ -37,6 +38,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <Preloader />
         <Routes>
           <Route path='/' element={
             <>
