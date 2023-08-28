@@ -61,15 +61,12 @@ lottie-player {
 }
 
 #project {
-  /* padding-top: 125px;
-  padding-bottom: 75px; */
   padding-top: 7.8125rem;
   padding-bottom: 4.6875rem;
   background-color: #0D1117;
 }
 
 #content {
-  /* padding: 150px 0px; */
   padding: 9.375rem 0;
   background-color: #0b0f14;
   display: grid;
@@ -108,13 +105,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin: 10px 0 0 20px; */
   margin: 0.625rem 0 0 1.25rem;
 }
 
 .nav--icon {
-  /* width: 44px;
-  height: 44px; */
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 50%;
@@ -128,9 +122,8 @@ a:hover .nav--icon {
 
 .nav--links {
   display: flex;
-  /* padding: 20px 80px 20px 40px; */
   padding: 1.25rem 5rem 1.25rem 2.5rem;
-  background-color: #10101a91;
+  background-color: #10101ab3;
   border-radius: 2.5px;
   flex-wrap: wrap;
 }
@@ -142,7 +135,6 @@ a:hover .nav--icon {
 }
 
 .nav--links a:not(:last-child) {
-  /* margin-right: 30px; */
   margin-right: 1.875rem;
 }
 
@@ -179,7 +171,6 @@ a:hover .nav--icon {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* margin-left: 125px; */
   margin-left: 7.813rem;
 }
 
@@ -190,7 +181,6 @@ a:hover .nav--icon {
 
 .hero--container--text h1 {
   font-family: 'Mark Pro', sans-serif;
-  /* font-size: 81px; */
   font-size: 5.063rem;
   line-height: 100%;
   letter-spacing: -.02em;
@@ -220,8 +210,6 @@ a:hover .nav--icon {
 }
 
 .hero--container--text p {
-  /* margin-top: 10px;
-  font-size: 19px; */
   margin-top: 0.625rem;
   font-size: 1.188rem;
   letter-spacing: 0.02em;
@@ -234,13 +222,8 @@ a:hover .nav--icon {
 	bottom: 5vh;
 	display: block;
 	text-align: center;
-	/* font-size: 20px; */
   font-size: 1.25rem;
 	text-decoration: none;
-	/* width: 12px;
-	height: 12px;
-	border-bottom: 2px solid #fff;
-	border-right: 2px solid #fff; */
   width: 0.75rem;
   height: 0.75rem;
   border-bottom: 0.125rem solid #fff;
@@ -257,10 +240,6 @@ a:hover .nav--icon {
 .hero--container--arrow::before {
   content: "";
   position: absolute;
-  /* top: -15px;
-  bottom: -15px;
-  left: -15px;
-  right: -15px; */
   top: -0.938rem;
   bottom: -0.938rem;
   left: -0.938rem;
@@ -320,8 +299,6 @@ a:hover .nav--icon {
 
 .about--container--globe {
   position: absolute;
-  /* top: 60px;
-  left: -300px; */
   top: 3.75rem;
   left: -18.75rem;
   opacity: 20%;
@@ -332,19 +309,15 @@ a:hover .nav--icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-left: 750px; */
   margin-left: 46.875rem;
 }
 
 .about--container--intro--text {
-  /* margin: 0 120px;
-  padding-top: 50px; */
   margin: 0 7.5rem;
   padding-top: 3.125rem;
 }
 
 .about--container--intro--text h1 {
-  /* margin: 20px 0px 30px 0px; */
   margin: 1.25rem 0 1.875rem 0;
   font-family: 'Mark Pro', sans-serif;
   line-height: 100%;
@@ -353,7 +326,6 @@ a:hover .nav--icon {
 
 .about--container--intro--text p {
   opacity: 75%;
-  /* margin: 20px 0px; */
   margin: 1.25rem 0;
   letter-spacing: 0.02em;
 }
@@ -364,14 +336,10 @@ a:hover .nav--icon {
   padding: 0;
   margin: 0;
   list-style: none;
-  /* margin-top: 40px; */
   margin-top: 2.5rem;
 }
 
 .about--container--intro--text li {
-  /* margin-right: 10px;
-  margin-bottom: 10px;
-  padding: 5px 10px; */
   margin-right: 0.625rem;
   margin-bottom: 0.625rem;
   padding: 0.3125rem 0.625rem;
@@ -392,8 +360,6 @@ a:hover .nav--icon {
  /**--------------------Project section-------------------- */
 .slideshow {
   position: relative;
-  /* max-width: 1000px;
-  height: 573.33px; */
   max-width: 62.5rem;
   height: 35.833rem;
   margin-left: auto;
@@ -410,10 +376,6 @@ a:hover .nav--icon {
 .slideshow--slide {
   /* display: none; */
   position: absolute;
-  /* top: 23px;
-  left: 133.5px;
-  width: 733px;
-  height: 459px; */
   top: 1.4375rem;
   left: 8.34375rem;
   width: 45.8125rem;
@@ -438,12 +400,9 @@ a:hover .nav--icon {
 .slideshow--slide--smartphone {
   position: absolute;
   border-radius: 10px;
-  /* top: 65px;
-  right: -89px; */
   top: 4.0625rem;
   right: -5.5625rem;
   aspect-ratio: 4.62 / 10;
-  /* height: 474px; */
   height: 29.625rem;
 }
 
@@ -460,8 +419,6 @@ a:hover .nav--icon {
   border: none;
   background: none;
   color: white;
-  /* margin: 55px;
-  font-size: 15px; */
   margin: 3.4375rem;
   font-size: 0.9375rem;
   font-weight: 500;
@@ -472,8 +429,6 @@ a:hover .nav--icon {
   content: "";
   position: absolute;
   left: 0;
-  /* bottom: -5px;
-  height: 2px; */
   bottom: -0.3125rem;
   height: 0.125rem;
   width: 0%; /* Change to 0% so the underline starts as hidden */
@@ -488,8 +443,6 @@ a:hover .nav--icon {
   content: "";
   position: absolute;
   left: 0;
-  /* bottom: -5px;
-  height: 2px; */
   bottom: -0.3125rem;
   height: 0.125rem;
   width: 100%;
@@ -509,15 +462,11 @@ a:hover .nav--icon {
 .project-page--container {
   display: grid;
   place-items: center;
-  /* padding: 200px 0px; */
   padding: 12.5rem 0;
 }
 
 .project {
   display: flex;
-  /* width: 1000px;
-  height: 400px;
-  margin-bottom: 100px; */
   width: 62.5rem;
   height: 25rem;
   margin-bottom: 6.25rem;
@@ -578,14 +527,12 @@ a:hover .nav--icon {
 }
 
 .project img {
-  /* width: 400px; */
   width: 25rem;
   height: 100%;
   object-fit: contain;
 }
 
 .project:nth-child(4) .globe {
-  /* width: 400px; */
   width: 25rem;
   height: 100%;
   opacity: 90%;
@@ -604,7 +551,6 @@ a:hover .nav--icon {
   opacity: 0;
   background-color: rgba(128, 128, 128, 0.8);
   color: rgba(255, 255, 255, 0.9);
-  /* padding: 12px 24px; */
   padding: 0.75rem 1.5rem;
   border: rgb(40, 40, 40) 2px solid;
   border-radius: 25px;
@@ -619,7 +565,6 @@ a:hover .nav--icon {
 .project .project--text {
   display: flex;
   align-items: center;
-  /* padding: 0px 30px; */
   padding: 0 1.875rem;
 }
 
@@ -630,7 +575,6 @@ a:hover .nav--icon {
 .project .project--text h1 {
   font-family: 'Mark Pro', sans-serif;
   font-size: 2em;
-  /* margin-bottom: 15px; */
   margin-bottom: 0.9375rem;
 }
 
@@ -642,15 +586,11 @@ a:hover .nav--icon {
   display: flex;
   flex-wrap: wrap; /*used so that the items will wrap onto multiple lines if there is not enough space in a single line.*/
   padding: 0;
-  /* margin-top: 15px !important; */
   margin-top: 0.938rem !important;
   list-style: none;
 }
 
 .project li {
-  /* margin-right: 10px !important;
-  margin-bottom: 10px !important;
-  padding: 5px 10px; */
   margin-right: 0.625rem !important;
   margin-bottom: 0.625rem !important;
   padding: 0.3125rem 0.625rem;
@@ -695,8 +635,6 @@ a:hover .nav--icon {
 }
 
 .grid-container--portrait {
-  /* width: 380px;
-  height: 510px; */
   width: 23.75rem;
   height: 31.875rem;
 }
@@ -778,8 +716,6 @@ a:hover .nav--icon {
 }
 
 .grid-container--landscape {
-  /* width: 510px;
-  height: 250px; */
   width: 31.875rem;
   height: 15.625rem;
 }
@@ -884,8 +820,6 @@ a:hover .nav--icon {
 }
 
 .grid-container--square {
-  /* width: 250px;
-  height: 250px; */
   width: 15.625rem;
   height: 15.625rem;
 }
@@ -944,15 +878,12 @@ a:hover .nav--icon {
 
 /* a black icon inverted to white */
 #content button {
-  /* margin-top: 20px; */
   margin-top: 1.25rem;
   padding: 0;
   background-color: transparent;
   border: transparent;
   filter: invert(100%);
   cursor: pointer;
-  /* width: 32px;
-  height: 32px; */
   width: 2rem;
   height: 2rem;
 }
@@ -997,24 +928,19 @@ footer h2 {
 .footer--container {
   display: flex;
   justify-content: space-between;
-  /* margin: 40px 200px; */
   margin: 2.5rem 12.5rem;
 }
 
 .footer--container div:first-child * {
-  /* margin-bottom: 10px; */
   margin-bottom: 0.625rem;
 }
 
 .footer--container div h2 {
-  /* margin-bottom: 5px; */
   margin-bottom: 0.3125rem;
   cursor: default;
 }
 
 .footer--container--first img {
-  /* width: 66px;
-  height: 66px; */
   width: 4.125rem;
   height: 4.125rem;
   border-radius: 50%;
@@ -1038,7 +964,6 @@ footer h2 {
 }
 
 .footer--container--second--links a:not(:last-child) {
-  /* margin-right: 15px; */
   margin-right: 0.9375rem;
 }
 
@@ -1048,8 +973,6 @@ footer h2 {
 }
 
 .footer--container--second--links img {
-  /* width: 26px;
-  height: 26px; */
   width: 1.625rem;
   height: 1.625rem;
 }
@@ -1057,8 +980,6 @@ footer h2 {
 .footer--end {
   display: flex;
   justify-content: space-between;
-  /* margin: 0px 200px;
-  padding: 10px 0px; */
   margin: 0rem 12.5rem;
   padding: 0.625rem 0rem;
   border-top: rgba(128, 128, 128, 0.128) 1px solid;
@@ -1066,7 +987,6 @@ footer h2 {
 
 .footer--end * {
   color: rgba(255, 255, 255, 0.5);
-  /* font-size: 12px; */
   font-size: 0.75rem;
   text-decoration: none;
 }
@@ -1081,7 +1001,6 @@ footer h2 {
 }
 
 .footer--end--links a:not(:last-child) {
-  /* margin-right: 20px; */
   margin-right: 1.25rem;
 }
 /**--------------------Contact section-------------------- */
@@ -1108,7 +1027,6 @@ footer h2 {
   }
 
   nav {
-    /* margin: 20px 20px 0 20px; */
     margin: 1.25rem 1.25rem 0 1.25rem;
   }
 
@@ -1127,8 +1045,6 @@ footer h2 {
   }
 
   .nav--hamburger img {
-    /* width: 44px;
-    height: 44px; */
     width: 2.75rem;
     height: 2.75rem;
   }
@@ -1136,8 +1052,6 @@ footer h2 {
   .nav--hamburger.active {
     position: fixed;
     z-index: 11; /* one more than .nav--side-links */
-    /* top: 20px;
-    right: 20px;  */
     top: 1.25rem;
     right: 1.25rem;
   }
@@ -1161,9 +1075,6 @@ footer h2 {
     font-family: 'Mark Pro', sans-serif;
     text-decoration: none;
     color: white;
-    /* padding: 10px 20px;
-    margin: 5px 0;
-    font-size: 24px;   */
     padding: 0.625rem 1.25rem;
     margin: 0.3125rem 0;
     font-size: 1.5rem;
@@ -1180,8 +1091,6 @@ footer h2 {
   }
 
   .nav--side-links img {
-    /* width: 44px;
-    height: 44px; */
     width: 2.75rem;
     height: 2.75rem;
     filter: invert(100%);
@@ -1212,17 +1121,14 @@ footer h2 {
   }
 
   .hero--container--text {
-    /* margin-inline: 20px; */
     margin-inline: 1.25rem;
   }
 
   .hero--container--text h1 {
-    /* font-size: 55px; */
     font-size: 3.4375rem;
   }
 
   .hero--container--text p {
-    /* font-size: 15px; */
     font-size: 0.9375rem;
     opacity: 50%;
   }
@@ -1233,7 +1139,6 @@ footer h2 {
 
   .about--container {
     height: auto;
-    /* margin: 100px 0px; */
     margin: 6.25rem 0;
   }
 
@@ -1242,14 +1147,11 @@ footer h2 {
   }
 
   .about--container--intro--text {
-    /* margin-inline: 20px; */
     margin-inline: 1.25rem;
     padding: 0;
   }
 
   .about--container--globe {
-    /* top: 150px;
-    left: -500px; */
     top: 9.375rem;
     left: -31.25rem;
     opacity: 50%;
@@ -1259,8 +1161,6 @@ footer h2 {
   #project {
     /* padding: 0 resets the padding set outside of the media query */
     padding: 0;
-    /* padding-top: 100px;
-    padding-bottom: 50px; */
     padding-top: 6.25rem;
     padding-bottom: 3.125rem;
   }
@@ -1291,14 +1191,12 @@ footer h2 {
     height: 70vh;
     border-radius: 10px;
     object-fit: cover;
-    /* margin-inline: 10px; */
     margin-inline: 0.625rem;
   }
 
   #project button,
   #project button.active {
     display: none;
-    /* margin: 50px auto; */
     margin: 3.125rem auto;
   }
 
@@ -1309,7 +1207,6 @@ footer h2 {
 
   #project button:last-child {
     display: block;
-    /* font-size: 20px; */
     font-size: 1.25rem;
     font-family: 'Mark Pro', sans-serif;
   }
@@ -1321,7 +1218,6 @@ footer h2 {
 
   /* ---------------------------------------------------- */
   .project-page--container {
-    /* padding: 200px 0 100px 0; */
     padding: 12.5rem 0 6.25rem 0;
   }
 
@@ -1332,7 +1228,6 @@ footer h2 {
   }
 
   .project .project--text *:not(li) {
-    /* margin: 15px 0px; */
     margin: 0.9375rem 0;
   }
 
@@ -1379,7 +1274,6 @@ footer h2 {
 
   #content {
     margin: 0;
-    /* padding: 100px 20px; */
     padding: 6.25rem 1.25rem;
   }
 
@@ -1432,7 +1326,6 @@ footer h2 {
   }
 
   .grid-container--portrait.first--text {
-    /* width: 100px; */
     width: 6.25rem;
     height: auto;
   }
@@ -1445,12 +1338,10 @@ footer h2 {
 
   .footer--container {
     flex-direction: column;
-    /* margin: 20px 20px 0 20px; */
     margin: 1.25rem 1.25rem 0 1.25rem;
   }
 
   .footer--container--first {
-    /* margin-bottom: 20px; */
     margin-bottom: 1.25rem;
   }
 
@@ -1466,12 +1357,10 @@ footer h2 {
 
   .footer--end {
     flex-direction: column;
-    /* margin: 20px 20px; */
     margin: 1.25rem;
   }
 
   .footer--end--links {
-    /* margin-top: 10px; */
     margin-top: 0.625rem;
   }
 
