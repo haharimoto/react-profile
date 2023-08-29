@@ -1,7 +1,6 @@
 // for lazy loading the globe so that it does not slow down the app's loading
 import React from 'react'
-import { Suspense } from 'react'
-const LazyGlobe = React.lazy(() => import('./GlobeComponent'))
+import GlobeComponent from './GlobeComponent'
 
 
 function About() {
@@ -9,9 +8,7 @@ function About() {
     <div id='about'>
       <div className="about--container">
         <div className="about--container--globe">
-          <Suspense fallback={<div>Loading globe...</div>}>
-            <LazyGlobe />
-          </Suspense>
+          <GlobeComponent />
         </div>
         <div className="about--container--intro">
           <div className="about--container--intro--text">

@@ -8,19 +8,30 @@ import earthImg from '../../public/earth.png'
 
 
 function GlobeComponent() {
+  const [showGlobe, setShowGlobe] = useState(false)
   const [arcsData, setArcsData] = useState([])
   const globeEl = useRef()
   const location = useLocation()
 
   useEffect(() => {
-    globeEl.current.controls().autoRotate = true;
-    globeEl.current.controls().autoRotateSpeed = location.pathname === '/' ? 0.8 : 1;
-    globeEl.current.controls().enableZoom = false;
-    globeEl.current.pointOfView({
-      lat: location.pathname === '/' ? 30 : 23.5,
-      lng: 155,
-      altitude: location.pathname === '/' ? 1.9 : 1.95
-    })
+    const timer = setTimeout(() => {
+      setShowGlobe(true)
+    }, 4300)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  useEffect(() => {
+    if (globeEl.current) {
+      globeEl.current.controls().autoRotate = true;
+      globeEl.current.controls().autoRotateSpeed = location.pathname === '/' ? 0.8 : 1;
+      globeEl.current.controls().enableZoom = false;
+      globeEl.current.pointOfView({
+        lat: location.pathname === '/' ? 30 : 23.5,
+        lng: 155,
+        altitude: location.pathname === '/' ? 1.9 : 1.95
+      })
+    }
   }, [globeEl.current, location.pathname])
 
   function onGlobeReady() {
@@ -62,40 +73,42 @@ function GlobeComponent() {
 
 
   return (
-    <div>
-      <Globe
-        ref={globeEl}
-        globeImageUrl={location.pathname === '/' ? "//unpkg.com/three-globe/example/img/earth-dark.jpg" : earthImg}
-        bumpImageUrl={location.pathname === '/' ? "//unpkg.com/three-globe/example/img/earth-topology.png" : undefined}
-        backgroundColor='rgba(0,0,0,0)'
-        width={location.pathname === '/' ? 1100 : 400}
-        height={location.pathname === '/' ? 1100 : 400}
-        hexPolygonsData={location.pathname === '/' ? undefined : countries.features}
-        hexPolygonMargin={0.7}
-        hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
-        arcsData={arcsData}
-        arcColor={"color"}
-        arcDashLength={() => Math.random() + 2}
-        arcDashGap={() => Math.random() + 1}
-        arcDashAnimateTime={() => 1750}
-        arcAltitudeAutoScale={0.4}
-        pointsData={cities}
-        pointLat="latitude"
-        pointLng="longitude"
-        pointColor={(city) => {
-          if (city.city === 'Tokyo' || city.city === 'Beijing' || city.city === 'Raleigh') {
-            return '#5a5096'
-          } else {
-            return 'white'
-          }
-        }}
-        pointRadius={0.5}
-        pointAltitude={0.01}
-        pointLabel={d => `${d.city}`}
-        onGlobeReady={onGlobeReady}
-        onGlobeRightClick={toggleRotation}
-      />
-    </div>
+    <>
+      {showGlobe &&
+        <Globe
+          ref={globeEl}
+          globeImageUrl={location.pathname === '/' ? "//unpkg.com/three-globe/example/img/earth-dark.jpg" : earthImg}
+          bumpImageUrl={location.pathname === '/' ? "//unpkg.com/three-globe/example/img/earth-topology.png" : undefined}
+          backgroundColor='rgba(0,0,0,0)'
+          width={location.pathname === '/' ? 1100 : 400}
+          height={location.pathname === '/' ? 1100 : 400}
+          hexPolygonsData={location.pathname === '/' ? undefined : countries.features}
+          hexPolygonMargin={0.7}
+          hexPolygonColor={() => 'rgba(255, 255, 255, 1)'}
+          arcsData={arcsData}
+          arcColor={"color"}
+          arcDashLength={() => Math.random() + 2}
+          arcDashGap={() => Math.random() + 1}
+          arcDashAnimateTime={() => 1750}
+          arcAltitudeAutoScale={0.4}
+          pointsData={cities}
+          pointLat="latitude"
+          pointLng="longitude"
+          pointColor={(city) => {
+            if (city.city === 'Tokyo' || city.city === 'Beijing' || city.city === 'Raleigh') {
+              return '#5a5096'
+            } else {
+              return 'white'
+            }
+          }}
+          pointRadius={0.5}
+          pointAltitude={0.01}
+          pointLabel={d => `${d.city}`}
+          onGlobeReady={onGlobeReady}
+          onGlobeRightClick={toggleRotation}
+        />
+      }
+    </>
   )
 }
 

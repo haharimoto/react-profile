@@ -1,5 +1,4 @@
 import React from 'react'
-import { Suspense } from 'react'
 import { useEffect } from 'react'
 import Header from './Header'
 import Contact from './Contact'
@@ -7,7 +6,7 @@ import unsplash from '../../public/projectPage/unsplash.jpg'
 import photoRonin from '../../public/projectPage/photoRonin.jpg'
 import chromeDino from '../../public/projectPage/chromeDino.jpg'
 import memeGenerator from '../../public/projectPage/trollFace.png'
-const LazyGlobe = React.lazy(() => import('./GlobeComponent'))
+import GlobeComponent from './GlobeComponent'
 
 
 function ProjectPage() {
@@ -99,9 +98,7 @@ function ProjectPage() {
             <div className="image-overlay"></div>
             <a onClick={(e) => e.preventDefault()} style={{ cursor: "default" }} target="_blank" rel="noopener noreferrer">
               <div className="globe">
-                <Suspense fallback={<div>Loading globe...</div>}>
-                  <LazyGlobe />
-                </Suspense>
+                <GlobeComponent />
               </div>
               <div className="hover-text">Coming Soon...</div>
             </a>
