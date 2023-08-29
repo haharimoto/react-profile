@@ -323,12 +323,13 @@ a:hover .nav--icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 46.875rem;
+  /* margin-left: 46.875rem; */
+  margin-left: 50%;
 }
 
 .about--container--intro--text {
-  margin: 0 7.5rem;
-  padding-top: 3.125rem;
+  /* max-width: 70ch; */
+  margin: 3.125rem 7rem 0 7rem;
 }
 
 .about--container--intro--text h1 {
@@ -1161,8 +1162,9 @@ footer h2 {
   }
 
   .about--container--intro--text {
-    margin-inline: 1.25rem;
+    margin: 0;
     padding: 0;
+    margin-inline: 1.25rem;
   }
 
   .about--container--globe {
@@ -1380,6 +1382,13 @@ footer h2 {
 
   .footer--end a:hover {
     color: inherit;
+  }
+}
+
+
+@media screen and (min-width: 1920px) {
+  .about--container--globe {
+    left: 0;
   }
 }
 /** --------------------Responsive Design-------------------- */
