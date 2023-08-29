@@ -13,7 +13,16 @@ import ErrorPage from './components/ErrorPage'
 
 
 function App() {
+  const [showLoad, setShowLoad] = useState(false)
   const [showAbout, setShowAbout] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoad(true);
+    }, 3300);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   // settimeout used for optimizing preloader animation since About component is task heavy and causing preloader animation to lag
   useEffect(() => {
@@ -28,7 +37,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Preloader />
+        {/* <Preloader /> */}
+        {!showLoad && <Preloader />}
         <Routes>
           <Route path='/' element={
             <>
