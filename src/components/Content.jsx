@@ -3,6 +3,19 @@ import { useState } from 'react'
 import { animated, useSpring } from 'react-spring';
 import upIcon from '../../public/grid/up.png'
 import downIcon from '../../public/grid/down.png'
+import sakura from '../../public/grid/sakura.jpg'
+import nightSakura from '../../public/grid/nightSakura.jpg'
+import doggoCar from '../../public/grid/doggos.jpg'
+import taxi from '../../public/grid/taxi.jpg'
+import akihabaraClabo from '../../public/grid/akihabaraClabo.jpg'
+import akihabaraKaikatsu from '../../public/grid/akihabaraKaikatsu.jpg'
+import akihabaraDrug from '../../public/grid/akihabaraDrug.jpg'
+import akihabaraPawn from '../../public/grid/akihabaraPawn.jpg'
+import shinjukuWarm from '../../public/grid/shinjukuWarm.jpg'
+import shinjukuCool from '../../public/grid/shinjukuCool.jpg'
+import allCandles from '../../public/grid/allCandles.jpg'
+import candleHand from '../../public/grid/candleHand.jpg'
+
 
 function Content() {
   const [isShowMore, setIsShowMore] = useState(false)
@@ -26,17 +39,35 @@ function Content() {
         </div>
         <div className="grid-container--square first"></div>
         <div className="grid-container--square second"></div>
-        <div className="grid-container--landscape first"></div>
-        <div className="grid-container--landscape second"></div>
+        <div className="grid-container--landscape first">
+          <img className="original" src={sakura} alt="" />
+          <img className="hover" src={nightSakura} alt="" />
+        </div>
+        <div className="grid-container--landscape second">
+          <img className="original" src={doggoCar} alt="" />
+          <img className="hover" src={taxi} alt="" />
+        </div>
 
         {isShowMore && (
           <>
             <div className="grid-container--portrait second"></div>
             <div className="grid-container--portrait third"></div>
-            <div className="grid-container--landscape third"></div>
-            <div className="grid-container--landscape fourth"></div>
-            <div className="grid-container--landscape fifth"></div>
-            <div className="grid-container--landscape sixth"></div>
+            <div className="grid-container--landscape third">
+              <img className="original" src={akihabaraClabo} alt="" />
+              <img className="hover" src={akihabaraKaikatsu} alt="" />
+            </div>
+            <div className="grid-container--landscape fourth">
+              <img className="original" src={akihabaraDrug} alt="" />
+              <img className="hover" src={akihabaraPawn} alt="" />
+            </div>
+            <div className="grid-container--landscape fifth">
+              <img className="original" src={shinjukuWarm} alt="" />
+              <img className="hover" src={shinjukuCool} alt="" />
+            </div>
+            <div className="grid-container--landscape sixth">
+              <img className="original" src={allCandles} alt="" />
+              <img className="hover" src={candleHand} alt="" />
+            </div>
             <div className="grid-container--square third"></div>
             <div className="grid-container--square fourth"></div>
             <div className="grid-container--square fifth"></div>

@@ -736,62 +736,226 @@ a:hover .nav--icon {
 }
 
 .grid-container--landscape.first {
+  position: relative;
   grid-row: 1 / 3;
   grid-column: 6 / 12;
-  background-image: url('../public/grid/sakura.jpg');
-  background-position: center;
-  background-size: cover;
-  transition: 0.4s ease-in-out;
+  overflow: hidden;
 }
 
+.grid-container--landscape.first .original {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.grid-container--landscape.first .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.grid-container--landscape.first:hover .original {
+  opacity: 0;
+}
+
+.grid-container--landscape.first:hover .hover {
+  opacity: 1;
+}
 
 .grid-container--landscape.second {
+  position: relative;
   grid-row: 3 / 5;
   grid-column: 4 / 8;
-  background-image: url('../public/grid/doggos.jpg');
-  background-position: center;
-  background-size: cover;
-  transition: 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.grid-container--landscape.second .original {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.grid-container--landscape.second .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.grid-container--landscape.second:hover .original {
+  opacity: 0;
+}
+
+.grid-container--landscape.second:hover .hover {
+  opacity: 1;
 }
 
 .grid-container--landscape.third {
+  position: relative;
   grid-row: 5 / 7;
   grid-column: 1 / 5;
-  background-image: url('../public/grid/akihabaraClabo.jpg');
-  background-position: bottom -50px right 0px;
-  background-size: cover;
-  transition: 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.grid-container--landscape.third .original {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0px -333px;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.grid-container--landscape.third .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0px -360px;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.grid-container--landscape.third:hover .original {
+  opacity: 0;
+}
+
+.grid-container--landscape.third:hover .hover {
+  opacity: 1;
 }
 
 .grid-container--landscape.fourth {
+  position: relative;
   grid-row: 7 / 9;
   grid-column: 3 / 7;
-  background-image: url('../public/grid/akihabaraDrug.jpg');
-  background-position: bottom -40px right 0px;
-  background-size: cover;
-  transition: 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.grid-container--landscape.fourth .original {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0px -360px;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.grid-container--landscape.fourth .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0px -310px;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.grid-container--landscape.fourth:hover .original {
+  opacity: 0;
+}
+
+.grid-container--landscape.fourth:hover .hover {
+  opacity: 1;
 }
 
 .grid-container--landscape.fifth {
+  position: relative;
   grid-row: 9 / 11;
   grid-column: 4 / 8;
-  background-image: url('../public/grid/shinjukuWarm.jpg');
-  background-position: bottom -30px right 0px;
-  background-size: cover;
-  transition: 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.grid-container--landscape.fifth .original {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.grid-container--landscape.fifth .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.grid-container--landscape.fifth:hover .original {
+  opacity: 0;
+}
+
+.grid-container--landscape.fifth:hover .hover {
+  opacity: 1;
 }
 
 .grid-container--landscape.sixth {
+  position: relative;
   grid-row: 11 / 13;
   grid-column: 6 / 11;
-  background-image: url('../public/grid/allCandles.jpg');
-  background-position: center;
-  background-size: cover;
-  filter: saturate(80%);
-  transition: 0.4s ease-in-out;
+  overflow: hidden;
 }
 
-.grid-container--landscape.first:hover {
+.grid-container--landscape.sixth .original {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.grid-container--landscape.sixth .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.grid-container--landscape.sixth:hover .original {
+  opacity: 0;
+}
+
+.grid-container--landscape.sixth:hover .hover {
+  opacity: 1;
+}
+
+/* .grid-container--landscape.first:hover {
   background-image: url('../public/grid/nightSakura.jpg');
   background-position: center;
   background-size: cover;
@@ -832,7 +996,7 @@ a:hover .nav--icon {
   background-size: cover;
   filter: saturate(70%);
   transition: 0.4s ease-in-out;
-}
+} */
 
 .grid-container--square {
   width: 15.625rem;
@@ -1330,6 +1494,13 @@ footer h2 {
     grid-column: span 2;
     grid-row: span 1;
   }
+
+  .grid-container--landscape.third .original,
+  .grid-container--landscape.third .hover,
+  .grid-container--landscape.fourth .original,
+  .grid-container--landscape.fourth .hover {
+        object-position: center;  /* Reset to default value */
+    }
 
   .grid-container--square.first,
   .grid-container--square.second,
