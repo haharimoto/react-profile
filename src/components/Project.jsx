@@ -85,15 +85,15 @@ function Project() {
         <img className='slideshow--frame' src={combinedFrame} alt="" />
         {slides.map((slide, index) => (
           <div className={`slideshow--slide ${index === activeIndex ? 'active' : ''}`} key={index}>
-            <img src={slide.image} alt="" className='slideshow--slide--regular'/>
-            <img src={slide.smallImage} alt="" className='slideshow--slide--smartphone'/>
+            <img src={slide.image} alt="" loading='lazy' className='slideshow--slide--regular' />
+            <img src={slide.smallImage} alt="" loading='lazy' className='slideshow--slide--smartphone' />
           </div>
         ))}
       </div>
 
       <div ref={carouselRef} className="carousel">
           {slides.map((slide, index) => (
-            <img key={index} src={slide.smallImage} alt="" />
+            <img key={index} src={slide.smallImage} alt="" loading='lazy'/>
           ))}
       </div>
 
