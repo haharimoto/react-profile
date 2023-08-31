@@ -1,9 +1,14 @@
-// for lazy loading the globe so that it does not slow down the app's loading
 import React from 'react'
+import { useRef } from 'react'
 import GlobeComponent from './GlobeComponent'
+import useOnScreen from './useOnScreen'
 
 
 function About() {
+  const textRef = useRef()
+  const isVisible = useOnScreen(textRef)
+
+
   return (
     <div id='about'>
       <div className="about--container">
@@ -11,7 +16,7 @@ function About() {
           <GlobeComponent />
         </div>
         <div className="about--container--intro">
-          <div className="about--container--intro--text">
+          <div className={`about--container--intro--text ${isVisible ? 'visible' : 'invisible'}`} ref={textRef}>
             <h1>Hi, I'm Harry Harimoto</h1>
             <p>
               As a Frontend Developer💻 I specialize in developing web applications with a focus on optimal performance and responsive design. And, when I'm not immersed in code, you'll find me exploring and appreciating the vibrant city of Tokyo, capturing the cityscape and people through my lens.

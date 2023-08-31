@@ -333,6 +333,16 @@ a:hover .nav--icon {
   margin: 3.125rem 6.875rem 0 6.875rem;
 }
 
+.about--container--intro--text.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.about--container--intro--text.invisible {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
 .about--container--intro--text h1 {
   margin: 1.25rem 0 1.875rem 0;
   font-family: 'Mark Pro', sans-serif;
