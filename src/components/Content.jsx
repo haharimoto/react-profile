@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { animated, useSpring } from 'react-spring';
 import upIcon from '../../public/grid/up.png'
 import downIcon from '../../public/grid/down.png'
@@ -15,10 +15,13 @@ import shinjukuWarm from '../../public/grid/shinjukuWarm.jpg'
 import shinjukuCool from '../../public/grid/shinjukuCool.jpg'
 import allCandles from '../../public/grid/allCandles.jpg'
 import candleHand from '../../public/grid/candleHand.jpg'
+import useOnScreen from './useOnScreen';
 
 
 function Content() {
   const [isShowMore, setIsShowMore] = useState(false)
+  // const contentRef = useRef()
+  // const isVisible = useOnScreen(contentRef)
 
   // React-Spring
   const animation = useSpring({
@@ -31,7 +34,6 @@ function Content() {
   return (
     <div id='content'>
       <animated.div className="grid-container" style={animation}>
-
         <div className="grid-container--portrait first">
           <div className='grid-container--portrait first--text'>
             Me in 2020<br />When I Started Photography

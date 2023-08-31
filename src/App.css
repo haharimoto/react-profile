@@ -670,6 +670,16 @@ a:hover .nav--icon {
   width: 100%;
 }
 
+.grid-container.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.grid-container.invisible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
 .grid-container > div {
   transition: transform 0.2s ease-in-out;
   border-radius: 5px;
