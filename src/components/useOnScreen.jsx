@@ -25,7 +25,9 @@ function useOnScreen(ref) {
     }
 
     return () => {
-      observer.unobserve(ref.current)
+      if (ref.current) {
+        observer.unobserve(ref.current)
+      }
     }
   }, [])
 

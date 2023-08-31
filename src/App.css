@@ -655,6 +655,21 @@ a:hover .nav--icon {
 
 
 /** --------------------Contents section-------------------- */
+.content--container {
+  display: grid;
+  place-items: center;
+}
+
+.content--container.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.content--container.invisible {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
 .grid-container {
   display: grid;
   justify-content: center;
@@ -668,16 +683,6 @@ a:hover .nav--icon {
   padding: 0.625rem 0;
   overflow: hidden;
   width: 100%;
-}
-
-.grid-container.visible {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
-
-.grid-container.invisible {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
 }
 
 .grid-container > div {
