@@ -92,11 +92,13 @@ lottie-player {
 } */
 
 #contact-visible {
+  background-color: #10101a;
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
 
 #contact-invisible {
+  background-color: #10101a;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
