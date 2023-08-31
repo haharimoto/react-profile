@@ -87,8 +87,18 @@ lottie-player {
   place-items: center;
 }
 
-#contact {
+/* #contact {
   background-color: #10101a;
+} */
+
+#contact-visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+#contact-invisible {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 #project-page {
@@ -655,21 +665,6 @@ a:hover .nav--icon {
 
 
 /** --------------------Contents section-------------------- */
-.content--container {
-  display: grid;
-  place-items: center;
-}
-
-.content--container.visible {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
-
-.content--container.invisible {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
 .grid-container {
   display: grid;
   justify-content: center;

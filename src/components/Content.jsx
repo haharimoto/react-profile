@@ -33,56 +33,54 @@ function Content() {
 
   return (
     <div id='content'>
-      <div className={`content--container ${isVisible ? 'visible' : 'invisible'}`} ref={contentRef}>
-        <animated.div className="grid-container" style={animation}>
-          <div className="grid-container--portrait first">
-            <div className='grid-container--portrait first--text'>
-              Me in 2020<br />When I Started Photography
-            </div>
+      <animated.div className="grid-container" style={animation}>
+        <div className="grid-container--portrait first">
+          <div className='grid-container--portrait first--text'>
+            Me in 2020<br />When I Started Photography
           </div>
-          <div className="grid-container--square first"></div>
-          <div className="grid-container--square second"></div>
-          <div className="grid-container--landscape first">
-            <img className="original" src={sakura} alt="" loading='lazy' />
-            <img className="hover" src={nightSakura} alt="" loading='lazy' />
-          </div>
-          <div className="grid-container--landscape second">
-            <img className="original" src={doggoCar} alt="" loading='lazy' />
-            <img className="hover" src={taxi} alt="" loading='lazy' />
-          </div>
+        </div>
+        <div className="grid-container--square first"></div>
+        <div className="grid-container--square second"></div>
+        <div className="grid-container--landscape first">
+          <img className="original" src={sakura} alt="" loading='lazy' />
+          <img className="hover" src={nightSakura} alt="" loading='lazy' />
+        </div>
+        <div className="grid-container--landscape second">
+          <img className="original" src={doggoCar} alt="" loading='lazy' />
+          <img className="hover" src={taxi} alt="" loading='lazy' />
+        </div>
 
-          {isShowMore && (
-            <>
-              <div className="grid-container--portrait second"></div>
-              <div className="grid-container--portrait third"></div>
-              <div className="grid-container--landscape third">
-                <img className="original" src={akihabaraClabo} alt="" loading='lazy' />
-                <img className="hover" src={akihabaraKaikatsu} alt="" loading='lazy' />
-              </div>
-              <div className="grid-container--landscape fourth">
-                <img className="original" src={akihabaraDrug} alt="" loading='lazy' />
-                <img className="hover" src={akihabaraPawn} alt="" loading='lazy' />
-              </div>
-              <div className="grid-container--landscape fifth">
-                <img className="original" src={shinjukuWarm} alt="" loading='lazy' />
-                <img className="hover" src={shinjukuCool} alt="" loading='lazy' />
-              </div>
-              <div className="grid-container--landscape sixth">
-                <img className="original" src={allCandles} alt="" loading='lazy' />
-                <img className="hover" src={candleHand} alt="" loading='lazy' />
-              </div>
-              <div className="grid-container--square third"></div>
-              <div className="grid-container--square fourth"></div>
-              <div className="grid-container--square fifth"></div>
-              <div className="grid-container--square sixth"></div>
-            </>
-          )
-          }
-        </animated.div>
-        <button onClick={() => {setIsShowMore(!isShowMore)}}>
-          {isShowMore ? <img className='button--up' src={upIcon} alt="" /> : <img className='button--down' src={downIcon} alt="" />}
-        </button>
-      </div>
+        {isShowMore && (
+          <>
+            <div className="grid-container--portrait second"></div>
+            <div className="grid-container--portrait third"></div>
+            <div className="grid-container--landscape third">
+              <img className="original" src={akihabaraClabo} alt="" loading='lazy' />
+              <img className="hover" src={akihabaraKaikatsu} alt="" loading='lazy' />
+            </div>
+            <div className="grid-container--landscape fourth">
+              <img className="original" src={akihabaraDrug} alt="" loading='lazy' />
+              <img className="hover" src={akihabaraPawn} alt="" loading='lazy' />
+            </div>
+            <div className="grid-container--landscape fifth">
+              <img className="original" src={shinjukuWarm} alt="" loading='lazy' />
+              <img className="hover" src={shinjukuCool} alt="" loading='lazy' />
+            </div>
+            <div className="grid-container--landscape sixth">
+              <img className="original" src={allCandles} alt="" loading='lazy' />
+              <img className="hover" src={candleHand} alt="" loading='lazy' />
+            </div>
+            <div className="grid-container--square third"></div>
+            <div className="grid-container--square fourth"></div>
+            <div className="grid-container--square fifth"></div>
+            <div className="grid-container--square sixth"></div>
+          </>
+        )
+        }
+      </animated.div>
+      <button onClick={() => {setIsShowMore(!isShowMore)}}>
+        {isShowMore ? <img className='button--up' src={upIcon} alt="" /> : <img className='button--down' src={downIcon} alt="" />}
+      </button>
     </div>
   )
 }

@@ -1,13 +1,17 @@
 import React from 'react'
+import { useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import moonIcon from '../../public/moonIcon.png'
 import instagramIcon from '../../public/footer/instagram.png'
 import githubIcon from '../../public/footer/github.png'
 import linkedinIcon from '../../public/footer/linkedin.png'
 import upworkIcon from '../../public/footer/upwork.png'
+import useOnScreen from './useOnScreen'
 
 function Contact() {
   const location = useLocation()
+  const footerRef = useRef()
+  const isVisible = useOnScreen(footerRef)
 
   function scrollToSections(e, id) {
     e.preventDefault()
@@ -16,10 +20,9 @@ function Contact() {
 
 
   return (
-    <div id='contact'>
+    <div id={`contact-${isVisible ? 'visible' : 'invisible'}`} ref={footerRef}>
        <footer>
         <div className="footer--container">
-
           <div className="footer--container--first">
             <a href="/">
               <img className='footer--icon' src={moonIcon} alt="" />
@@ -29,7 +32,6 @@ function Contact() {
               to <span>Creation</span>
             </h2>
           </div>
-
           <div className="footer--container--second">
             <div className="footer--container--second--links">
               <a href="https://www.instagram.com/jharimo/" target='_blank'>
