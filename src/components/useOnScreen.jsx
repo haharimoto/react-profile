@@ -12,7 +12,7 @@ function useOnScreen(ref) {
       setIsVisible(entry.isIntersecting)
     },
     {
-      threshold: 1
+      threshold: 0.5
     }
     )
 

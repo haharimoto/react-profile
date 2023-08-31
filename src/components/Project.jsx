@@ -8,6 +8,7 @@ import photoRonin from '../../public/slideshow/images/photoRonin.png'
 import smartphoneImageApp from '../../public/slideshow/images/smartphoneImageApp.png'
 import smartphoneMemeGenerator from '../../public/slideshow/images/smartphoneMemeGenerator.png'
 import smartphonePhotoRonin from '../../public/slideshow/images/smartphonePhotoRonin.png'
+import useOnScreen from './useOnScreen'
 
 
 function Project() {
@@ -17,9 +18,12 @@ function Project() {
     {image: photoRonin, smallImage: smartphonePhotoRonin, name: 'Photo Ronin'},
     {image: memeGenerator, smallImage: smartphoneMemeGenerator, name: 'Meme Generator'}
   ]
-
+  const slideShowRef = useRef()
+  const isSlideShow = useOnScreen(slideShowRef)
   const carouselRef = useRef(null)
   const navigate = useNavigate()
+  const buttonsRef = useRef()
+  const isButtons = useOnScreen(buttonsRef)
 
   // centering the 'middle' image horizontally
   useEffect(() => {
@@ -81,7 +85,7 @@ function Project() {
 
   return (
     <div id='project'>
-      <div className="slideshow">
+      <div className={`slideshow ${isSlideShow ? 'visible' : 'invisible'}`} ref={slideShowRef}>
         <img className='slideshow--frame' src={combinedFrame} alt="" />
         {slides.map((slide, index) => (
           <div className={`slideshow--slide ${index === activeIndex ? 'active' : ''}`} key={index}>
@@ -91,13 +95,13 @@ function Project() {
         ))}
       </div>
 
-      <div ref={carouselRef} className="carousel">
+      <div className="carousel" ref={carouselRef}>
           {slides.map((slide, index) => (
             <img key={index} src={slide.smallImage} alt="" loading='lazy'/>
           ))}
       </div>
 
-      <div className="buttons">
+      <div className={`buttons ${isButtons ? 'visible' : 'invisible'}`} ref={buttonsRef}>
         {slides.map((slide, index) => (
           <button key={index} onClick={() => setActiveIndex(index)} className={`${index === activeIndex ? 'active' : ''}`}>
             {slide.name}
