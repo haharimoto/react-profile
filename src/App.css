@@ -211,6 +211,20 @@ a:hover .nav--icon {
   line-height: 100%;
   letter-spacing: -.02em;
   color: white;
+  opacity: 0;
+  animation: fadeInH1 1s ease-in-out forwards;
+  animation-delay: 3.5s;
+}
+
+@keyframes fadeInH1 {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .hero--container--text h1 span {
@@ -239,7 +253,20 @@ a:hover .nav--icon {
   margin-top: 0.625rem;
   font-size: 1.188rem;
   letter-spacing: 0.02em;
-  opacity: 75%;
+  opacity: 0;
+  animation: fadeInP 1s ease-in-out forwards;
+  animation-delay: 3.7s;
+}
+
+@keyframes fadeInP {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 75%;
+    transform: translateX(0);
+  }
 }
 
 .hero--container--arrow {
@@ -494,7 +521,7 @@ a:hover .nav--icon {
   opacity: 1;
   filter: blur(0);
   transform: translateY(0);
-  transition: all 1s ease-in-out
+  transition: all 0.5s ease-in-out
 }
 
 .buttons.invisible > * {
@@ -1375,7 +1402,6 @@ footer h2 {
 
   .hero--container--text p {
     font-size: 0.9375rem;
-    opacity: 50%;
   }
 
   .hero--container--arrow {
