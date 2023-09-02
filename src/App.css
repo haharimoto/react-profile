@@ -327,9 +327,8 @@ a:hover .nav--icon {
   position: absolute;
   top: 3.75rem;
   left: -18.75rem;
-  opacity: 25%;
+  opacity: 20%;
   filter: saturate(150%);
-  filter: brightness(125%);
 }
 
 .about--container--intro {
@@ -343,9 +342,6 @@ a:hover .nav--icon {
 .about--container--intro--text {
   /* max-width: 70ch; */
   margin: 3.125rem 6.875rem 0 6.875rem;
-}
-
-.about--container--intro--text.visible {
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
@@ -402,9 +398,6 @@ a:hover .nav--icon {
   height: 35.833rem;
   margin-left: auto;
   margin-right: auto;
-}
-
-.slideshow.visible {
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
@@ -460,9 +453,6 @@ a:hover .nav--icon {
 
 .buttons {
   text-align: center;
-}
-
-.buttons.visible {
   opacity: 1;
   transition: opacity 1s ease-in-out
 }
@@ -521,6 +511,14 @@ a:hover .nav--icon {
   display: grid;
   place-items: center;
   padding: 12.5rem 0;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+
+}
+
+.project-page--container.invisible {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .project {
@@ -680,6 +678,13 @@ a:hover .nav--icon {
   padding: 0.625rem 0;
   overflow: hidden;
   width: 100%;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.grid-container.invisible {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .grid-container > div {
@@ -1356,6 +1361,13 @@ footer h2 {
     overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .carousel.invisible {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
   }
 
   .carousel::-webkit-scrollbar {

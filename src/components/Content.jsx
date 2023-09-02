@@ -29,11 +29,11 @@ function Content() {
     // after adding gap =>
     maxHeight: isShowMore ? '1570px' : '530px',
     config: { tension: 120, friction: 14 }
-  });
+  })
 
   return (
     <div id='content'>
-      <animated.div className="grid-container" style={animation}>
+      <animated.div className={`grid-container ${isVisible ? '' : 'invisible'}`} style={animation} ref={contentRef}>
         <div className="grid-container--portrait first">
           <div className='grid-container--portrait first--text'>
             Me in 2020<br />When I Started Photography

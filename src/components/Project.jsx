@@ -21,6 +21,7 @@ function Project() {
   const slideShowRef = useRef()
   const isSlideShow = useOnScreen(slideShowRef)
   const carouselRef = useRef(null)
+  const isCarousel = useOnScreen(carouselRef)
   const navigate = useNavigate()
   const buttonsRef = useRef()
   const isButtons = useOnScreen(buttonsRef)
@@ -85,7 +86,7 @@ function Project() {
 
   return (
     <div id='project'>
-      <div className={`slideshow ${isSlideShow ? 'visible' : 'invisible'}`} ref={slideShowRef}>
+      <div className={`slideshow ${isSlideShow ? '' : 'invisible'}`} ref={slideShowRef}>
         <img className='slideshow--frame' src={combinedFrame} alt="" />
         {slides.map((slide, index) => (
           <div className={`slideshow--slide ${index === activeIndex ? 'active' : ''}`} key={index}>
@@ -95,13 +96,13 @@ function Project() {
         ))}
       </div>
 
-      <div className="carousel" ref={carouselRef}>
+      <div className={`carousel ${isCarousel ? '' : 'invisible'}`} ref={carouselRef}>
           {slides.map((slide, index) => (
             <img key={index} src={slide.smallImage} alt="" loading='lazy'/>
           ))}
       </div>
 
-      <div className={`buttons ${isButtons ? 'visible' : 'invisible'}`} ref={buttonsRef}>
+      <div className={`buttons ${isButtons ? '' : 'invisible'}`} ref={buttonsRef}>
         {slides.map((slide, index) => (
           <button key={index} onClick={() => setActiveIndex(index)} className={`${index === activeIndex ? 'active' : ''}`}>
             {slide.name}

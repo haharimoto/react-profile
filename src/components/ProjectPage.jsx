@@ -19,7 +19,6 @@ function ProjectPage() {
     <div id='project-page'>
       <Header />
       <div className='project-page--container'>
-
         <div className="project">
           <div className="project--image">
             <div className="image-overlay"></div>
@@ -143,7 +142,6 @@ function ProjectPage() {
             </div>
           </div>
         </div>
-
       </div>
       <Contact />
     </div>
