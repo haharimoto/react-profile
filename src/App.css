@@ -125,6 +125,17 @@ header {
   width: 100%;
   background-color: transparent;
   z-index: 10;
+  opacity: 0;
+  animation: fadeInHeader 1s ease-in-out forwards;
+}
+
+@keyframes fadeInHeader {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
 }
 
 nav {
@@ -186,6 +197,7 @@ a:hover .nav--icon {
 
 /** ---------------------Header section--------------------- */
 
+/** --------------------Hero section-------------------- */
 .hero--container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -255,7 +267,7 @@ a:hover .nav--icon {
   letter-spacing: 0.02em;
   opacity: 0;
   animation: fadeInP 1s ease-in-out forwards;
-  animation-delay: 3.7s;
+  animation-delay: 3.9s;
 }
 
 @keyframes fadeInP {
@@ -342,6 +354,7 @@ a:hover .nav--icon {
   opacity: 0;
   }
  }
+/** --------------------Hero section-------------------- */
 
  /**--------------------About section-------------------- */
 .about--container {

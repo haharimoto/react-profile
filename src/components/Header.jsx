@@ -39,7 +39,11 @@ function Header() {
 
 
   return (
-    <header>
+    <header
+      style={{
+        animationDelay: location.pathname === '/' ? '3.5s' : '1s'
+      }}
+    >
       <nav>
         <a href="/">
           <img className="nav--icon" src={moonIcon} alt="" />
