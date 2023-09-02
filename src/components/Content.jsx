@@ -31,6 +31,7 @@ function Content() {
     config: { tension: 120, friction: 14 }
   })
 
+
   return (
     <div id='content'>
       <animated.div className={`grid-container ${isVisible ? '' : 'invisible'}`} style={animation} ref={contentRef}>

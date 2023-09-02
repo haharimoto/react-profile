@@ -18,7 +18,6 @@ function About() {
           <MemoizedGlobeComponent />
         </div>
         <div className="about--container--intro">
-          {/* <div className="about--container--intro--text"> */}
           <div className={`about--container--intro--text ${isVisible ? '' : 'invisible'}`} ref={textRef}>
             <h1>Hi, I'm Harry Harimoto</h1>
             <p>

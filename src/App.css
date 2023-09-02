@@ -342,14 +342,41 @@ a:hover .nav--icon {
 .about--container--intro--text {
   /* max-width: 70ch; */
   margin: 3.125rem 6.875rem 0 6.875rem;
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
 }
 
-.about--container--intro--text.invisible {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+/* animate on scroll-------------------- */
+/* animate on scroll css directly on each direct child of .about--container--intro--text */
+/* so that transition delay can be used */
+.about--container--intro--text > * {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
 }
+
+.about--container--intro--text.invisible > * {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(50%);
+  transition: all 1s ease-in-out;
+}
+
+.about--container--intro--text > *:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.about--container--intro--text > *:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.about--container--intro--text > *:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+.about--container--intro--text > *:nth-child(4) {
+  transition-delay: 0.8s;
+}
+/* animate on scroll-------------------- */
 
 .about--container--intro--text h1 {
   margin: 1.25rem 0 1.875rem 0;
@@ -399,12 +426,12 @@ a:hover .nav--icon {
   margin-left: auto;
   margin-right: auto;
   opacity: 1;
-  transition: opacity 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .slideshow.invisible {
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .slideshow--frame {
@@ -453,14 +480,47 @@ a:hover .nav--icon {
 
 .buttons {
   text-align: center;
-  opacity: 1;
-  transition: opacity 1s ease-in-out
 }
 
-.buttons.invisible {
+/* .buttons.invisible {
   opacity: 0;
-  transition: opacity 1s ease-in-out
+  filter: blur(5px);
+  transform: translateY(-50%);
+  transition: all 1s ease-in-out
+} */
+
+/* animate on scroll-------------------- */
+.buttons > * {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  transition: all 1s ease-in-out
 }
+
+.buttons.invisible > * {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(-100%);
+  transition: all 1s ease-in-out
+}
+
+.buttons > *:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.buttons > *:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.buttons > *:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.buttons > *:nth-child(4) {
+  transition-delay: 0.4s;
+}
+/* animate on scroll-------------------- */
+
 
 #project button {
   position: relative;
