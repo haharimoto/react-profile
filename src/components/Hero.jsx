@@ -1,4 +1,6 @@
 import React from 'react'
+import backgroundImgLarge from '../../public/astronautResized.jpg'
+import backgroundImgSmall from '../../public/astronautMobile.jpg'
 
 
 function Hero() {
@@ -12,6 +14,10 @@ function Hero() {
   return (
     <div id='hero'>
       <div className="hero--container">
+        <picture>
+          <source media="(max-width: 600px)" srcSet={backgroundImgSmall} />
+          <img className="hero--container--background" src={backgroundImgLarge} alt="background image" decoding="async" />
+        </picture>
         <div className="hero--container--text">
           <h1>from Concept <br /> to <span>Creation</span></h1>
           <p>
