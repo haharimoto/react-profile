@@ -75,7 +75,7 @@ function ProjectPage() {
           <div className="project--image">
             <div className="image-overlay"></div>
             <a onClick={(e) => e.preventDefault()} style={{ cursor: "default" }} target="_blank" rel="noopener noreferrer">
-              <img src={chromeDino} alt="" />
+              <img src={chromeDino} alt="" loading='lazy' />
               <div className="hover-text">Coming Soon...</div>
             </a>
           </div>
@@ -125,7 +125,7 @@ function ProjectPage() {
           <div className="project--image">
             <div className="image-overlay"></div>
             <a href="https://bespoke-salamander-2319ba.netlify.app/" target="_blank" rel="noopener noreferrer">
-              <img src={memeGenerator} alt="" />
+              <img src={memeGenerator} alt="" loading='lazy' />
               <div className="hover-text">Visit Website</div>
             </a>
           </div>
