@@ -20,11 +20,11 @@ function Contact() {
 
 
   return (
-    <div id={`contact-${isVisible ? 'visible' : 'invisible'}`} ref={footerRef}>
-       <footer>
+    <div id='contact'>
+       <footer className={isVisible ? '' : 'invisible'} ref={footerRef}>
         <div className="footer--container">
           <div className="footer--container--first">
-            <a href="/">
+            <a href="" onClick={(e) => scrollToSections(e, 'hero')}>
               <img className='footer--icon' src={moonIcon} alt="" />
             </a>
             <h2>
