@@ -2,6 +2,7 @@ import React from 'react'
 import { useRef } from 'react'
 import useOnScreen from './useOnScreen'
 import GlobeComponent from './GlobeComponent'
+import ErrorBoundary from './ErrorBoundary'
 const MemoizedGlobeComponent = React.memo(GlobeComponent)
 
 
@@ -14,8 +15,9 @@ function About() {
     <div id='about'>
       <div className="about--container">
         <div className="about--container--globe">
-          {/* <GlobeComponent /> */}
-          <MemoizedGlobeComponent />
+          <ErrorBoundary fallback="Error">
+            <MemoizedGlobeComponent />
+          </ErrorBoundary>
         </div>
         <div className="about--container--intro">
           <div className={`about--container--intro--text ${isVisible ? '' : 'invisible'}`} ref={textRef}>
@@ -49,6 +51,5 @@ function About() {
 }
 
 export default About
-
 
 // React.memo is a higher order component that memoizes the rendered output of the wrapped component, preventing unnecessary renders if the props haven't changed.

@@ -24,7 +24,7 @@ function Contact() {
        <footer className={isVisible ? '' : 'invisible'} ref={footerRef}>
         <div className="footer--container">
           <div className="footer--container--first">
-            <a href="" onClick={(e) => scrollToSections(e, 'hero')}>
+            <a href="/" >
               <img className='footer--icon' src={moonIcon} alt="" />
             </a>
             <h2>
