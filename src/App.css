@@ -548,14 +548,14 @@ a:hover .nav--icon {
   opacity: 1;
   filter: blur(0);
   transform: translateY(0);
-  transition: all 0.5s ease-in-out
+  transition: opacity 0.5s ease-in-out, 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .buttons.invisible > * {
   opacity: 0;
   filter: blur(5px);
   transform: translateY(-100%);
-  transition: all 1s ease-in-out
+  transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .buttons > *:nth-child(1) {
@@ -574,7 +574,6 @@ a:hover .nav--icon {
   transition-delay: 0.4s;
 }
 /* animate on scroll-------------------- */
-
 
 #project button {
   position: relative;
