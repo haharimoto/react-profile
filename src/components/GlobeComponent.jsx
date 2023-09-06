@@ -6,7 +6,7 @@ import countries from '../../public/custom.geo.json'
 import cities from '../../public/techHubs.json'
 import earthImg from '../../public/earth.png'
 
-
+// TODO: can probably be more optimized
 function GlobeComponent() {
   const [showGlobe, setShowGlobe] = useState(false)
   const [arcsData, setArcsData] = useState([])
@@ -121,5 +121,6 @@ export default GlobeComponent
 // use website down below for all the continents, but beware bc the file size is too big and cause lengthy loading of the globe
 // http://geojson.xyz/
 
-
 // The useRef hook is used to reference a value that’s not needed for rendering. In this case, it’s used to reference the Globe component so that it can be manipulated using the controls() method of the globeEl.current object. The controls() method is used to access the controls of the globe and set the autoRotate and autoRotateSpeed properties to true and 1 respectively. This makes the globe rotate automatically1. (BING AI)
+
+// Careful with excessive re-rendering as it causes error like this (THREE.WebGLRenderer: A WebGL context could not be created. Reason:  Web page caused context loss and was blocked)
