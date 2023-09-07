@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
@@ -13,23 +13,23 @@ import ErrorPage from './components/ErrorPage'
 
 
 function App() {
-  const [showLoad, setShowLoad] = useState(false)
+  // const [showLoad, setShowLoad] = useState(false)
+  // //* works now but need some improvements, especially for slower networks
+  // // settimeout used for optimizing preloader animation since About component is task heavy and causing preloader animation to lag
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowLoad(true)
+  //   }, 3300)
 
-  //* works now but need some improvements, especially for slower networks
-  // settimeout used for optimizing preloader animation since About component is task heavy and causing preloader animation to lag
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowLoad(true)
-    }, 3300)
-
-    return () => clearTimeout(timer)
-  }, [])
+  //   return () => clearTimeout(timer)
+  // }, [])
 
 
   return (
     <BrowserRouter>
       <div className="App">
-        {!showLoad && <Preloader />}
+        {/* {!showLoad && <Preloader />} */}
+        <Preloader />
         <Routes>
           <Route path='/' element={
             <>

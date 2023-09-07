@@ -44,9 +44,9 @@ function ParticlesBackground() {
             "enable": false,
             "zIndex": 1
           },
-          "detectRetina": true,
+          "detectRetina": false,
           "duration": 0,
-          "fpsLimit": 120,
+          "fpsLimit": 30,
           "interactivity": {
             "detectsOn": "window",
             "events": {
