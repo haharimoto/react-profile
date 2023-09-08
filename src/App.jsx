@@ -50,3 +50,6 @@ function App() {
 }
 
 export default App
+
+// TODO: give more contexts (texts)
+// improve heading of About section

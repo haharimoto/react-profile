@@ -5,6 +5,8 @@ import ParticlesBackground from './ParticlesBackground'
 
 
 function Hero() {
+  const isMobile = window.innerWidth <= 600
+
   function handleClick(e) {
     e.preventDefault()
     const aboutSection = document.getElementById('about')
@@ -15,7 +17,7 @@ function Hero() {
   return (
     <div id='hero'>
       <div className="hero--container">
-        <ParticlesBackground />
+        {!isMobile && <ParticlesBackground />}
         <picture>
           <source media="(max-width: 600px)" srcSet={backgroundImgSmall} />
           <img className="hero--container--background" src={backgroundImgLarge} alt="background image" decoding="async" />
