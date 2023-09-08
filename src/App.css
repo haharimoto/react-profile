@@ -388,8 +388,8 @@ a:hover .nav--icon {
   position: absolute;
   top: 3.75rem;
   left: -18.75rem;
-  opacity: 20%;
-  filter: saturate(150%);
+  opacity: 25%;
+  filter: saturate(200%);
 }
 
 .about--container--intro {
