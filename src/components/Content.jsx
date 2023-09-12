@@ -34,9 +34,9 @@ function Content() {
 
   return (
     <div id='content'>
-      {/* <div className="heading-container">
-        <h1>some of my favorite photos I've captured👇🏼</h1>
-      </div> */}
+      <div className="heading-container">
+        <h1>some of my favorite photos I've captured📸</h1>
+      </div>
       <animated.div className={`grid-container ${isVisible ? '' : 'invisible'}`} style={animation} ref={contentRef}>
         <div className="grid-container--portrait first">
           <div className='grid-container--portrait first--text'>

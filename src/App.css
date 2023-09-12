@@ -82,13 +82,13 @@ lottie-player {
 }
 
 #project {
-  padding-top: 7.8125rem;
-  padding-bottom: 4.6875rem;
+  padding-top: 12.5rem;
+  padding-bottom: 9.375rem;
   background-color: #0D1117;
 }
 
 #content {
-  padding: 9.375rem 0;
+  padding: 12.5rem 0;
   background-color: #0b0f14;
   display: grid;
   place-items: center;
@@ -815,6 +815,20 @@ a:hover .nav--icon {
 
 
 /** --------------------Content section-------------------- */
+.heading-container {
+  display: grid;
+  grid-template-columns: repeat(9, 7.5rem);
+  gap: 0.625rem;
+  margin-bottom: 6.25rem;
+}
+
+.heading-container h1 {
+  grid-column: span 3 / auto;
+  margin: 0;
+  font-family: 'Mark Pro', sans-serif;
+  letter-spacing: -.02em;
+}
+
 .grid-container {
   display: grid;
   justify-content: center;
@@ -1615,6 +1629,13 @@ footer h2 {
   #content {
     margin: 0;
     padding: 6.25rem 1.25rem;
+  }
+
+  .heading-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-rows: auto-fill;
+    gap: 5px;
+    margin-bottom: 3.125rem;
   }
 
   .grid-container {
