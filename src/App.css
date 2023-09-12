@@ -814,7 +814,7 @@ a:hover .nav--icon {
 /** -------------------ProjectPage section------------------- */
 
 
-/** --------------------Contents section-------------------- */
+/** --------------------Content section-------------------- */
 .grid-container {
   display: grid;
   justify-content: center;
@@ -1244,7 +1244,7 @@ a:hover .nav--icon {
   opacity: 80%;
   transition: 0.15s ease-in-out;
 }
-/** --------------------Contents section-------------------- */
+/** --------------------Content section-------------------- */
 
 
 /**--------------------Contact section-------------------- */

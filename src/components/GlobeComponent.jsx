@@ -16,7 +16,7 @@ function GlobeComponent() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowGlobe(true)
-    }, 4300)
+    }, 3300)
 
     return () => clearTimeout(timer)
   }, [])
