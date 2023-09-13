@@ -21,7 +21,9 @@ import useOnScreen from './useOnScreen';
 function Content() {
   const [isShowMore, setIsShowMore] = useState(false)
   const contentRef = useRef()
-  const isVisible = useOnScreen(contentRef)
+  const isGrid = useOnScreen(contentRef)
+  const headingRef = useRef()
+  const isHeading = useOnScreen(headingRef)
 
   // React-Spring
   const animation = useSpring({
@@ -34,10 +36,10 @@ function Content() {
 
   return (
     <div id='content'>
-      <div className="heading-container">
-        <h1>some of my favorite photos I've captured📸</h1>
+      <div className={`heading-container ${isHeading ? '' : 'invisible'}`} ref={headingRef}>
+        <h1>some of my favorite <span>photos</span> I've captured📸</h1>
       </div>
-      <animated.div className={`grid-container ${isVisible ? '' : 'invisible'}`} style={animation} ref={contentRef}>
+      <animated.div className={`grid-container ${isGrid ? '' : 'invisible'}`} style={animation} ref={contentRef}>
         <div className="grid-container--portrait first">
           <div className='grid-container--portrait first--text'>
             Me in 2020<br />When I Started Photography
