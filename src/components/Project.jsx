@@ -14,7 +14,7 @@ import useOnScreen from './useOnScreen'
 function Project() {
   const [activeIndex, setActiveIndex] = useState(0)
   const slides = [
-    {image: imageApp, smallImage: smartphoneImageApp, name: 'UnSplash App'},
+    {image: imageApp, smallImage: smartphoneImageApp, name: 'Unsplash App'},
     {image: photoRonin, smallImage: smartphonePhotoRonin, name: 'Photo Ronin'},
     {image: memeGenerator, smallImage: smartphoneMemeGenerator, name: 'Meme Generator'}
   ]

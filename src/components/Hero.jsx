@@ -25,7 +25,7 @@ function Hero() {
         <div className="hero--container--text">
           <h1>from Concept <br /> to <span>Creation</span></h1>
           <p>
-            frontend developer & content creator <br />
+            full-stack developer & content creator <br />
             bridging the gap between imagination and reality
           </p>
         </div>
