@@ -32,22 +32,6 @@ function Contact() {
               to <span>Creation</span>
             </h2>
           </div>
-          <div className="footer--container--second">
-            <div className="footer--container--second--links">
-              <a href="https://www.instagram.com/jharimo/" target='_blank'>
-                <img src={instagramIcon} alt="" />
-              </a>
-              <a href="https://github.com/haharimoto" target='_blank'>
-                <img src={githubIcon} alt="" />
-              </a>
-              <a href="https://www.linkedin.com/in/harry-harimoto-32338b123/" target='_blank'>
-                <img src={linkedinIcon} alt="" />
-              </a>
-              <a href="https://www.upwork.com/freelancers/~0133d43d0682316f5f" target='_blank'>
-                <img src={upworkIcon} alt="" />
-              </a>
-            </div>
-          </div>
         </div>
 
         <div className="footer--end">

@@ -21,7 +21,7 @@ function About() {
         </div>
         <div className="about--container--intro">
           <div className={`about--container--intro--text ${isVisible ? '' : 'invisible'}`} ref={textRef}>
-            <h1>Hi, I'm Harry Harimoto</h1>
+            <h1>About myself</h1>
             <p>
               As a <b><em>Full-Stack Developer</em></b>💻 I specialize in developing web applications with a focus on optimal performance and responsive design. And, when I'm not immersed in code, you'll find me exploring and appreciating the vibrant city of Tokyo, capturing the cityscape and people through my lens.
             </p>
