@@ -40,7 +40,7 @@ function Contact() {
               <a href="https://github.com/haharimoto" target='_blank'>
                 <img src={githubIcon} alt="" />
               </a>
-              <a href="https://www.linkedin.com/in/harry-harimoto-32338b123/" target='_blank'>
+              <a href="https://www.linkedin.com/in/harry-harimoto" target='_blank'>
                 <img src={linkedinIcon} alt="" />
               </a>
               <a href="https://www.upwork.com/freelancers/~0133d43d0682316f5f" target='_blank'>
@@ -52,7 +52,7 @@ function Contact() {
 
         <div className="footer--end">
           <div>
-            <p>© 2023 haharimoto</p>
+            <p>© 2023-2026 haharimoto</p>
           </div>
           {location.pathname === '/' && <div className="footer--end--links">
             <a href='' onClick={(e) => scrollToSections(e, 'hero')}>Home</a>
